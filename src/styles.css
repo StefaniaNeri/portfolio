@@ -20,7 +20,7 @@
   --dark-orange: #976405;
   --light-orange: #ebb401;
 
-  --darkblue-palette: #030f18;
+  --darkblue-palette: #072338;
   --lightblue-palette: #154755;
   --whiteblue-palette: #9ebee0;
   --sand-palette: #ffdc7f;
@@ -138,6 +138,13 @@ footer a:hover {
   border-left: 15px solid #a0faa336;
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
+}
+
+.border-setop-green {
+  border-right: 15px solid #a0faa336;
+  border-left: 15px solid #a0faa336;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
 }
 
 /* MARGINS */
