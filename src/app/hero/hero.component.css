@@ -1,0 +1,17 @@
+.heightHero {
+  height: calc(100vh - 90px);
+}
+
+.name {
+  font-size: 7rem;
+  color: var(--light-green);
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000,
+    -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.sub {
+  color: #a0faa3af;
+}
+
+@media screen {
+}

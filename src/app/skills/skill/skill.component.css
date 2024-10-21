@@ -1,0 +1,11 @@
+.prgparent {
+  background-color: #0a1623;
+  border-radius: 0;
+  border: 1px solid var(--light-green);
+}
+
+.pgbar {
+  background-color: var(--light-green);
+  box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 24px,
+    rgb(160, 250, 163, 0.2) 0px 0px 39px, rgb(160, 250, 163, 0.2) 0px 0px 60px;
+}

@@ -1,0 +1,18 @@
+.bg-skill {
+  background-color: #041622;
+}
+
+.container .slide-in {
+  animation: slideIn 4s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(120%) !important;
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) !important;
+    opacity: 1;
+  }
+}

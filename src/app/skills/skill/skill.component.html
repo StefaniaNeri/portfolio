@@ -1,0 +1,10 @@
+<div class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
+  <div class="card-body pt-4 pb-3 text-center">
+    <img src="{{skill.src}}" alt="{{skill.linguaggio}} logo" height="70" width="70">
+    <h5 id="linguaggio" class="card-title pt-2 pb-3">{{skill.linguaggio}}</h5>
+    <div class="progress prgparent" aria-labelledby="linguaggio">
+      <div class="progress-bar pgbar" role="progressbar" [style.width.%]="skill.progress"
+        [attr.aria-valuenow]="skill.progress" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+</div>

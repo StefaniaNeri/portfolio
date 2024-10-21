@@ -1,0 +1,212 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --extra-dark: #161616;
+  --extra-blue: #040425;
+  --dark: #282d35;
+  --dark-green: #021a0a;
+  --semi-dark-green: #064f1e;
+  --mild-green: #1d9c5c;
+  --light-green: #a0faa3;
+  --mild-blue: #1a6796;
+  --light-blue: #61dafb;
+  --dark-orange: #976405;
+  --light-orange: #ebb401;
+
+  --darkblue-palette: #04121d;
+  --lightblue-palette: #154755;
+  --whiteblue-palette: #9ebee0;
+  --sand-palette: #ffdc7f;
+
+  --darkgreen-palette: #0c3025;
+  --lightgreen-palette: #6a9c89;
+  --whitegreen-palette: #a5ccc0;
+  --whitewhitegreen-palette: #e9efec;
+
+  --porpora: #410404;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5:not(app-skill h5),
+h6,
+p:not(footer p) {
+  font-weight: 600;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+
+  background-color: var(--darkblue-palette);
+  color: #eee;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--light-green);
+}
+
+/* FONT SIZES */
+
+h1:not(app-hero h1) {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+/* LINK GLOBAL */
+
+a,
+a:active {
+  text-decoration: none;
+  color: #1e7b5e;
+  transition: all 0.3s;
+}
+
+a:hover {
+  text-decoration: underline #6dc3a8;
+  color: #103e30;
+  transition: all 0.3s;
+}
+
+/* LINK FOOTER */
+
+footer a,
+footer a:active {
+  color: var(--light-green);
+  transition: all 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+  transition: all 0.3s;
+}
+
+/* TEXT COLORS */
+
+.dark-text {
+  color: var(--darkblue-palette);
+}
+
+/* BACKGROUND COLORS */
+
+.bg-light-green {
+  background-color: var(--light-green);
+}
+
+.bg-lightgreen-gradient {
+  background-image: linear-gradient(180deg, #a0faa395, #d4f6d595);
+}
+
+.bg-darkblue-main {
+  background-color: var(--darkblue-palette);
+}
+
+/* BORDERS */
+
+.border-light-green {
+  border: 2.5px solid var(--light-green);
+}
+
+.border-tb-orange {
+  border-top: 2.5px solid var(--sand-palette);
+  border-bottom: 2.5px solid var(--sand-palette);
+}
+
+.border-end-blue {
+  border-right: 1.5px solid var(--darkblue-palette);
+}
+
+.border-se-green {
+  border-right: 15px solid #a0faa336;
+  border-left: 15px solid #a0faa336;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+
+/* MARGINS */
+
+.margin-20 {
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+.margin-left-70 {
+  margin-left: 70px;
+}
+
+/* EFFECTS */
+
+.effectGlimmer {
+  box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 24px,
+    rgb(160, 250, 163, 0.2) 0px 0px 39px, rgb(160, 250, 163, 0.2) 0px 0px 60px;
+}
+
+.effectGlimmerHover,
+.effectGlimmerHoverIcons,
+.effectUp {
+  transition: all 0.4s;
+}
+
+.effectGlimmerHover:hover {
+  box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 70px,
+    rgb(160, 250, 163, 0.2) 0px 0px 70px, rgb(160, 250, 163, 0.2) 0px 0px 70px;
+}
+
+.effectGlimmerHoverIcons:hover {
+  box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 24px,
+    rgb(160, 250, 163, 0.2) 0px 0px 39px, rgb(160, 250, 163, 0.2) 0px 0px 60px;
+}
+
+.effectUp:hover {
+  transform: translateY(-0.8rem);
+}
+
+/* BACK TO TOP */
+.back-to-top {
+  position: fixed;
+  bottom: 4rem;
+  right: 3rem;
+  display: inline-flex;
+  background-color: var(--light-green);
+  color: var(--darkblue-palette);
+  padding: 0.7rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+  animation: opacity 0.2s;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.back-to-top:hover {
+  text-decoration: none;
+  box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 24px,
+    rgb(160, 250, 163, 0.2) 0px 0px 39px, rgb(160, 250, 163, 0.2) 0px 0px 60px;
+}
+
+.back-to-top:hover span {
+  transform: translateY(-3px);
+}
