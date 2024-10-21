@@ -20,7 +20,7 @@
   --dark-orange: #976405;
   --light-orange: #ebb401;
 
-  --darkblue-palette: #04121d;
+  --darkblue-palette: #072338;
   --lightblue-palette: #154755;
   --whiteblue-palette: #9ebee0;
   --sand-palette: #ffdc7f;
@@ -140,6 +140,13 @@ footer a:hover {
   border-bottom-right-radius: 20%;
 }
 
+.border-setop-green {
+  border-right: 15px solid #a0faa336;
+  border-left: 15px solid #a0faa336;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+}
+
 /* MARGINS */
 
 .margin-20 {
@@ -185,6 +192,7 @@ footer a:hover {
   display: inline-flex;
   background-color: var(--light-green);
   color: var(--darkblue-palette);
+  border: 1.5px solid var(--darkblue-palette);
   padding: 0.7rem;
   text-decoration: none;
   border-radius: 1rem;
