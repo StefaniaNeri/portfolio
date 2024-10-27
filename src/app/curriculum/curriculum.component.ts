@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-curriculum',
@@ -6,10 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './curriculum.component.css',
 })
 export class CurriculumComponent {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   urlCV: string = 'assets/CV new SF.pdf';
 
   openCV() {
-    if (typeof window !== 'undefined') {
+    if (isPlatformBrowser(this.platformId)) {
       window.open(this.urlCV, '_blank');
     }
   }
