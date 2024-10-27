@@ -1,36 +1,36 @@
-<nav [ngClass]="{'sticky': isSticky}" class="navbar navbar-expand-sm  navbar-dark bg-darkblue-main">
+<nav [ngClass]="{'sticky': isSticky}" class="navbar navbar-expand-lg  navbar-dark bg-darkblue-main">
+  <div class="container-fluid">
 
-  <a href="#" class="margin-left-70 logo d-inline-block ">
-    <img src="assets/logo/sn-logo-zip-file (1)/png/logo-no-background.png"
-      alt="Logo con una finestra browser contenente un piccolo ingranaggio e parentesi angolari, e al di sotto le iniziali sn"
-      height="60" width="50">
-  </a>
+    <a href="#" class="margin-left-70 logo d-inline-block ">
+      <img src="assets/logo/sn-logo-zip-file (1)/png/logo-no-background.png"
+        alt="Logo con una finestra browser contenente un piccolo ingranaggio e parentesi angolari, e al di sotto le iniziali sn">
+    </a>
 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <button class="navbar-toggler d-lg-none " type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
-    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse me-5 d-flex justify-content-center fs-4to5 fw-600" id="collapsibleNavId">
-    <ul class="navbar-nav mt-2 mt-lg-0 ms-auto mx-5 text-dark rounded">
-      <!-- <li class="nav-item px-3 bg-light-green rounded-start border-end-blue">
+    <div class="collapse navbar-collapse me-md-5 fs-4to5" id="navbarSupportedContent">
+      <ul class="navbar-nav mt-2 mt-lg-0 ms-auto mx-5 text-dark rounded">
+        <!-- <li class="nav-item px-3 bg-light-green rounded-start border-end-blue">
         <a class="nav-link active" href="#about-me" aria-current="page">About me
           <span class="visually-hidden">(current)</span></a>
       </li> -->
-      <li class="nav-item px-3 rounded-start bg-light-green border-end-blue">
-        <a class="nav-link " href="#skills">Skills</a>
-      </li>
-      <li class="nav-item px-3 bg-light-green border-end-blue">
-        <a class="nav-link" href="#projects">Projects</a>
-      </li>
-      <li class="nav-item px-3 bg-light-green border-end-blue rounded-end">
-        <a class="nav-link" href="#cv">Curriculum</a>
-      </li>
-      <!-- <li class="nav-item me-5 px-3 bg-light-green rounded-end">
+        <li class="nav-item px-3 rounded-start bg-light-green border-end-blue">
+          <a class="nav-link " href="#skills">Skills</a>
+        </li>
+        <li class="nav-item px-3 bg-light-green border-end-blue">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item px-3 bg-light-green border-end-blue rounded-end">
+          <a class="nav-link" href="#cv">Curriculum</a>
+        </li>
+        <!-- <li class="nav-item me-5 px-3 bg-light-green rounded-end">
         <a class="nav-link" href="#contacs">Contacts</a>
       </li> -->
-    </ul>
+      </ul>
 
+    </div>
   </div>
 </nav>

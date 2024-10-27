@@ -21,4 +21,8 @@
   .prgparent {
     width: 100%;
   }
+
+  .border-light-green {
+    border: 1px solid var(--light-green);
+  }
 }
