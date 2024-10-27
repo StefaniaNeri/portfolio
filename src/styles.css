@@ -218,3 +218,26 @@ footer a:hover {
 .back-to-top:hover span {
   transform: translateY(-3px);
 }
+
+/* 576px */
+@media (max-width: 36em) {
+  h1 {
+    font-size: 3rem !important;
+  }
+
+  .border-setop-green {
+    border-right: 2px solid #a0faa336;
+    border-left: 2px solid #a0faa336;
+    /* border-top-left-radius: 20%;
+    border-top-right-radius: 20%; */
+  }
+
+  .border-se-green {
+    .border-se-green {
+      border-right: 2px solid #a0faa336;
+      border-left: 2px solid #a0faa336;
+      /* border-bottom-left-radius: 20%;
+      border-bottom-right-radius: 20%; */
+    }
+  }
+}

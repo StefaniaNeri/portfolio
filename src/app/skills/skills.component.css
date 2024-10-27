@@ -19,9 +19,9 @@
 
 /* 576px */
 @media (max-width: 36em) {
-  .skillsTitle > h1 {
+  /* .skillsTitle > h1 {
     font-size: 3rem;
-  }
+  } */
 
   .subTitle {
     font-size: 1.7rem;
