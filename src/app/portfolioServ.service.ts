@@ -1,10 +1,11 @@
-import { HostListener, Injectable } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { HostListener, Inject, Injectable, PLATFORM_ID } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PortfolioServService {
-  constructor() {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
   isVisible = false;
 
   onAppear() {
@@ -16,11 +17,14 @@ export class PortfolioServService {
 
   @HostListener('window:scroll', [])
   checkScroll() {
-    const scrollPos =
-      window.scrollY ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop ||
-      0;
-    this.isSticky = scrollPos >= 600;
+    if (isPlatformBrowser(this.platformId)) {
+      const scrollPos =
+        window.scrollY ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0;
+
+      this.isSticky = scrollPos >= 600;
+    }
   }
 }

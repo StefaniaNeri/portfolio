@@ -1,3 +1,4 @@
+import { isPlatformBrowser } from '@angular/common';
 import {
   AfterViewInit,
   Directive,
@@ -5,6 +6,8 @@ import {
   OnDestroy,
   Output,
   EventEmitter,
+  Inject,
+  PLATFORM_ID,
 } from '@angular/core';
 import { fromEvent, startWith, Subscription } from 'rxjs';
 
@@ -22,24 +25,25 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
   subscriptionScroll: Subscription;
   subscriptionResize: Subscription;
 
-  constructor(private element: ElementRef) {}
+  constructor(
+    private element: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   saveDimensions() {
-    if(typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') {
       this.elementPos = this.getOffsetTop(this.element.nativeElement);
       this.elementHeight = this.element.nativeElement.offsetHeight;
       this.windowHeight = window.innerHeight;
       // console.log('Element position:' + this.elementPos);
       // console.log('Element height:' + this.elementHeight);
-
     }
   }
 
   saveScrollPos() {
-    if(typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') {
       this.scrollPos = window.scrollY;
       // console.log('Scroll position:' + this.scrollPos);
-
     }
   }
 
@@ -67,19 +71,21 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
   }
 
   subscribe() {
-    this.subscriptionScroll = fromEvent(window, 'scroll')
-      .pipe(startWith(null))
-      .subscribe(() => {
-        this.saveScrollPos();
-        this.checkVisibility();
-      });
+    if (isPlatformBrowser(this.platformId)) {
+      this.subscriptionScroll = fromEvent(window, 'scroll')
+        .pipe(startWith(null))
+        .subscribe(() => {
+          this.saveScrollPos();
+          this.checkVisibility();
+        });
 
-    this.subscriptionResize = fromEvent(window, 'resize')
-      .pipe(startWith(null))
-      .subscribe(() => {
-        this.saveDimensions();
-        this.checkVisibility();
-      });
+      this.subscriptionResize = fromEvent(window, 'resize')
+        .pipe(startWith(null))
+        .subscribe(() => {
+          this.saveDimensions();
+          this.checkVisibility();
+        });
+    }
   }
 
   unsubscribe() {
