@@ -1,3 +1,7 @@
 .bg-prj {
   background-color: #031017;
 }
+
+.card {
+  max-width: 60%;
+}
