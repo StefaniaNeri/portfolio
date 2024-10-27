@@ -2,20 +2,20 @@
 
   <div class="container" (appear)="onAppear()" [ngClass]="{'slide-in': isVisible}">
 
-    <div class="text-center pt-5 mb-2">
+    <div class="text-center pt-5 mb-2 skillsTitle">
       <h1>Skills</h1>
     </div>
 
-    <h2 class="mt-5 text-center">Frontend</h2>
+    <h2 class="mt-md-5 text-center subTitle">Frontend</h2>
     <div role="list" class="row pb-4 d-flex justify-content-center align-items-center">
       <app-skill role="listitem" *ngFor="let skill of listaSkillFE" [skill]="skill"
-        class="col-6 col-sm-4 col-lg-2 mt-5 mx-1"></app-skill>
+        class="col-8 col-sm-4 col-lg-2 mt-4 mt-md-5 mx-1 "></app-skill>
     </div>
 
-    <h2 class="mt-5 text-center">Backend</h2>
+    <h2 class="mt-5 text-center subTitle">Backend</h2>
     <div role="list" class="row pb-4 d-flex justify-content-center align-items-center">
       <app-skill role="listitem" *ngFor="let skill of listaSkillBE" [skill]="skill"
-        class="col-6 col-sm-4 col-lg-2 mt-5 mx-1"></app-skill>
+        class="col-6 col-sm-4 col-lg-2 mt-4 mt-md-5 mx-1"></app-skill>
     </div>
 
     <!-- <h2 class="mt-5 text-center">Testing</h2>
@@ -24,10 +24,10 @@
     </div> -->
 
 
-    <h2 class="mt-5 text-center">Miscellaneous</h2>
+    <h2 class="mt-5 text-center subTitle">Miscellaneous</h2>
     <div role="list" class="row pb-5 d-flex justify-content-center align-items-center">
       <app-skill role="listitem" *ngFor="let skill of listaSkillMisc" [skill]="skill"
-        class="col-6 col-sm-4 col-lg-2 my-5 mx-1"></app-skill>
+        class="col-6 col-sm-4 col-lg-2 my-4 my-md-5 mx-1"></app-skill>
     </div>
 
   </div>

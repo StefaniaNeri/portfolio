@@ -25,26 +25,26 @@ export class CurriculumComponent {
     // }
   }
 
-  ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      // Iscriversi agli eventi di scroll
-      this.scrollSubscription = this.portfolioServ.onScroll().subscribe(() => {
-        // Calcola la posizione di scroll
-        const scrollPos =
-          window.scrollY ||
-          document.documentElement.scrollTop ||
-          document.body.scrollTop ||
-          0;
-        // Aggiorna lo stato sticky
-        this.portfolioServ.updateSticky(scrollPos);
-      });
-    }
-  }
+  //   ngOnInit() {
+  //     if (isPlatformBrowser(this.platformId)) {
+  //       // Iscriversi agli eventi di scroll
+  //       this.scrollSubscription = this.portfolioServ.onScroll().subscribe(() => {
+  //         // Calcola la posizione di scroll
+  //         const scrollPos =
+  //           window.scrollY ||
+  //           document.documentElement.scrollTop ||
+  //           document.body.scrollTop ||
+  //           0;
+  //         // Aggiorna lo stato sticky
+  //         this.portfolioServ.updateSticky(scrollPos);
+  //       });
+  //     }
+  //   }
 
-  ngOnDestroy() {
-    // Disiscriversi dall'osservabile quando il componente viene distrutto
-    if (this.scrollSubscription) {
-      this.scrollSubscription.unsubscribe();
-    }
-  }
+  //   ngOnDestroy() {
+  //     // Disiscriversi dall'osservabile quando il componente viene distrutto
+  //     if (this.scrollSubscription) {
+  //       this.scrollSubscription.unsubscribe();
+  //     }
+  //   }
 }

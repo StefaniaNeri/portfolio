@@ -91,15 +91,22 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
   // }
 
   private subscribeToScroll() {
-    this.subscriptionScroll = this.portfolioServ.onScroll().subscribe(() => {
-      this.checkVisibility();
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      this.subscriptionScroll = this.portfolioServ
+        .onScroll()
+        .subscribe((scrollPos) => {
+          console.log('Scroll position:', scrollPos);
+          this.checkVisibility(); // Controlla la visibilità dell'elemento
+        });
+    }
   }
 
   private subscribeToResize() {
-    this.subscriptionResize = this.portfolioServ.onResize().subscribe(() => {
-      this.checkVisibility();
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      this.subscriptionResize = this.portfolioServ.onResize().subscribe(() => {
+        this.checkVisibility(); // Controlla la visibilità dell'elemento
+      });
+    }
   }
 
   unsubscribe() {
