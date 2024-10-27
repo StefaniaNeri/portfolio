@@ -10,6 +10,7 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { fromEvent, startWith, Subscription } from 'rxjs';
+import { PortfolioServService } from './portfolioServ.service';
 
 @Directive({
   selector: '[appear]',
@@ -27,7 +28,8 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
 
   constructor(
     private element: ElementRef,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private portfolioServ: PortfolioServService
   ) {}
 
   saveDimensions() {
@@ -70,22 +72,34 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
     return this.scrollPos + this.windowHeight >= this.elementPos;
   }
 
-  subscribe() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.subscriptionScroll = fromEvent(window, 'scroll')
-        .pipe(startWith(null))
-        .subscribe(() => {
-          this.saveScrollPos();
-          this.checkVisibility();
-        });
+  // subscribe() {
+  //   if (isPlatformBrowser(this.platformId)) {
+  //     this.subscriptionScroll = fromEvent(window, 'scroll')
+  //       .pipe(startWith(null))
+  //       .subscribe(() => {
+  //         this.saveScrollPos();
+  //         this.checkVisibility();
+  //       });
 
-      this.subscriptionResize = fromEvent(window, 'resize')
-        .pipe(startWith(null))
-        .subscribe(() => {
-          this.saveDimensions();
-          this.checkVisibility();
-        });
-    }
+  //     this.subscriptionResize = fromEvent(window, 'resize')
+  //       .pipe(startWith(null))
+  //       .subscribe(() => {
+  //         this.saveDimensions();
+  //         this.checkVisibility();
+  //       });
+  //   }
+  // }
+
+  private subscribeToScroll() {
+    this.subscriptionScroll = this.portfolioServ.onScroll().subscribe(() => {
+      this.checkVisibility();
+    });
+  }
+
+  private subscribeToResize() {
+    this.subscriptionResize = this.portfolioServ.onResize().subscribe(() => {
+      this.checkVisibility();
+    });
   }
 
   unsubscribe() {
@@ -98,8 +112,14 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.saveDimensions(); // save initial dimensions
-    this.subscribe();
+    // if (isPlatformBrowser(this.platformId)) {
+    //   if (this.element && this.element.nativeElement) {
+    //     this.saveDimensions(); // Salva le dimensioni iniziali
+    //     this.subscribe();
+    //   }
+    // }
+    this.subscribeToScroll();
+    this.subscribeToResize();
   }
 
   ngOnDestroy(): void {
