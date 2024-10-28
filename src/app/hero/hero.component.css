@@ -5,15 +5,16 @@
 .heroContent {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .name {
-  font-size: 6.5rem;
+  font-size: 4.6rem;
   color: var(--light-green);
 }
 
 .sub {
+  font-size: 2rem;
   color: #a0faa3c4;
 }
 

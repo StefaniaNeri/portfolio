@@ -51,6 +51,7 @@ nav .nav-link {
 
 .nav-item:hover .nav-link {
   color: var(--light-green);
+  text-decoration: none;
 }
 
 .fw-600 {
