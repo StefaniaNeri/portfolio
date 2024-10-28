@@ -1,7 +1,7 @@
 /* STICKY */
 
 nav {
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 0 0;
 }
 
 .sticky {
@@ -15,6 +15,7 @@ nav {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease-in-out;
   animation: opacity 0.5s;
+  padding: 1.5rem 0;
 }
 
 @keyframes opacity {
@@ -64,24 +65,19 @@ nav .nav-link {
 }
 
 .logo img {
-  width: 50px;
-  height: 60px;
+  width: 43px;
+  height: auto;
 }
 
-@media (min-width: 36em) {
+/* for bigger devices */
+@media (min-width: 62em) {
   .collapse {
     display: flex;
     justify-content: center;
   }
 }
 
-@media (max-width: 36em) {
-  .logo img {
-    width: 30px;
-    height: auto;
-    margin-right: auto;
-  }
-
+@media (max-width: 62em) {
   .container-fluid {
     position: relative;
   }
@@ -109,5 +105,13 @@ nav .nav-link {
 
   .navbar-toggler-icon {
     color: var(--light-green);
+  }
+}
+
+/* for smaller devices */
+@media (max-width: 36em) {
+  .logo img {
+    width: 30px;
+    margin-right: auto;
   }
 }

@@ -468,14 +468,14 @@
     }
 
     @media (min-width:768px) {
+      .col-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%
+      }
+
       .col-md-5 {
         flex: 0 0 auto;
         width: 41.66666667%
-      }
-
-      .col-md-6 {
-        flex: 0 0 auto;
-        width: 50%
       }
     }
 
@@ -1029,7 +1029,7 @@
 
     body {
       font-family: Rajdhani, sans-serif;
-      background-color: var(--darkblue-palette);
+      background-image: linear-gradient(180deg, var(--darkblue-palette), #154755);
       color: #eee
     }
 
@@ -1039,11 +1039,11 @@
     }
 
     h1:not(app-hero h1) {
-      font-size: 4.5rem
+      font-size: 4rem
     }
 
     h2 {
-      font-size: 3rem
+      font-size: 2.3rem
     }
 
     a,
@@ -1079,7 +1079,7 @@
     }
 
     .bg-lightgreen-gradient {
-      background-image: linear-gradient(180deg, #a0faa395, #d4f6d595)
+      background-image: linear-gradient(180deg, #a0faa3e4, #c2eac4be)
     }
 
     .bg-darkblue-main {
@@ -1163,8 +1163,8 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="styles-RNZKAJ3M.css" media="print" onload="this.media='all'"><noscript>
-    <link rel="stylesheet" href="styles-RNZKAJ3M.css">
+  <link rel="stylesheet" href="styles-AMLMQMIH.css" media="print" onload="this.media='all'"><noscript>
+    <link rel="stylesheet" href="styles-AMLMQMIH.css">
   </noscript>
   <style ng-app-id="ng">
     .slide-in[_ngcontent-ng-c889936215] {
@@ -1185,7 +1185,7 @@
   </style>
   <style ng-app-id="ng">
     nav[_ngcontent-ng-c661381708] {
-      padding: 1.5rem 0
+      padding: 1.5rem 0 0
     }
 
     .sticky[_ngcontent-ng-c661381708] {
@@ -1198,7 +1198,8 @@
       background-color: #030f1896;
       box-shadow: 0 4px 6px #0000001a;
       transition: all .5s ease-in-out;
-      animation: _ngcontent-ng-c661381708_opacity .5s
+      animation: _ngcontent-ng-c661381708_opacity .5s;
+      padding: 1.5rem 0
     }
 
     @keyframes _ngcontent-ng-c661381708_opacity {
@@ -1232,7 +1233,8 @@
     }
 
     .nav-item[_ngcontent-ng-c661381708]:hover .nav-link[_ngcontent-ng-c661381708] {
-      color: var(--light-green)
+      color: var(--light-green);
+      text-decoration: none
     }
 
     .fw-600[_ngcontent-ng-c661381708] {
@@ -1245,24 +1247,18 @@
     }
 
     .logo[_ngcontent-ng-c661381708] img[_ngcontent-ng-c661381708] {
-      width: 50px;
-      height: 60px
+      width: 43px;
+      height: auto
     }
 
-    @media (min-width: 36em) {
+    @media (min-width: 62em) {
       .collapse[_ngcontent-ng-c661381708] {
         display: flex;
         justify-content: center
       }
     }
 
-    @media (max-width: 36em) {
-      .logo[_ngcontent-ng-c661381708] img[_ngcontent-ng-c661381708] {
-        width: 30px;
-        height: auto;
-        margin-right: auto
-      }
-
+    @media (max-width: 62em) {
       .container-fluid[_ngcontent-ng-c661381708] {
         position: relative
       }
@@ -1292,77 +1288,89 @@
         color: var(--light-green)
       }
     }
+
+    @media (max-width: 36em) {
+      .logo[_ngcontent-ng-c661381708] img[_ngcontent-ng-c661381708] {
+        width: 30px;
+        margin-right: auto
+      }
+    }
   </style>
   <style ng-app-id="ng">
-    .heightHero[_ngcontent-ng-c2390460610] {
-      height: calc(100vh - 90px)
+    .heightHero[_ngcontent-ng-c2351457143] {
+      height: calc(100vh - 77.31px)
     }
 
-    .heroContent[_ngcontent-ng-c2390460610] {
+    .heroContent[_ngcontent-ng-c2351457143] {
       display: flex;
       align-items: center;
-      justify-content: space-between
+      justify-content: space-around;
+      border: 2px solid var(--light-green);
+      padding: 8rem;
+      border-radius: 3%;
+      background-image: linear-gradient(180deg, var(--darkblue-palette), #154755)
     }
 
-    .name[_ngcontent-ng-c2390460610] {
-      font-size: 6.5rem;
+    .name[_ngcontent-ng-c2351457143] {
+      font-size: 4.6rem;
       color: var(--light-green)
     }
 
-    .sub[_ngcontent-ng-c2390460610] {
-      color: #a0faa3af
+    .sub[_ngcontent-ng-c2351457143] {
+      font-size: 2rem;
+      color: #a0faa3c4
     }
 
-    .imgHero[_ngcontent-ng-c2390460610] {
+    .imgHero[_ngcontent-ng-c2351457143] {
       height: auto;
       width: 100%
     }
 
     @media (max-width: 87.5em) {
-      .name[_ngcontent-ng-c2390460610] {
+      .name[_ngcontent-ng-c2351457143] {
         font-size: 4.5rem
       }
 
-      .sub[_ngcontent-ng-c2390460610] {
+      .sub[_ngcontent-ng-c2351457143] {
         font-size: 2.5rem
       }
     }
 
     @media (max-width: 62em) {
-      .name[_ngcontent-ng-c2390460610] {
+      .name[_ngcontent-ng-c2351457143] {
         font-size: 3.5rem
       }
 
-      .sub[_ngcontent-ng-c2390460610] {
+      .sub[_ngcontent-ng-c2351457143] {
         font-size: 1.7rem
       }
     }
 
     @media (max-width: 48em) {
-      .name[_ngcontent-ng-c2390460610] {
+      .name[_ngcontent-ng-c2351457143] {
         text-align: center;
         margin-top: 2rem
       }
 
-      .sub[_ngcontent-ng-c2390460610] {
+      .sub[_ngcontent-ng-c2351457143] {
         text-align: center
       }
 
-      .imgHero[_ngcontent-ng-c2390460610] {
+      .imgHero[_ngcontent-ng-c2351457143] {
         padding-bottom: 2rem
       }
     }
 
     @media (max-width: 36em) {
-      .heightHero[_ngcontent-ng-c2390460610] {
+      .heightHero[_ngcontent-ng-c2351457143] {
         height: auto
       }
 
-      .heroContent[_ngcontent-ng-c2390460610] {
+      .heroContent[_ngcontent-ng-c2351457143] {
         justify-content: center
       }
 
-      .imgHero[_ngcontent-ng-c2390460610] {
+      .imgHero[_ngcontent-ng-c2351457143] {
         padding-bottom: 2rem
       }
     }
@@ -1415,17 +1423,20 @@
     }
   </style>
   <style ng-app-id="ng">
-    .btn-cv[_ngcontent-ng-c3602176334] {
-      box-shadow: #030f1833 0 0 24px, #030f1833 0 0 39px, #030f1833 0 0 60px;
+    .btn-cv[_ngcontent-ng-c3563809286] {
       border: 1px solid var(--sand-palette);
       background-color: var(--darkblue-palette);
       color: var(--light-green);
       transition: all .7s
     }
 
-    .btn-cv[_ngcontent-ng-c3602176334]:hover,
-    .btn-cv[_ngcontent-ng-c3602176334]:active {
-      background-image: linear-gradient(180deg, #a0faa3e2, #d4f6d5da);
+    .bg-lightgreen-gradient-cv[_ngcontent-ng-c3563809286] {
+      background-image: linear-gradient(180deg, #a0faa3e4, #e1f4e1d2)
+    }
+
+    .btn-cv[_ngcontent-ng-c3563809286]:hover,
+    .btn-cv[_ngcontent-ng-c3563809286]:active {
+      background-image: linear-gradient(180deg, #8df390, #d4f6d5da);
       color: var(--darkblue-palette);
       font-weight: 600;
       border-color: var(--darkgreen);
@@ -1434,12 +1445,8 @@
     }
 
     @media (max-width: 36em) {
-      .btn-cv[_ngcontent-ng-c3602176334] {
+      .btn-cv[_ngcontent-ng-c3563809286] {
         box-shadow: #030f1800 0 0 24px, #030f1800 0 0 39px, #030f1833 0 0 60px
-      }
-
-      .bg-lightgreen-gradient[_ngcontent-ng-c3602176334] {
-        background-image: linear-gradient(180deg, #a0faa3e4, #d4f6d595)
       }
     }
   </style>
@@ -1510,18 +1517,19 @@
           </div>
         </div>
       </nav>
-    </app-navbar><app-hero _ngcontent-ng-c889936215 _nghost-ng-c2390460610 ngh="0">
-      <section _ngcontent-ng-c2390460610 class="bg-darkblue-main heightHero py-5 d-flex align-items-center">
-        <div _ngcontent-ng-c2390460610 class="container">
-          <div _ngcontent-ng-c2390460610 class="row pb-5 heroContent">
-            <div _ngcontent-ng-c2390460610 class="col-12 col-md-6">
-              <h1 _ngcontent-ng-c2390460610 class="name pb-2 mb-4">Stefania Neri</h1>
-              <div _ngcontent-ng-c2390460610>
-                <h1 _ngcontent-ng-c2390460610 class="sub">Junior Full Stack Developer</h1>
-                <h1 _ngcontent-ng-c2390460610 class="sub pb-5">QA Tester</h1>
+    </app-navbar><app-hero _ngcontent-ng-c889936215 _nghost-ng-c2351457143 ngh="0">
+      <section _ngcontent-ng-c2351457143
+        class="bg-darkblue-main heightHero d-flex align-items-center justify-content-center">
+        <div _ngcontent-ng-c2351457143>
+          <div _ngcontent-ng-c2351457143 class="row heroContent">
+            <div _ngcontent-ng-c2351457143 class="col-12 col-md-5">
+              <h1 _ngcontent-ng-c2351457143 class="name pb-2 mb-4">Stefania Neri</h1>
+              <div _ngcontent-ng-c2351457143>
+                <h1 _ngcontent-ng-c2351457143 class="sub">Junior Full Stack Developer</h1>
+                <h1 _ngcontent-ng-c2351457143 class="sub pb-5">QA Tester</h1>
               </div>
             </div>
-            <div _ngcontent-ng-c2390460610 class="col-9 col-md-5 mx-2"><img _ngcontent-ng-c2390460610
+            <div _ngcontent-ng-c2351457143 class="col-9 col-md-4 mx-2"><img _ngcontent-ng-c2351457143
                 src="assets/laptop-2298286_640 2- Copia.png" alt="Disegno con un laptop, una lampada e un cactus"
                 class="imgHero"></div>
           </div>
@@ -1740,10 +1748,10 @@
           </div>
         </div>
       </section>
-    </app-projects><app-curriculum _ngcontent-ng-c889936215 _nghost-ng-c3602176334 ngh="0">
-      <div _ngcontent-ng-c3602176334 class="bg-lightgreen-gradient border-tb-orange">
-        <div _ngcontent-ng-c3602176334 id="cv" class="container py-5 text-center">
-          <h2 _ngcontent-ng-c3602176334 class="dark-text pb-3 pt-5">Curriculum</h2><button _ngcontent-ng-c3602176334
+    </app-projects><app-curriculum _ngcontent-ng-c889936215 _nghost-ng-c3563809286 ngh="0">
+      <div _ngcontent-ng-c3563809286 class="bg-lightgreen-gradient-cv border-tb-orange">
+        <div _ngcontent-ng-c3563809286 id="cv" class="container py-5 text-center">
+          <h2 _ngcontent-ng-c3563809286 class="dark-text pb-3 pt-5">Curriculum</h2><button _ngcontent-ng-c3563809286
             class="btn-cv rounded px-4 py-4 fs-3 mb-5"> Get my CV for more info </button>
         </div>
       </div>
@@ -1777,7 +1785,7 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="polyfills-A7MJM4D4.js" type="module"></script>
   <script src="scripts-EEEIPNC3.js" defer></script>
-  <script src="main-YQNBMMDF.js" type="module"></script>
+  <script src="main-TIL4WLXA.js" type="module"></script>
 
   <script id="ng-state"
     type="application/json">{"__nghData__":[{},{"t":{"8":"t0","12":"t1","16":"t2"},"c":{"8":[{"i":"t0","r":1,"x":5}],"12":[{"i":"t1","r":1,"x":3}],"16":[{"i":"t2","r":1,"x":2}]}}]}</script>
