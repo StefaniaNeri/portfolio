@@ -2,11 +2,15 @@
   height: calc(100vh - 90px);
 }
 
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .name {
-  font-size: 7rem;
+  font-size: 6.5rem;
   color: var(--light-green);
-  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000,
-    -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
 
 .sub {
@@ -49,6 +53,21 @@
   .sub {
     text-align: center;
   }
+  .imgHero {
+    padding-bottom: 2rem;
+  }
+}
+
+/* 576px */
+@media (max-width: 36em) {
+  .heightHero {
+    height: auto;
+  }
+
+  .heroContent {
+    justify-content: center;
+  }
+
   .imgHero {
     padding-bottom: 2rem;
   }

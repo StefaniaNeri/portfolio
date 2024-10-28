@@ -1,3 +1,4 @@
+import { isPlatformBrowser } from '@angular/common';
 import {
   AfterViewInit,
   Directive,
@@ -5,8 +6,11 @@ import {
   OnDestroy,
   Output,
   EventEmitter,
+  Inject,
+  PLATFORM_ID,
 } from '@angular/core';
 import { fromEvent, startWith, Subscription } from 'rxjs';
+import { PortfolioServService } from './portfolioServ.service';
 
 @Directive({
   selector: '[appear]',
@@ -22,24 +26,26 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
   subscriptionScroll: Subscription;
   subscriptionResize: Subscription;
 
-  constructor(private element: ElementRef) {}
+  constructor(
+    private element: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private portfolioServ: PortfolioServService
+  ) {}
 
   saveDimensions() {
-    if(typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') {
       this.elementPos = this.getOffsetTop(this.element.nativeElement);
       this.elementHeight = this.element.nativeElement.offsetHeight;
       this.windowHeight = window.innerHeight;
       // console.log('Element position:' + this.elementPos);
       // console.log('Element height:' + this.elementHeight);
-
     }
   }
 
   saveScrollPos() {
-    if(typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') {
       this.scrollPos = window.scrollY;
       // console.log('Scroll position:' + this.scrollPos);
-
     }
   }
 
@@ -66,20 +72,41 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
     return this.scrollPos + this.windowHeight >= this.elementPos;
   }
 
-  subscribe() {
-    this.subscriptionScroll = fromEvent(window, 'scroll')
-      .pipe(startWith(null))
-      .subscribe(() => {
-        this.saveScrollPos();
-        this.checkVisibility();
-      });
+  // subscribe() {
+  //   if (isPlatformBrowser(this.platformId)) {
+  //     this.subscriptionScroll = fromEvent(window, 'scroll')
+  //       .pipe(startWith(null))
+  //       .subscribe(() => {
+  //         this.saveScrollPos();
+  //         this.checkVisibility();
+  //       });
 
-    this.subscriptionResize = fromEvent(window, 'resize')
-      .pipe(startWith(null))
-      .subscribe(() => {
-        this.saveDimensions();
-        this.checkVisibility();
+  //     this.subscriptionResize = fromEvent(window, 'resize')
+  //       .pipe(startWith(null))
+  //       .subscribe(() => {
+  //         this.saveDimensions();
+  //         this.checkVisibility();
+  //       });
+  //   }
+  // }
+
+  private subscribeToScroll() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.subscriptionScroll = this.portfolioServ
+        .onScroll()
+        .subscribe((scrollPos) => {
+          console.log('Scroll position:', scrollPos);
+          this.checkVisibility(); // Controlla la visibilità dell'elemento
+        });
+    }
+  }
+
+  private subscribeToResize() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.subscriptionResize = this.portfolioServ.onResize().subscribe(() => {
+        this.checkVisibility(); // Controlla la visibilità dell'elemento
       });
+    }
   }
 
   unsubscribe() {
@@ -92,8 +119,14 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.saveDimensions(); // save initial dimensions
-    this.subscribe();
+    // if (isPlatformBrowser(this.platformId)) {
+    //   if (this.element && this.element.nativeElement) {
+    //     this.saveDimensions(); // Salva le dimensioni iniziali
+    //     this.subscribe();
+    //   }
+    // }
+    this.subscribeToScroll();
+    this.subscribeToResize();
   }
 
   ngOnDestroy(): void {

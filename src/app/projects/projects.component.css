@@ -1,3 +1,14 @@
 .bg-prj {
   background-color: #031017;
 }
+
+.card {
+  max-width: 60%;
+}
+
+/* 576px */
+@media (max-width: 36em) {
+  .card {
+    width: 100%;
+  }
+}

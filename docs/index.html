@@ -125,8 +125,6 @@
   </style>
 
   <style>
-    /* @charset "UTF-8"; */
-
     :root {
       --bs-blue: #0d6efd;
       --bs-indigo: #6610f2;
@@ -373,7 +371,8 @@
       cursor: pointer
     }
 
-    .container {
+    .container,
+    .container-fluid {
       --bs-gutter-x: 1.5rem;
       --bs-gutter-y: 0;
       width: 100%;
@@ -451,6 +450,11 @@
       width: 66.66666667%
     }
 
+    .col-9 {
+      flex: 0 0 auto;
+      width: 75%
+    }
+
     .col-12 {
       flex: 0 0 auto;
       width: 100%
@@ -464,6 +468,11 @@
     }
 
     @media (min-width:768px) {
+      .col-md-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%
+      }
+
       .col-md-6 {
         flex: 0 0 auto;
         width: 50%
@@ -474,13 +483,6 @@
       .col-lg-2 {
         flex: 0 0 auto;
         width: 16.66666667%
-      }
-    }
-
-    @media (min-width:1200px) {
-      .col-xl-6 {
-        flex: 0 0 auto;
-        width: 50%
       }
     }
 
@@ -551,6 +553,13 @@
       padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x)
     }
 
+    .navbar>.container-fluid {
+      display: flex;
+      flex-wrap: inherit;
+      align-items: center;
+      justify-content: space-between
+    }
+
     .navbar-nav {
       --bs-nav-link-padding-x: 0;
       --bs-nav-link-padding-y: .5rem;
@@ -609,27 +618,27 @@
       background-size: 100%
     }
 
-    @media (min-width:576px) {
-      .navbar-expand-sm {
+    @media (min-width:992px) {
+      .navbar-expand-lg {
         flex-wrap: nowrap;
         justify-content: flex-start
       }
 
-      .navbar-expand-sm .navbar-nav {
+      .navbar-expand-lg .navbar-nav {
         flex-direction: row
       }
 
-      .navbar-expand-sm .navbar-nav .nav-link {
+      .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: var(--bs-navbar-nav-link-padding-x);
         padding-left: var(--bs-navbar-nav-link-padding-x)
       }
 
-      .navbar-expand-sm .navbar-collapse {
+      .navbar-expand-lg .navbar-collapse {
         display: flex !important;
         flex-basis: auto
       }
 
-      .navbar-expand-sm .navbar-toggler {
+      .navbar-expand-lg .navbar-toggler {
         display: none
       }
     }
@@ -772,6 +781,11 @@
       margin-left: 3rem !important
     }
 
+    .my-4 {
+      margin-top: 1.5rem !important;
+      margin-bottom: 1.5rem !important
+    }
+
     .my-5 {
       margin-top: 3rem !important;
       margin-bottom: 3rem !important
@@ -779,6 +793,10 @@
 
     .mt-2 {
       margin-top: .5rem !important
+    }
+
+    .mt-4 {
+      margin-top: 1.5rem !important
     }
 
     .mt-5 {
@@ -791,10 +809,6 @@
 
     .me-1 {
       margin-right: .25rem !important
-    }
-
-    .me-5 {
-      margin-right: 3rem !important
     }
 
     .mb-0 {
@@ -831,11 +845,6 @@
       padding-left: 1.5rem !important
     }
 
-    .px-5 {
-      padding-right: 3rem !important;
-      padding-left: 3rem !important
-    }
-
     .py-2 {
       padding-top: .5rem !important;
       padding-bottom: .5rem !important
@@ -856,12 +865,8 @@
       padding-bottom: 3rem !important
     }
 
-    .pt-2 {
-      padding-top: .5rem !important
-    }
-
-    .pt-4 {
-      padding-top: 1.5rem !important
+    .pt-1 {
+      padding-top: .25rem !important
     }
 
     .pt-5 {
@@ -928,11 +933,47 @@
       border-top-left-radius: var(--bs-border-radius) !important
     }
 
-    @media (min-width:992px) {
-      .d-lg-none {
-        display: none !important
+    @media (min-width:768px) {
+      .my-md-5 {
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important
       }
 
+      .mt-md-5 {
+        margin-top: 3rem !important
+      }
+
+      .me-md-5 {
+        margin-right: 3rem !important
+      }
+
+      .px-md-5 {
+        padding-right: 3rem !important;
+        padding-left: 3rem !important
+      }
+
+      .pt-md-2 {
+        padding-top: .5rem !important
+      }
+
+      .pt-md-4 {
+        padding-top: 1.5rem !important
+      }
+
+      .pt-md-5 {
+        padding-top: 3rem !important
+      }
+
+      .pb-md-3 {
+        padding-bottom: 1rem !important
+      }
+
+      .pb-md-4 {
+        padding-bottom: 1.5rem !important
+      }
+    }
+
+    @media (min-width:992px) {
       .mt-lg-0 {
         margin-top: 0 !important
       }
@@ -968,7 +1009,7 @@
       --light-blue: #61dafb;
       --dark-orange: #976405;
       --light-orange: #ebb401;
-      --darkblue-palette: #030f18;
+      --darkblue-palette: #072338;
       --lightblue-palette: #154755;
       --whiteblue-palette: #9ebee0;
       --sand-palette: #ffdc7f;
@@ -1065,6 +1106,13 @@
       border-bottom-right-radius: 20%
     }
 
+    .border-setop-green {
+      border-right: 15px solid #a0faa336;
+      border-left: 15px solid #a0faa336;
+      border-top-left-radius: 20%;
+      border-top-right-radius: 20%
+    }
+
     .margin-left-70 {
       margin-left: 70px
     }
@@ -1090,16 +1138,40 @@
     .effectUp:hover {
       transform: translateY(-.8rem)
     }
+
+    @media (max-width: 36em) {
+      h1:not(app-hero h1) {
+        font-size: 3rem !important
+      }
+
+      .border-setop-green {
+        border-right: 2px solid #a0faa336;
+        border-left: 2px solid #a0faa336;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%
+      }
+
+      .border-se-green {
+        border-right: 2px solid #a0faa336;
+        border-left: 2px solid #a0faa336;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%
+      }
+
+      .margin-left-70 {
+        margin-left: 20px
+      }
+    }
   </style>
-  <link rel="stylesheet" href="styles-3L56OVAP.css" media="print" onload="this.media='all'"><noscript>
-    <link rel="stylesheet" href="styles-3L56OVAP.css">
+  <link rel="stylesheet" href="styles-RNZKAJ3M.css" media="print" onload="this.media='all'"><noscript>
+    <link rel="stylesheet" href="styles-RNZKAJ3M.css">
   </noscript>
   <style ng-app-id="ng">
-    .slide-in[_ngcontent-ng-c2444698680] {
-      animation: _ngcontent-ng-c2444698680_slideIn 4s forwards
+    .slide-in[_ngcontent-ng-c889936215] {
+      animation: _ngcontent-ng-c889936215_slideIn 4s forwards
     }
 
-    @keyframes _ngcontent-ng-c2444698680_slideIn {
+    @keyframes _ngcontent-ng-c889936215_slideIn {
       0% {
         transform: translate(120%) !important;
         opacity: 0
@@ -1112,11 +1184,11 @@
     }
   </style>
   <style ng-app-id="ng">
-    nav[_ngcontent-ng-c1348583578] {
+    nav[_ngcontent-ng-c661381708] {
       padding: 1.5rem 0
     }
 
-    .sticky[_ngcontent-ng-c1348583578] {
+    .sticky[_ngcontent-ng-c661381708] {
       position: sticky;
       top: 0;
       left: 0;
@@ -1126,10 +1198,10 @@
       background-color: #030f1896;
       box-shadow: 0 4px 6px #0000001a;
       transition: all .5s ease-in-out;
-      animation: _ngcontent-ng-c1348583578_opacity .5s
+      animation: _ngcontent-ng-c661381708_opacity .5s
     }
 
-    @keyframes _ngcontent-ng-c1348583578_opacity {
+    @keyframes _ngcontent-ng-c661381708_opacity {
       0% {
         opacity: 0
       }
@@ -1139,104 +1211,172 @@
       }
     }
 
-    .sticky[_ngcontent-ng-c1348583578] .logo[_ngcontent-ng-c1348583578] {
+    .sticky[_ngcontent-ng-c661381708] .logo[_ngcontent-ng-c661381708] {
       transform: scale(.8);
       transition: transform .5s ease-in-out
     }
 
-    .nav-item[_ngcontent-ng-c1348583578] {
+    .nav-item[_ngcontent-ng-c661381708] {
       transform: all .3s
     }
 
-    nav[_ngcontent-ng-c1348583578] .nav-link[_ngcontent-ng-c1348583578] {
+    nav[_ngcontent-ng-c661381708] .nav-link[_ngcontent-ng-c661381708] {
       color: var(--darkblue-palette)
     }
 
-    .nav-item[_ngcontent-ng-c1348583578]:hover,
-    .nav-item[_ngcontent-ng-c1348583578]:active {
+    .nav-item[_ngcontent-ng-c661381708]:hover,
+    .nav-item[_ngcontent-ng-c661381708]:active {
       background-color: transparent;
       cursor: pointer;
       box-shadow: #a0faa333 0 0 24px, #a0faa333 0 0 39px, #a0faa333 0 0 60px
     }
 
-    .nav-item[_ngcontent-ng-c1348583578]:hover .nav-link[_ngcontent-ng-c1348583578] {
+    .nav-item[_ngcontent-ng-c661381708]:hover .nav-link[_ngcontent-ng-c661381708] {
       color: var(--light-green)
     }
 
-    .fw-600[_ngcontent-ng-c1348583578] {
+    .fw-600[_ngcontent-ng-c661381708] {
       font-weight: 600;
       letter-spacing: 1.2px
     }
 
-    .fs-4to5[_ngcontent-ng-c1348583578] {
+    .fs-4to5[_ngcontent-ng-c661381708] {
       font-size: 1.3rem
+    }
+
+    .logo[_ngcontent-ng-c661381708] img[_ngcontent-ng-c661381708] {
+      width: 50px;
+      height: 60px
+    }
+
+    @media (min-width: 36em) {
+      .collapse[_ngcontent-ng-c661381708] {
+        display: flex;
+        justify-content: center
+      }
+    }
+
+    @media (max-width: 36em) {
+      .logo[_ngcontent-ng-c661381708] img[_ngcontent-ng-c661381708] {
+        width: 30px;
+        height: auto;
+        margin-right: auto
+      }
+
+      .container-fluid[_ngcontent-ng-c661381708] {
+        position: relative
+      }
+
+      .navbar-collapse[_ngcontent-ng-c661381708] {
+        position: absolute;
+        top: -12px;
+        right: 35px
+      }
+
+      .nav-item[_ngcontent-ng-c661381708] {
+        border: solid .2px var(--darkblue-palette) !important;
+        border-radius: 0% !important
+      }
+
+      .navbar-toggler[_ngcontent-ng-c661381708] {
+        border: 1px solid var(--light-green);
+        color: var(--light-green)
+      }
+
+      .navbar-toggler[_ngcontent-ng-c661381708]:active {
+        border: 1.5px solid var(--light-green);
+        color: var(--light-green)
+      }
+
+      .navbar-toggler-icon[_ngcontent-ng-c661381708] {
+        color: var(--light-green)
+      }
     }
   </style>
   <style ng-app-id="ng">
-    .heightHero[_ngcontent-ng-c1385638325] {
+    .heightHero[_ngcontent-ng-c2390460610] {
       height: calc(100vh - 90px)
     }
 
-    .name[_ngcontent-ng-c1385638325] {
-      font-size: 7rem;
-      color: var(--light-green);
-      text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000
+    .heroContent[_ngcontent-ng-c2390460610] {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
     }
 
-    .sub[_ngcontent-ng-c1385638325] {
+    .name[_ngcontent-ng-c2390460610] {
+      font-size: 6.5rem;
+      color: var(--light-green)
+    }
+
+    .sub[_ngcontent-ng-c2390460610] {
       color: #a0faa3af
     }
 
-    .imgHero[_ngcontent-ng-c1385638325] {
+    .imgHero[_ngcontent-ng-c2390460610] {
       height: auto;
       width: 100%
     }
 
     @media (max-width: 87.5em) {
-      .name[_ngcontent-ng-c1385638325] {
+      .name[_ngcontent-ng-c2390460610] {
         font-size: 4.5rem
       }
 
-      .sub[_ngcontent-ng-c1385638325] {
+      .sub[_ngcontent-ng-c2390460610] {
         font-size: 2.5rem
       }
     }
 
     @media (max-width: 62em) {
-      .name[_ngcontent-ng-c1385638325] {
+      .name[_ngcontent-ng-c2390460610] {
         font-size: 3.5rem
       }
 
-      .sub[_ngcontent-ng-c1385638325] {
+      .sub[_ngcontent-ng-c2390460610] {
         font-size: 1.7rem
       }
     }
 
     @media (max-width: 48em) {
-      .name[_ngcontent-ng-c1385638325] {
+      .name[_ngcontent-ng-c2390460610] {
         text-align: center;
         margin-top: 2rem
       }
 
-      .sub[_ngcontent-ng-c1385638325] {
+      .sub[_ngcontent-ng-c2390460610] {
         text-align: center
       }
 
-      .imgHero[_ngcontent-ng-c1385638325] {
+      .imgHero[_ngcontent-ng-c2390460610] {
+        padding-bottom: 2rem
+      }
+    }
+
+    @media (max-width: 36em) {
+      .heightHero[_ngcontent-ng-c2390460610] {
+        height: auto
+      }
+
+      .heroContent[_ngcontent-ng-c2390460610] {
+        justify-content: center
+      }
+
+      .imgHero[_ngcontent-ng-c2390460610] {
         padding-bottom: 2rem
       }
     }
   </style>
   <style ng-app-id="ng">
-    .bg-skill[_ngcontent-ng-c1363935554] {
-      background-color: #041622
+    .bg-skill[_ngcontent-ng-c404209727] {
+      background-color: #051d2c
     }
 
-    .container[_ngcontent-ng-c1363935554] .slide-in[_ngcontent-ng-c1363935554] {
-      animation: _ngcontent-ng-c1363935554_slideIn 4s forwards
+    .container[_ngcontent-ng-c404209727] .slide-in[_ngcontent-ng-c404209727] {
+      animation: _ngcontent-ng-c404209727_slideIn 4s forwards
     }
 
-    @keyframes _ngcontent-ng-c1363935554_slideIn {
+    @keyframes _ngcontent-ng-c404209727_slideIn {
       0% {
         transform: translate(120%) !important;
         opacity: 0
@@ -1247,10 +1387,31 @@
         opacity: 1
       }
     }
+
+    @media (max-width: 36em) {
+      .subTitle[_ngcontent-ng-c404209727] {
+        font-size: 1.7rem;
+        margin-top: 1rem
+      }
+
+      .row[_ngcontent-ng-c404209727] {
+        margin: 0
+      }
+    }
   </style>
   <style ng-app-id="ng">
-    .bg-prj[_ngcontent-ng-c2645327988] {
+    .bg-prj[_ngcontent-ng-c3547498399] {
       background-color: #031017
+    }
+
+    .card[_ngcontent-ng-c3547498399] {
+      max-width: 60%
+    }
+
+    @media (max-width: 36em) {
+      .card[_ngcontent-ng-c3547498399] {
+        width: 100%
+      }
     }
   </style>
   <style ng-app-id="ng">
@@ -1271,6 +1432,16 @@
       box-shadow: #a0faa395 0 0 60px, #a0faa395 0 0 60px, #a0faa395 0 0 60px;
       transition: all .3s
     }
+
+    @media (max-width: 36em) {
+      .btn-cv[_ngcontent-ng-c3602176334] {
+        box-shadow: #030f1800 0 0 24px, #030f1800 0 0 39px, #030f1833 0 0 60px
+      }
+
+      .bg-lightgreen-gradient[_ngcontent-ng-c3602176334] {
+        background-image: linear-gradient(180deg, #a0faa3e4, #d4f6d595)
+      }
+    }
   </style>
   <style ng-app-id="ng">
     .bg-about[_ngcontent-ng-c2319175346] {
@@ -1287,267 +1458,281 @@
     }
   </style>
   <style ng-app-id="ng">
-    .prgparent[_ngcontent-ng-c1074040312] {
+    .prgparent[_ngcontent-ng-c3689859672] {
       background-color: #0a1623;
       border-radius: 0;
       border: 1px solid var(--light-green)
     }
 
-    .pgbar[_ngcontent-ng-c1074040312] {
+    .pgbar[_ngcontent-ng-c3689859672] {
       background-color: var(--light-green);
       box-shadow: #a0faa333 0 0 24px, #a0faa333 0 0 39px, #a0faa333 0 0 60px
+    }
+
+    @media (max-width: 36em) {
+      .card-body[_ngcontent-ng-c3689859672] {
+        display: flex;
+        align-items: center;
+        justify-content: stretch
+      }
+
+      .prgparent[_ngcontent-ng-c3689859672] {
+        width: 100%
+      }
+
+      .border-light-green[_ngcontent-ng-c3689859672] {
+        border: 1px solid var(--light-green)
+      }
     }
   </style>
 </head>
 
 <body><!--nghm-->
-  <app-root _nghost-ng-c2444698680 ng-version="17.3.11" ngh="0" ng-server-context="ssg"><app-navbar
-      _ngcontent-ng-c2444698680 _nghost-ng-c1348583578 ngh="0">
-      <nav _ngcontent-ng-c1348583578 class="navbar navbar-expand-sm navbar-dark bg-darkblue-main"><a
-          _ngcontent-ng-c1348583578 href="#" class="margin-left-70 logo d-inline-block"><img _ngcontent-ng-c1348583578
-            src="assets/logo/sn-logo-zip-file (1)/png/logo-no-background.png"
-            alt="Logo con una finestra browser contenente un piccolo ingranaggio e parentesi angolari, e al di sotto le iniziali sn"
-            height="60" width="50"></a><button _ngcontent-ng-c1348583578 type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-          aria-label="Toggle navigation" class="navbar-toggler d-lg-none"><span _ngcontent-ng-c1348583578
-            class="navbar-toggler-icon"></span></button>
-        <div _ngcontent-ng-c1348583578 id="collapsibleNavId"
-          class="collapse navbar-collapse me-5 d-flex justify-content-center fs-4to5 fw-600">
-          <ul _ngcontent-ng-c1348583578 class="navbar-nav mt-2 mt-lg-0 ms-auto mx-5 text-dark rounded">
-            <li _ngcontent-ng-c1348583578 class="nav-item px-3 rounded-start bg-light-green border-end-blue"><a
-                _ngcontent-ng-c1348583578 href="#skills" class="nav-link">Skills</a></li>
-            <li _ngcontent-ng-c1348583578 class="nav-item px-3 bg-light-green border-end-blue"><a
-                _ngcontent-ng-c1348583578 href="#projects" class="nav-link">Projects</a></li>
-            <li _ngcontent-ng-c1348583578 class="nav-item px-3 bg-light-green border-end-blue rounded-end"><a
-                _ngcontent-ng-c1348583578 href="#cv" class="nav-link">Curriculum</a></li>
-          </ul>
+  <app-root _nghost-ng-c889936215 ng-version="17.3.11" ngh="0" ng-server-context="ssg"><app-navbar
+      _ngcontent-ng-c889936215 _nghost-ng-c661381708 ngh="0">
+      <nav _ngcontent-ng-c661381708 class="navbar navbar-expand-lg navbar-dark bg-darkblue-main">
+        <div _ngcontent-ng-c661381708 class="container-fluid"><a _ngcontent-ng-c661381708 href="#"
+            class="margin-left-70 logo d-inline-block"><img _ngcontent-ng-c661381708
+              src="assets/logo/sn-logo-zip-file (1)/png/logo-no-background.png"
+              alt="Logo con una finestra browser contenente un piccolo ingranaggio e parentesi angolari, e al di sotto le iniziali sn"></a><button
+            _ngcontent-ng-c661381708 type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"><span _ngcontent-ng-c661381708 class="navbar-toggler-icon"></span></button>
+          <div _ngcontent-ng-c661381708 id="navbarSupportedContent" class="collapse navbar-collapse me-md-5 fs-4to5">
+            <ul _ngcontent-ng-c661381708 class="navbar-nav mt-2 mt-lg-0 ms-auto mx-5 text-dark rounded">
+              <li _ngcontent-ng-c661381708 class="nav-item px-3 rounded-start bg-light-green border-end-blue"><a
+                  _ngcontent-ng-c661381708 href="#skills" class="nav-link">Skills</a></li>
+              <li _ngcontent-ng-c661381708 class="nav-item px-3 bg-light-green border-end-blue"><a
+                  _ngcontent-ng-c661381708 href="#projects" class="nav-link">Projects</a></li>
+              <li _ngcontent-ng-c661381708 class="nav-item px-3 bg-light-green border-end-blue rounded-end"><a
+                  _ngcontent-ng-c661381708 href="#cv" class="nav-link">Curriculum</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
-    </app-navbar><app-hero _ngcontent-ng-c2444698680 _nghost-ng-c1385638325 ngh="0">
-      <section _ngcontent-ng-c1385638325 class="bg-darkblue-main heightHero py-5 d-flex align-items-center">
-        <div _ngcontent-ng-c1385638325 class="container">
-          <div _ngcontent-ng-c1385638325 class="row d-flex align-items-center justify-content-center pb-5">
-            <div _ngcontent-ng-c1385638325 class="col-8 col-md-6">
-              <h1 _ngcontent-ng-c1385638325 class="name pb-2 mb-4">Stefania Neri</h1>
-              <div _ngcontent-ng-c1385638325>
-                <h1 _ngcontent-ng-c1385638325 class="sub">Junior Full Stack Developer</h1>
-                <h1 _ngcontent-ng-c1385638325 class="sub pb-5">QA Tester</h1>
+    </app-navbar><app-hero _ngcontent-ng-c889936215 _nghost-ng-c2390460610 ngh="0">
+      <section _ngcontent-ng-c2390460610 class="bg-darkblue-main heightHero py-5 d-flex align-items-center">
+        <div _ngcontent-ng-c2390460610 class="container">
+          <div _ngcontent-ng-c2390460610 class="row pb-5 heroContent">
+            <div _ngcontent-ng-c2390460610 class="col-12 col-md-6">
+              <h1 _ngcontent-ng-c2390460610 class="name pb-2 mb-4">Stefania Neri</h1>
+              <div _ngcontent-ng-c2390460610>
+                <h1 _ngcontent-ng-c2390460610 class="sub">Junior Full Stack Developer</h1>
+                <h1 _ngcontent-ng-c2390460610 class="sub pb-5">QA Tester</h1>
               </div>
             </div>
-            <div _ngcontent-ng-c1385638325 class="col-8 col-md-6"><img _ngcontent-ng-c1385638325
+            <div _ngcontent-ng-c2390460610 class="col-9 col-md-5 mx-2"><img _ngcontent-ng-c2390460610
                 src="assets/laptop-2298286_640 2- Copia.png" alt="Disegno con un laptop, una lampada e un cactus"
                 class="imgHero"></div>
           </div>
         </div>
       </section>
-    </app-hero><app-skills _ngcontent-ng-c2444698680 _nghost-ng-c1363935554 ngh="1">
-      <section _ngcontent-ng-c1363935554 id="skills" class="py-5 bg-skill border-se-green">
-        <div _ngcontent-ng-c1363935554 class="container">
-          <div _ngcontent-ng-c1363935554 class="text-center pt-5 mb-2">
-            <h1 _ngcontent-ng-c1363935554>Skills</h1>
+    </app-hero><app-skills _ngcontent-ng-c889936215 _nghost-ng-c404209727 ngh="1">
+      <section _ngcontent-ng-c404209727 id="skills" class="py-5 bg-skill border-se-green">
+        <div _ngcontent-ng-c404209727 class="container">
+          <div _ngcontent-ng-c404209727 class="text-center pt-md-5 mb-2 skillsTitle">
+            <h1 _ngcontent-ng-c404209727>Skills</h1>
           </div>
-          <h2 _ngcontent-ng-c1363935554 class="mt-5 text-center">Frontend</h2>
-          <div _ngcontent-ng-c1363935554 role="list" class="row pb-4 d-flex justify-content-center align-items-center">
-            <app-skill _ngcontent-ng-c1363935554 role="listitem" class="col-6 col-sm-4 col-lg-2 mt-5 mx-1"
-              _nghost-ng-c1074040312 ngh="0">
-              <div _ngcontent-ng-c1074040312
+          <h2 _ngcontent-ng-c404209727 class="mt-md-5 text-center subTitle">Frontend</h2>
+          <div _ngcontent-ng-c404209727 role="list" class="row pb-4 d-flex justify-content-center align-items-center">
+            <app-skill _ngcontent-ng-c404209727 role="listitem" class="col-8 col-sm-4 col-lg-2 mt-4 mt-md-5 mx-1"
+              _nghost-ng-c3689859672 ngh="0">
+              <div _ngcontent-ng-c3689859672
                 class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
-                <div _ngcontent-ng-c1074040312 class="card-body pt-4 pb-3 text-center"><img _ngcontent-ng-c1074040312
-                    height="70" width="70" src="https://img.icons8.com/plasticine/200/html-5.png" alt="HTML5 logo">
-                  <h5 _ngcontent-ng-c1074040312 id="linguaggio" class="card-title pt-2 pb-3">HTML5</h5>
-                  <div _ngcontent-ng-c1074040312 aria-labelledby="linguaggio" class="progress prgparent">
-                    <div _ngcontent-ng-c1074040312 role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                      class="progress-bar pgbar" style="width: 85%;" aria-valuenow="85"></div>
+                <div _ngcontent-ng-c3689859672 class="card-body pt-1 pb-2 pt-md-4 pb-md-3 text-center"><img
+                    _ngcontent-ng-c3689859672 height="70" width="70"
+                    src="https://img.icons8.com/plasticine/200/html-5.png" alt="HTML5 logo">
+                  <div _ngcontent-ng-c3689859672>
+                    <h5 _ngcontent-ng-c3689859672 id="linguaggio" class="card-title pt-md-2 pb-md-3">HTML5</h5>
+                    <div _ngcontent-ng-c3689859672 aria-labelledby="linguaggio" class="progress prgparent">
+                      <div _ngcontent-ng-c3689859672 role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="progress-bar pgbar" style="width: 85%;" aria-valuenow="85"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </app-skill><app-skill _ngcontent-ng-c1363935554 role="listitem" class="col-6 col-sm-4 col-lg-2 mt-5 mx-1"
-              _nghost-ng-c1074040312 ngh="0">
-              <div _ngcontent-ng-c1074040312
+            </app-skill><app-skill _ngcontent-ng-c404209727 role="listitem"
+              class="col-8 col-sm-4 col-lg-2 mt-4 mt-md-5 mx-1" _nghost-ng-c3689859672 ngh="0">
+              <div _ngcontent-ng-c3689859672
                 class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
-                <div _ngcontent-ng-c1074040312 class="card-body pt-4 pb-3 text-center"><img _ngcontent-ng-c1074040312
-                    height="70" width="70" src="https://img.icons8.com/plasticine/200/css3.png" alt="CSS3 logo">
-                  <h5 _ngcontent-ng-c1074040312 id="linguaggio" class="card-title pt-2 pb-3">CSS3</h5>
-                  <div _ngcontent-ng-c1074040312 aria-labelledby="linguaggio" class="progress prgparent">
-                    <div _ngcontent-ng-c1074040312 role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                      class="progress-bar pgbar" style="width: 70%;" aria-valuenow="70"></div>
+                <div _ngcontent-ng-c3689859672 class="card-body pt-1 pb-2 pt-md-4 pb-md-3 text-center"><img
+                    _ngcontent-ng-c3689859672 height="70" width="70"
+                    src="https://img.icons8.com/plasticine/200/css3.png" alt="CSS3 logo">
+                  <div _ngcontent-ng-c3689859672>
+                    <h5 _ngcontent-ng-c3689859672 id="linguaggio" class="card-title pt-md-2 pb-md-3">CSS3</h5>
+                    <div _ngcontent-ng-c3689859672 aria-labelledby="linguaggio" class="progress prgparent">
+                      <div _ngcontent-ng-c3689859672 role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="progress-bar pgbar" style="width: 70%;" aria-valuenow="70"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </app-skill><app-skill _ngcontent-ng-c1363935554 role="listitem" class="col-6 col-sm-4 col-lg-2 mt-5 mx-1"
-              _nghost-ng-c1074040312 ngh="0">
-              <div _ngcontent-ng-c1074040312
+            </app-skill><app-skill _ngcontent-ng-c404209727 role="listitem"
+              class="col-8 col-sm-4 col-lg-2 mt-4 mt-md-5 mx-1" _nghost-ng-c3689859672 ngh="0">
+              <div _ngcontent-ng-c3689859672
                 class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
-                <div _ngcontent-ng-c1074040312 class="card-body pt-4 pb-3 text-center"><img _ngcontent-ng-c1074040312
-                    height="70" width="70" src="https://img.icons8.com/fluency/96/javascript.png" alt="JavaScript logo">
-                  <h5 _ngcontent-ng-c1074040312 id="linguaggio" class="card-title pt-2 pb-3">JavaScript</h5>
-                  <div _ngcontent-ng-c1074040312 aria-labelledby="linguaggio" class="progress prgparent">
-                    <div _ngcontent-ng-c1074040312 role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                      class="progress-bar pgbar" style="width: 60%;" aria-valuenow="60"></div>
+                <div _ngcontent-ng-c3689859672 class="card-body pt-1 pb-2 pt-md-4 pb-md-3 text-center"><img
+                    _ngcontent-ng-c3689859672 height="70" width="70"
+                    src="https://img.icons8.com/fluency/96/javascript.png" alt="JavaScript logo">
+                  <div _ngcontent-ng-c3689859672>
+                    <h5 _ngcontent-ng-c3689859672 id="linguaggio" class="card-title pt-md-2 pb-md-3">JavaScript</h5>
+                    <div _ngcontent-ng-c3689859672 aria-labelledby="linguaggio" class="progress prgparent">
+                      <div _ngcontent-ng-c3689859672 role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="progress-bar pgbar" style="width: 60%;" aria-valuenow="60"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </app-skill><app-skill _ngcontent-ng-c1363935554 role="listitem" class="col-6 col-sm-4 col-lg-2 mt-5 mx-1"
-              _nghost-ng-c1074040312 ngh="0">
-              <div _ngcontent-ng-c1074040312
+            </app-skill><app-skill _ngcontent-ng-c404209727 role="listitem"
+              class="col-8 col-sm-4 col-lg-2 mt-4 mt-md-5 mx-1" _nghost-ng-c3689859672 ngh="0">
+              <div _ngcontent-ng-c3689859672
                 class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
-                <div _ngcontent-ng-c1074040312 class="card-body pt-4 pb-3 text-center"><img _ngcontent-ng-c1074040312
-                    height="70" width="70" src="https://img.icons8.com/color/96/bootstrap--v2.png" alt="Bootstrap logo">
-                  <h5 _ngcontent-ng-c1074040312 id="linguaggio" class="card-title pt-2 pb-3">Bootstrap</h5>
-                  <div _ngcontent-ng-c1074040312 aria-labelledby="linguaggio" class="progress prgparent">
-                    <div _ngcontent-ng-c1074040312 role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                      class="progress-bar pgbar" style="width: 65%;" aria-valuenow="65"></div>
+                <div _ngcontent-ng-c3689859672 class="card-body pt-1 pb-2 pt-md-4 pb-md-3 text-center"><img
+                    _ngcontent-ng-c3689859672 height="70" width="70"
+                    src="https://img.icons8.com/color/96/bootstrap--v2.png" alt="Bootstrap logo">
+                  <div _ngcontent-ng-c3689859672>
+                    <h5 _ngcontent-ng-c3689859672 id="linguaggio" class="card-title pt-md-2 pb-md-3">Bootstrap</h5>
+                    <div _ngcontent-ng-c3689859672 aria-labelledby="linguaggio" class="progress prgparent">
+                      <div _ngcontent-ng-c3689859672 role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="progress-bar pgbar" style="width: 65%;" aria-valuenow="65"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </app-skill><app-skill _ngcontent-ng-c1363935554 role="listitem" class="col-6 col-sm-4 col-lg-2 mt-5 mx-1"
-              _nghost-ng-c1074040312 ngh="0">
-              <div _ngcontent-ng-c1074040312
+            </app-skill><app-skill _ngcontent-ng-c404209727 role="listitem"
+              class="col-8 col-sm-4 col-lg-2 mt-4 mt-md-5 mx-1" _nghost-ng-c3689859672 ngh="0">
+              <div _ngcontent-ng-c3689859672
                 class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
-                <div _ngcontent-ng-c1074040312 class="card-body pt-4 pb-3 text-center"><img _ngcontent-ng-c1074040312
-                    height="70" width="70" src="https://img.icons8.com/fluency/96/angularjs.png" alt="Angular logo">
-                  <h5 _ngcontent-ng-c1074040312 id="linguaggio" class="card-title pt-2 pb-3">Angular</h5>
-                  <div _ngcontent-ng-c1074040312 aria-labelledby="linguaggio" class="progress prgparent">
-                    <div _ngcontent-ng-c1074040312 role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                      class="progress-bar pgbar" style="width: 35%;" aria-valuenow="35"></div>
+                <div _ngcontent-ng-c3689859672 class="card-body pt-1 pb-2 pt-md-4 pb-md-3 text-center"><img
+                    _ngcontent-ng-c3689859672 height="70" width="70"
+                    src="https://img.icons8.com/fluency/96/angularjs.png" alt="Angular logo">
+                  <div _ngcontent-ng-c3689859672>
+                    <h5 _ngcontent-ng-c3689859672 id="linguaggio" class="card-title pt-md-2 pb-md-3">Angular</h5>
+                    <div _ngcontent-ng-c3689859672 aria-labelledby="linguaggio" class="progress prgparent">
+                      <div _ngcontent-ng-c3689859672 role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="progress-bar pgbar" style="width: 35%;" aria-valuenow="35"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </app-skill><!---->
-          </div>
-          <h2 _ngcontent-ng-c1363935554 class="mt-5 text-center">Backend</h2>
-          <div _ngcontent-ng-c1363935554 role="list" class="row pb-4 d-flex justify-content-center align-items-center">
-            <app-skill _ngcontent-ng-c1363935554 role="listitem" class="col-6 col-sm-4 col-lg-2 mt-5 mx-1"
-              _nghost-ng-c1074040312 ngh="0">
-              <div _ngcontent-ng-c1074040312
+            </app-skill><!----></div>
+          <h2 _ngcontent-ng-c404209727 class="mt-5 text-center subTitle">Backend</h2>
+          <div _ngcontent-ng-c404209727 role="list" class="row pb-4 d-flex justify-content-center align-items-center">
+            <app-skill _ngcontent-ng-c404209727 role="listitem" class="col-8 col-sm-4 col-lg-2 mt-4 mt-md-5 mx-1"
+              _nghost-ng-c3689859672 ngh="0">
+              <div _ngcontent-ng-c3689859672
                 class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
-                <div _ngcontent-ng-c1074040312 class="card-body pt-4 pb-3 text-center"><img _ngcontent-ng-c1074040312
-                    height="70" width="70" src="https://img.icons8.com/nolan/100/java-coffee-cup-logo.png"
-                    alt="Java logo">
-                  <h5 _ngcontent-ng-c1074040312 id="linguaggio" class="card-title pt-2 pb-3">Java</h5>
-                  <div _ngcontent-ng-c1074040312 aria-labelledby="linguaggio" class="progress prgparent">
-                    <div _ngcontent-ng-c1074040312 role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                      class="progress-bar pgbar" style="width: 35%;" aria-valuenow="35"></div>
+                <div _ngcontent-ng-c3689859672 class="card-body pt-1 pb-2 pt-md-4 pb-md-3 text-center"><img
+                    _ngcontent-ng-c3689859672 height="70" width="70"
+                    src="https://img.icons8.com/nolan/100/java-coffee-cup-logo.png" alt="Java logo">
+                  <div _ngcontent-ng-c3689859672>
+                    <h5 _ngcontent-ng-c3689859672 id="linguaggio" class="card-title pt-md-2 pb-md-3">Java</h5>
+                    <div _ngcontent-ng-c3689859672 aria-labelledby="linguaggio" class="progress prgparent">
+                      <div _ngcontent-ng-c3689859672 role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="progress-bar pgbar" style="width: 35%;" aria-valuenow="35"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </app-skill><app-skill _ngcontent-ng-c1363935554 role="listitem" class="col-6 col-sm-4 col-lg-2 mt-5 mx-1"
-              _nghost-ng-c1074040312 ngh="0">
-              <div _ngcontent-ng-c1074040312
+            </app-skill><app-skill _ngcontent-ng-c404209727 role="listitem"
+              class="col-8 col-sm-4 col-lg-2 mt-4 mt-md-5 mx-1" _nghost-ng-c3689859672 ngh="0">
+              <div _ngcontent-ng-c3689859672
                 class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
-                <div _ngcontent-ng-c1074040312 class="card-body pt-4 pb-3 text-center"><img _ngcontent-ng-c1074040312
-                    height="70" width="70" src="https://img.icons8.com/color/96/spring-logo.png" alt="Spring Boot logo">
-                  <h5 _ngcontent-ng-c1074040312 id="linguaggio" class="card-title pt-2 pb-3">Spring Boot</h5>
-                  <div _ngcontent-ng-c1074040312 aria-labelledby="linguaggio" class="progress prgparent">
-                    <div _ngcontent-ng-c1074040312 role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                      class="progress-bar pgbar" style="width: 37%;" aria-valuenow="37"></div>
+                <div _ngcontent-ng-c3689859672 class="card-body pt-1 pb-2 pt-md-4 pb-md-3 text-center"><img
+                    _ngcontent-ng-c3689859672 height="70" width="70"
+                    src="https://img.icons8.com/color/96/spring-logo.png" alt="Spring Boot logo">
+                  <div _ngcontent-ng-c3689859672>
+                    <h5 _ngcontent-ng-c3689859672 id="linguaggio" class="card-title pt-md-2 pb-md-3">Spring Boot</h5>
+                    <div _ngcontent-ng-c3689859672 aria-labelledby="linguaggio" class="progress prgparent">
+                      <div _ngcontent-ng-c3689859672 role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="progress-bar pgbar" style="width: 37%;" aria-valuenow="37"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </app-skill><app-skill _ngcontent-ng-c1363935554 role="listitem" class="col-6 col-sm-4 col-lg-2 mt-5 mx-1"
-              _nghost-ng-c1074040312 ngh="0">
-              <div _ngcontent-ng-c1074040312
+            </app-skill><app-skill _ngcontent-ng-c404209727 role="listitem"
+              class="col-8 col-sm-4 col-lg-2 mt-4 mt-md-5 mx-1" _nghost-ng-c3689859672 ngh="0">
+              <div _ngcontent-ng-c3689859672
                 class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
-                <div _ngcontent-ng-c1074040312 class="card-body pt-4 pb-3 text-center"><img _ngcontent-ng-c1074040312
-                    height="70" width="70"
+                <div _ngcontent-ng-c3689859672 class="card-body pt-1 pb-2 pt-md-4 pb-md-3 text-center"><img
+                    _ngcontent-ng-c3689859672 height="70" width="70"
                     src="https://img.icons8.com/external-those-icons-flat-those-icons/96/external-MySQL-programming-and-development-those-icons-flat-those-icons.png"
                     alt="MySQL logo">
-                  <h5 _ngcontent-ng-c1074040312 id="linguaggio" class="card-title pt-2 pb-3">MySQL</h5>
-                  <div _ngcontent-ng-c1074040312 aria-labelledby="linguaggio" class="progress prgparent">
-                    <div _ngcontent-ng-c1074040312 role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                      class="progress-bar pgbar" style="width: 40%;" aria-valuenow="40"></div>
+                  <div _ngcontent-ng-c3689859672>
+                    <h5 _ngcontent-ng-c3689859672 id="linguaggio" class="card-title pt-md-2 pb-md-3">MySQL</h5>
+                    <div _ngcontent-ng-c3689859672 aria-labelledby="linguaggio" class="progress prgparent">
+                      <div _ngcontent-ng-c3689859672 role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="progress-bar pgbar" style="width: 40%;" aria-valuenow="40"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </app-skill><!---->
-          </div>
-          <h2 _ngcontent-ng-c1363935554 class="mt-5 text-center">Miscellaneous</h2>
-          <div _ngcontent-ng-c1363935554 role="list" class="row pb-5 d-flex justify-content-center align-items-center">
-            <app-skill _ngcontent-ng-c1363935554 role="listitem" class="col-6 col-sm-4 col-lg-2 my-5 mx-1"
-              _nghost-ng-c1074040312 ngh="0">
-              <div _ngcontent-ng-c1074040312
+            </app-skill><!----></div>
+          <h2 _ngcontent-ng-c404209727 class="mt-5 text-center subTitle">Miscellaneous</h2>
+          <div _ngcontent-ng-c404209727 role="list" class="row pb-5 d-flex justify-content-center align-items-center">
+            <app-skill _ngcontent-ng-c404209727 role="listitem" class="col-6 col-sm-4 col-lg-2 my-4 my-md-5 mx-1"
+              _nghost-ng-c3689859672 ngh="0">
+              <div _ngcontent-ng-c3689859672
                 class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
-                <div _ngcontent-ng-c1074040312 class="card-body pt-4 pb-3 text-center"><img _ngcontent-ng-c1074040312
-                    height="70" width="70" src="https://img.icons8.com/nolan/100/git.png" alt="Git logo">
-                  <h5 _ngcontent-ng-c1074040312 id="linguaggio" class="card-title pt-2 pb-3">Git</h5>
-                  <div _ngcontent-ng-c1074040312 aria-labelledby="linguaggio" class="progress prgparent">
-                    <div _ngcontent-ng-c1074040312 role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                      class="progress-bar pgbar" style="width: 40%;" aria-valuenow="40"></div>
+                <div _ngcontent-ng-c3689859672 class="card-body pt-1 pb-2 pt-md-4 pb-md-3 text-center"><img
+                    _ngcontent-ng-c3689859672 height="70" width="70" src="https://img.icons8.com/nolan/100/git.png"
+                    alt="Git logo">
+                  <div _ngcontent-ng-c3689859672>
+                    <h5 _ngcontent-ng-c3689859672 id="linguaggio" class="card-title pt-md-2 pb-md-3">Git</h5>
+                    <div _ngcontent-ng-c3689859672 aria-labelledby="linguaggio" class="progress prgparent">
+                      <div _ngcontent-ng-c3689859672 role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="progress-bar pgbar" style="width: 40%;" aria-valuenow="40"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </app-skill><app-skill _ngcontent-ng-c1363935554 role="listitem" class="col-6 col-sm-4 col-lg-2 my-5 mx-1"
-              _nghost-ng-c1074040312 ngh="0">
-              <div _ngcontent-ng-c1074040312
+            </app-skill><app-skill _ngcontent-ng-c404209727 role="listitem"
+              class="col-6 col-sm-4 col-lg-2 my-4 my-md-5 mx-1" _nghost-ng-c3689859672 ngh="0">
+              <div _ngcontent-ng-c3689859672
                 class="card effectUp effectGlimmer rounded border-light-green bg-darkblue-main text-white">
-                <div _ngcontent-ng-c1074040312 class="card-body pt-4 pb-3 text-center"><img _ngcontent-ng-c1074040312
-                    height="70" width="70" src="https://img.icons8.com/color/96/npm.png" alt="Npm logo">
-                  <h5 _ngcontent-ng-c1074040312 id="linguaggio" class="card-title pt-2 pb-3">Npm</h5>
-                  <div _ngcontent-ng-c1074040312 aria-labelledby="linguaggio" class="progress prgparent">
-                    <div _ngcontent-ng-c1074040312 role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                      class="progress-bar pgbar" style="width: 40%;" aria-valuenow="40"></div>
+                <div _ngcontent-ng-c3689859672 class="card-body pt-1 pb-2 pt-md-4 pb-md-3 text-center"><img
+                    _ngcontent-ng-c3689859672 height="70" width="70" src="https://img.icons8.com/color/96/npm.png"
+                    alt="Npm logo">
+                  <div _ngcontent-ng-c3689859672>
+                    <h5 _ngcontent-ng-c3689859672 id="linguaggio" class="card-title pt-md-2 pb-md-3">Npm</h5>
+                    <div _ngcontent-ng-c3689859672 aria-labelledby="linguaggio" class="progress prgparent">
+                      <div _ngcontent-ng-c3689859672 role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="progress-bar pgbar" style="width: 40%;" aria-valuenow="40"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </app-skill><!---->
-          </div>
+            </app-skill><!----></div>
         </div>
       </section>
-    </app-skills><app-projects _ngcontent-ng-c2444698680 _nghost-ng-c2645327988 ngh="0">
-      <section _ngcontent-ng-c2645327988 id="projects" class="py-5 bg-prj border-se-greenTop">
-        <div _ngcontent-ng-c2645327988 class="container">
-          <div _ngcontent-ng-c2645327988 class="text-center pb-4 pt-5 mb-2">
-            <h1 _ngcontent-ng-c2645327988>Projects</h1>
+    </app-skills><app-projects _ngcontent-ng-c889936215 _nghost-ng-c3547498399 ngh="0">
+      <section _ngcontent-ng-c3547498399 id="projects" class="py-5 bg-prj border-setop-green">
+        <div _ngcontent-ng-c3547498399 class="container">
+          <div _ngcontent-ng-c3547498399 class="text-center pb-md-4 pt-md-5 mb-2">
+            <h1 _ngcontent-ng-c3547498399>Projects</h1>
           </div>
-          <div _ngcontent-ng-c2645327988 class="row pb-5">
-            <div _ngcontent-ng-c2645327988 class="col-12 col-xl-6 px-5">
-              <div _ngcontent-ng-c2645327988 class="card my-5 effectGlimmerHover effectGlimmer"><img
-                  _ngcontent-ng-c2645327988 src="assets/pexels-donaldtong94-109669.jpg"
+          <div _ngcontent-ng-c3547498399 class="row pb-5">
+            <div _ngcontent-ng-c3547498399 class="col-12 px-md-5 d-flex justify-content-center">
+              <div _ngcontent-ng-c3547498399 class="card my-5 effectGlimmerHover effectGlimmer"><img
+                  _ngcontent-ng-c3547498399 src="assets/pexels-donaldtong94-109669.jpg"
                   alt="Vista di un teatro dal punto di vista di uno spettatore" loading="lazy" class="card-img-top">
-                <div _ngcontent-ng-c2645327988 class="card-body p-4 bg-lightgreen-gradient">
-                  <h4 _ngcontent-ng-c2645327988 class="card-title fs-3 pb-2">Biglietteria teatro</h4>
-                  <p _ngcontent-ng-c2645327988 class="fs-5">Piattaforma che, successivamente all'accesso tramite login,
-                    offre un catalogo di spettacoli da poter prenotare. Si verrà reindirizzati ad una pagina per il
-                    pagamento (fittizio) e la conferma di acquisto del biglietto. La registrazione utente e i biglietti
-                    acquistati vengono memorizzati nel database della compagnia teatrale. </p>
-                  <p _ngcontent-ng-c2645327988 class="card-text fs-4">Source code: <a _ngcontent-ng-c2645327988
-                      href="#">Biglietteria teatro repository</a></p>
-                  <p _ngcontent-ng-c2645327988 class="fs-4 mb-0">Tecnologie utilizzate:</p>
-                  <ul _ngcontent-ng-c2645327988 class="fs-5">
-                    <li _ngcontent-ng-c2645327988>Java</li>
-                    <li _ngcontent-ng-c2645327988>SpringBoot</li>
-                    <li _ngcontent-ng-c2645327988>Hibernate</li>
-                    <li _ngcontent-ng-c2645327988>MySQL</li>
-                    <li _ngcontent-ng-c2645327988>JavaScript</li>
-                    <li _ngcontent-ng-c2645327988>HTML</li>
-                    <li _ngcontent-ng-c2645327988>CSS</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div _ngcontent-ng-c2645327988 class="col-12 col-xl-6 px-5">
-              <div _ngcontent-ng-c2645327988 class="card my-5 effectGlimmerHover effectGlimmer"><img
-                  _ngcontent-ng-c2645327988 src="assets/pexels-donaldtong94-109669.jpg" alt="Teatro" loading="lazy"
-                  class="card-img-top">
-                <div _ngcontent-ng-c2645327988 class="card-body p-4 bg-lightgreen-gradient">
-                  <h4 _ngcontent-ng-c2645327988 class="card-title fs-3 pb-2">Biglietteria teatro</h4>
-                  <p _ngcontent-ng-c2645327988 class="fs-5">Piattaforma che, successivamente all'accesso tramite login,
-                    offre un catalogo di spettacoli da poter prenotare. Si verrà reindirizzati ad una pagina per il
-                    pagamento (fittizio) e la conferma di acquisto del biglietto. La registrazione utente e i biglietti
-                    acquistati vengono memorizzati nel database della compagnia teatrale. </p>
-                  <p _ngcontent-ng-c2645327988 class="card-text fs-4">Url: <a _ngcontent-ng-c2645327988
-                      href="#">Indirizzo con github pages</a></p>
-                  <p _ngcontent-ng-c2645327988 class="card-text fs-4">Source code: <a _ngcontent-ng-c2645327988
-                      href="#">Biglietteria teatro repository</a></p>
-                  <p _ngcontent-ng-c2645327988 class="fs-4 mb-0">Tecnologie utilizzate:</p>
-                  <ul _ngcontent-ng-c2645327988 class="fs-5">
-                    <li _ngcontent-ng-c2645327988>Java</li>
-                    <li _ngcontent-ng-c2645327988>SpringBoot</li>
-                    <li _ngcontent-ng-c2645327988>Hibernate</li>
-                    <li _ngcontent-ng-c2645327988>MySQL</li>
-                    <li _ngcontent-ng-c2645327988>JavaScript</li>
-                    <li _ngcontent-ng-c2645327988>HTML</li>
-                    <li _ngcontent-ng-c2645327988>CSS</li>
+                <div _ngcontent-ng-c3547498399 class="card-body p-4 bg-lightgreen-gradient">
+                  <h4 _ngcontent-ng-c3547498399 class="card-title fs-3 pb-2">Theater Box Office</h4>
+                  <p _ngcontent-ng-c3547498399 class="fs-5">As part of a simulated project I created a platform that
+                    offers a catalog of shows available for booking. Users must log in to select and book a show, then
+                    are redirected to a page for payment and ticket purchase confirmation. User registrations and
+                    purchased tickets are stored in the fictional theater company’s database.</p>
+                  <p _ngcontent-ng-c3547498399 class="card-text fs-4">Source code: <a _ngcontent-ng-c3547498399
+                      href="#">Theater Box Office repository</a></p>
+                  <p _ngcontent-ng-c3547498399 class="fs-4 mb-0">Made with:</p>
+                  <ul _ngcontent-ng-c3547498399>
+                    <li _ngcontent-ng-c3547498399>Java</li>
+                    <li _ngcontent-ng-c3547498399>SpringBoot</li>
+                    <li _ngcontent-ng-c3547498399>Hibernate</li>
+                    <li _ngcontent-ng-c3547498399>MySQL</li>
+                    <li _ngcontent-ng-c3547498399>JavaScript</li>
+                    <li _ngcontent-ng-c3547498399>HTML</li>
+                    <li _ngcontent-ng-c3547498399>CSS</li>
                   </ul>
                 </div>
               </div>
@@ -1555,17 +1740,17 @@
           </div>
         </div>
       </section>
-    </app-projects><app-curriculum _ngcontent-ng-c2444698680 _nghost-ng-c3602176334 ngh="0">
+    </app-projects><app-curriculum _ngcontent-ng-c889936215 _nghost-ng-c3602176334 ngh="0">
       <div _ngcontent-ng-c3602176334 class="bg-lightgreen-gradient border-tb-orange">
         <div _ngcontent-ng-c3602176334 id="cv" class="container py-5 text-center">
           <h2 _ngcontent-ng-c3602176334 class="dark-text pb-3 pt-5">Curriculum</h2><button _ngcontent-ng-c3602176334
             class="btn-cv rounded px-4 py-4 fs-3 mb-5"> Get my CV for more info </button>
         </div>
       </div>
-    </app-curriculum><app-about-me _ngcontent-ng-c2444698680 _nghost-ng-c2319175346 ngh="0"></app-about-me><app-contacts
-      _ngcontent-ng-c2444698680 _nghost-ng-c3602012397 ngh="0"></app-contacts><a _ngcontent-ng-c2444698680 href="#"
-      class><span _ngcontent-ng-c2444698680 class="material-icons"> keyboard_arrow_up </span></a><app-footer
-      _ngcontent-ng-c2444698680 _nghost-ng-c393433012 ngh="0">
+    </app-curriculum><app-about-me _ngcontent-ng-c889936215 _nghost-ng-c2319175346 ngh="0"></app-about-me><app-contacts
+      _ngcontent-ng-c889936215 _nghost-ng-c3602012397 ngh="0"></app-contacts><a _ngcontent-ng-c889936215 href="#"
+      class><span _ngcontent-ng-c889936215 class="material-icons"> keyboard_arrow_up </span></a><app-footer
+      _ngcontent-ng-c889936215 _nghost-ng-c393433012 ngh="0">
       <footer _ngcontent-ng-c393433012 class="mt-auto bg-darkblue-main text-center custom-shadow py-4 d-flex">
         <div _ngcontent-ng-c393433012 class="container d-flex flex-column align-items-center">
           <div _ngcontent-ng-c393433012 class="fs-3 py-2">© 2024 Stefania Neri</div>
@@ -1592,7 +1777,7 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="polyfills-A7MJM4D4.js" type="module"></script>
   <script src="scripts-EEEIPNC3.js" defer></script>
-  <script src="main-ZGJ5LVFT.js" type="module"></script>
+  <script src="main-YQNBMMDF.js" type="module"></script>
 
   <script id="ng-state"
     type="application/json">{"__nghData__":[{},{"t":{"8":"t0","12":"t1","16":"t2"},"c":{"8":[{"i":"t0","r":1,"x":5}],"12":[{"i":"t1","r":1,"x":3}],"16":[{"i":"t2","r":1,"x":2}]}}]}</script>
