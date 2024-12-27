@@ -18,16 +18,16 @@ export class CurriculumComponent {
 
   urlCV: string = 'assets/CV Stefania Neri.pdf';
 
-  // openCV() {
-  //   if (isPlatformBrowser(this.platformId)) {
-  //     // Log per debug
-  //     console.log('Open cv ts:', this.urlCV);
+  openCV() {
+    if (isPlatformBrowser(this.platformId)) {
+      // Log per debug
+      console.log('Open cv ts:', this.urlCV);
 
-  //     // Apri il PDF
-  //     // window.open(this.urlCV, '_blank');
-  //     this.portfolioServ.open(this.urlCV);
-  //   }
-  // }
+      // Apri il PDF
+      // window.open(this.urlCV, '_blank');
+      this.portfolioServ.open(this.urlCV);
+    }
+  }
 
   //   ngOnInit() {
   //     if (isPlatformBrowser(this.platformId)) {
