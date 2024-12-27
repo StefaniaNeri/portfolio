@@ -24,8 +24,8 @@ export class CurriculumComponent {
       console.log('Open cv ts:', this.urlCV);
 
       // Apri il PDF
-      window.open(this.urlCV, '_blank');
-      // this.portfolioServ.open(this.urlCV);
+      // window.open(this.urlCV, '_blank');
+      this.portfolioServ.open(this.urlCV);
     }
   }
 
