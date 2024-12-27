@@ -16,10 +16,11 @@ export class CurriculumComponent {
     private portfolioServ: PortfolioServService
   ) {}
 
-  urlCV: string = 'assets/CV new SF.pdf';
+  urlCV: string = 'assets/CV Stefania Neri.pdf';
 
   openCV() {
     this.portfolioServ.open(this.urlCV);
+
     // if (isPlatformBrowser(this.platformId)) {
     //   window.open(this.urlCV, '_blank');
     // }
