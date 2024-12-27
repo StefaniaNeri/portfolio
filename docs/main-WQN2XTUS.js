@@ -14460,7 +14460,7 @@ var MS = (t) => ({ "back-to-top": t }),
               "app-projects"
             )(4, "app-curriculum")(5, "app-about-me")(6, "app-contacts"),
             C(7, "a", 1)(8, "span", 2),
-            P(9, " keyboard_arrow_up "),
+            P(9, "keyboard_arrow_up"),
             T()(),
             Y(10, "app-footer")),
             i & 2 &&
