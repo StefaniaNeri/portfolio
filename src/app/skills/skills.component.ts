@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component } from '@angular/core';
 import { Skill } from './skill/skill.model';
 import { PortfolioServService } from '../portfolioServ.service';
 
