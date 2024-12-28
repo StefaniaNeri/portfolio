@@ -51,6 +51,11 @@ body {
   color: #eee;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3 {
@@ -248,7 +253,7 @@ footer a:hover {
     border-bottom-right-radius: 0%;
   }
 
-  .margin-left-70 {
+  .margin-left-20 {
     margin-left: 20px;
   }
 }

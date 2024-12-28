@@ -60,26 +60,28 @@ export class NavbarComponent implements AfterViewInit, OnDestroy {
         }
       });
 
-      // Cliccando una voce del menu hamburger o fuori da menù, si chiude
+      //// MOBILE
+      // Tappando una voce del menu hamburger o fuori da menù, si chiude
       if (
         window.getComputedStyle(this.hamburger.nativeElement).display !== 'none'
       ) {
-        // Al click su una voce del menù, si chiude
-        document.addEventListener('click', () => {
+        // Al tap su una voce del menù, si chiude
+        document.addEventListener('touchstart', () => {
           const navItems = document.querySelectorAll('.nav-item');
           navItems.forEach((item) => {
-            item.addEventListener('click', () =>
+            item.addEventListener('touchstart', () =>
               this.collapsedMenu.nativeElement.classList.remove('show')
             );
           });
         });
 
-        // Al click fuori dal menù, si chiude
-        document.addEventListener('click', (e) => {
+        // Al tap fuori dal menù, si chiude
+        document.addEventListener('touchstart', (e) => {
           if (!this.collapsedMenu.nativeElement.contains(e.target)) {
             this.collapsedMenu.nativeElement.classList.remove('show');
           }
         });
+        // ora servono due click mi sa per chiuderlo da mobile però. E c'è il pezzo a destra
       }
     }
   }
