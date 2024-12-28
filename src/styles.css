@@ -119,6 +119,14 @@ footer a:hover {
   background-color: var(--darkblue-palette);
 }
 
+.bg-extra-dark {
+  background-color: #031017cd;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
 /* BORDERS */
 
 .border-light-green {
@@ -220,7 +228,7 @@ footer a:hover {
   transform: translateY(-3px);
 }
 
-/* 576px */
+/* 576px smaller devices*/
 @media (max-width: 36em) {
   h1:not(app-hero h1) {
     font-size: 3rem !important;

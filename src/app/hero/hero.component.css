@@ -1,6 +1,10 @@
 .heightHero {
-  height: calc(100vh - 77.31px);
+  height: calc(100vh - 93.31px);
 }
+/* .heightHero {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+} */
 
 .heroContent {
   display: flex;
@@ -11,6 +15,10 @@
   padding: 8rem 8rem;
   border-radius: 3%;
   background-image: linear-gradient(180deg, var(--darkblue-palette), #154755);
+}
+
+.mt-custom {
+  margin-top: -80px;
 }
 
 .name {
