@@ -62,27 +62,26 @@ export class NavbarComponent implements AfterViewInit, OnDestroy {
 
       //// MOBILE
       // Tappando una voce del menu hamburger o fuori da menù, si chiude
-      if (
-        window.getComputedStyle(this.hamburger.nativeElement).display !== 'none'
-      ) {
-        // Al tap su una voce del menù, si chiude
-        document.addEventListener('touchstart', () => {
-          const navItems = document.querySelectorAll('.nav-item');
-          navItems.forEach((item) => {
-            item.addEventListener('touchstart', () =>
-              this.collapsedMenu.nativeElement.classList.remove('show')
-            );
-          });
-        });
+      // if (
+      //   window.getComputedStyle(this.hamburger.nativeElement).display !== 'none'
+      // ) {
+      //   // Al tap su una voce del menù, si chiude
+      //   const navItems = document.querySelectorAll('.nav-item');
+      //   navItems.forEach((item) => {
+      //     item.addEventListener('touchstart', (e) => {
+      //       e.stopPropagation();
+      //       this.collapsedMenu.nativeElement.classList.toggle('show');
+      //     });
+      //   });
+      // }
 
-        // Al tap fuori dal menù, si chiude
-        document.addEventListener('touchstart', (e) => {
-          if (!this.collapsedMenu.nativeElement.contains(e.target)) {
-            this.collapsedMenu.nativeElement.classList.remove('show');
-          }
-        });
-        // ora servono due click mi sa per chiuderlo da mobile però. E c'è il pezzo a destra
-      }
+      // // Al tap fuori dal menù, si chiude
+      // document.addEventListener('touchstart', (e) => {
+      //   if (!this.collapsedMenu.nativeElement.contains(e.target)) {
+      //     this.collapsedMenu.nativeElement.classList.toggle('show');
+      //   }
+      // });
+      // ora servono due click mi sa per chiuderlo da mobile però. E c'è il pezzo a destra
     }
   }
 

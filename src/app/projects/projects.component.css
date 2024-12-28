@@ -3,12 +3,12 @@
 }
 
 .card {
-  max-width: 60%;
+  width: 60%;
 }
 
 /* 576px */
 @media (max-width: 36em) {
   .card {
-    width: 100%;
+    width: 90%;
   }
 }
