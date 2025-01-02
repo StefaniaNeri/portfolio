@@ -28,7 +28,10 @@ export class CurriculumComponent {
       console.log(userAgent);
       if (userAgent.includes('Mobile')) {
         // Apri il PDF su mobile
-        window.open(this.urlCV, '_system');
+        const link = document.createElement('a');
+        link.href = this.urlCV;
+        link.download = 'CV Stefania Neri.pdf';
+        link.click(); // Il browser sa di dover cliccare l'elemento "a" appena creato
       } else {
         // Apri il PDF su desktop
         // window.open(this.urlCV, '_blank');
