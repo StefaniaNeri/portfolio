@@ -44,11 +44,11 @@ export class CurriculumComponent {
           } finally {
             document.body.removeChild(link);
           }
-        } else {
-          // Apri il PDF su desktop
-          // window.open(this.urlCV, '_blank');
-          this.portfolioServ.open(this.urlCV);
         }
+      } else {
+        // Apri il PDF su desktop
+        // window.open(this.urlCV, '_blank');
+        this.portfolioServ.open(this.urlCV);
       }
     }
   }
