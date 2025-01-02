@@ -23,10 +23,12 @@ export class CurriculumComponent {
       // Log per debug
       console.log('Open cv ts:', this.urlCV);
 
-      // userAgent
-      const userAgent = navigator.userAgent;
-      console.log(userAgent);
-      if (userAgent.includes('Mobile')) {
+      // const userAgent = navigator.userAgent;
+      // const isMobile = userAgent.includes('Mobi') || userAgent.includes('Android') || userAgent.includes('iPhone') || userAgent.includes('iPad') || userAgent.includes('iPod');
+      // Alternativa con regex:
+      const isMobile = /Android|iPhone|iPad|Mobi|/i.test(navigator.userAgent);
+      console.log(isMobile);
+      if (isMobile) {
         // Apri il PDF su mobile
         const link = document.createElement('a');
         link.href = this.urlCV;
