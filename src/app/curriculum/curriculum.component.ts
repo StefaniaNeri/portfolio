@@ -23,9 +23,17 @@ export class CurriculumComponent {
       // Log per debug
       console.log('Open cv ts:', this.urlCV);
 
-      // Apri il PDF
-      // window.open(this.urlCV, '_blank');
-      this.portfolioServ.open(this.urlCV);
+      // userAgent
+      const userAgent = navigator.userAgent;
+      console.log(userAgent);
+      if (userAgent.includes('Mobile')) {
+        // Apri il PDF su mobile
+        window.open(this.urlCV, '_system');
+      } else {
+        // Apri il PDF su desktop
+        // window.open(this.urlCV, '_blank');
+        this.portfolioServ.open(this.urlCV);
+      }
     }
   }
 
