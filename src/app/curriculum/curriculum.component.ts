@@ -16,7 +16,7 @@ export class CurriculumComponent {
     private portfolioServ: PortfolioServService
   ) {}
 
-  urlCV: string = 'assets/CV Stefania Neri.pdf';
+  urlCV: string = 'assets/CVStefaniaNeri.pdf';
 
   openCV() {
     if (isPlatformBrowser(this.platformId)) {
@@ -54,27 +54,4 @@ export class CurriculumComponent {
       // }
     }
   }
-
-  //   ngOnInit() {
-  //     if (isPlatformBrowser(this.platformId)) {
-  //       // Iscriversi agli eventi di scroll
-  //       this.scrollSubscription = this.portfolioServ.onScroll().subscribe(() => {
-  //         // Calcola la posizione di scroll
-  //         const scrollPos =
-  //           window.scrollY ||
-  //           document.documentElement.scrollTop ||
-  //           document.body.scrollTop ||
-  //           0;
-  //         // Aggiorna lo stato sticky
-  //         this.portfolioServ.updateSticky(scrollPos);
-  //       });
-  //     }
-  //   }
-
-  //   ngOnDestroy() {
-  //     // Disiscriversi dall'osservabile quando il componente viene distrutto
-  //     if (this.scrollSubscription) {
-  //       this.scrollSubscription.unsubscribe();
-  //     }
-  //   }
 }
