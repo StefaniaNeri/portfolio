@@ -35,21 +35,20 @@ export class CurriculumComponent {
           link.setAttribute('href', this.urlCV);
           link.setAttribute('download', 'CV Stefania Neri.pdf');
           link.style.visibility = 'hidden';
-          // document.body.appendChild(link);
+          document.body.appendChild(link);
           try {
             link.click();
           } catch {
             console.log('Errore apertura CV');
             // window.open(this.urlCV, '_blank');
-            // } finally {
-            //   document.body.removeChild(link);
-            // }
+          } finally {
+            document.body.removeChild(link);
           }
-        } else {
-          // Apri il PDF su desktop
-          // window.open(this.urlCV, '_blank');
-          this.portfolioServ.open(this.urlCV);
         }
+      } else {
+        // Apri il PDF su desktop
+        // window.open(this.urlCV, '_blank');
+        this.portfolioServ.open(this.urlCV);
       }
     }
   }
