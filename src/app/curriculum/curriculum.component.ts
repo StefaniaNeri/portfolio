@@ -25,31 +25,33 @@ export class CurriculumComponent {
 
       // const userAgent = navigator.userAgent;
       // const isMobile = userAgent.includes('Mobi') || userAgent.includes('Android') || userAgent.includes('iPhone') || userAgent.includes('iPad') || userAgent.includes('iPod');
+
       // Alternativa con regex:
-      const isMobile = /Android|iPhone|iPad|Mobi|/i.test(navigator.userAgent);
-      console.log(isMobile);
-      if (isMobile) {
-        // Apri il PDF su mobile
-        const link = document.createElement('a');
-        if (link.download !== undefined) {
-          link.setAttribute('href', this.urlCV);
-          link.setAttribute('download', 'CV Stefania Neri.pdf');
-          link.style.visibility = 'hidden';
-          document.body.appendChild(link);
-          try {
-            link.click();
-          } catch {
-            console.log('Errore apertura CV');
-            // window.open(this.urlCV, '_blank');
-          } finally {
-            document.body.removeChild(link);
-          }
-        }
-      } else {
-        // Apri il PDF su desktop
-        // window.open(this.urlCV, '_blank');
-        this.portfolioServ.open(this.urlCV);
-      }
+      // const isMobile = /Android|iPhone|iPad|Mobi|/i.test(navigator.userAgent);
+      // console.log(isMobile);
+      // if (isMobile) {
+      //   // Apri il PDF su mobile
+      //   const link = document.createElement('a');
+      //   if (link.download !== undefined) {
+      //     link.setAttribute('href', this.urlCV);
+      //     link.setAttribute('download', 'CV Stefania Neri.pdf');
+      //     link.style.visibility = 'hidden';
+      //     // document.body.appendChild(link);
+      //     try {
+      //       link.click();
+      //     } catch {
+      //       console.log('Errore apertura CV');
+      //       // window.open(this.urlCV, '_blank');
+      //       // } finally {
+      //       //   document.body.removeChild(link);
+      //       // }
+      //     }
+      //   } else {
+      // Apri il PDF su desktop
+      // window.open(this.urlCV, '_blank');
+      this.portfolioServ.open(this.urlCV);
+      // }
+      // }
     }
   }
 

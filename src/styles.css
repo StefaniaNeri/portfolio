@@ -49,11 +49,12 @@ body {
   background-image: linear-gradient(180deg, var(--darkblue-palette), #154755);
 
   color: #eee;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* html,
-body {
-  overflow-x: hidden;
+/* html {
+  font-size: calc(0.3rem + 0.5vw);
 } */
 
 h1,
