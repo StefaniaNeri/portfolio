@@ -16,7 +16,7 @@ export class CurriculumComponent {
     private portfolioServ: PortfolioServService
   ) {}
 
-  urlCV: string = 'assets/CVStefaniaNeri.pdf';
+  urlCV: string = 'assets/CV Stefania Neri.pdf';
 
   openCV() {
     if (isPlatformBrowser(this.platformId)) {
