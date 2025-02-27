@@ -8,5 +8,6 @@ import { Component, signal, WritableSignal } from '@angular/core';
 export class ProjectsComponent {
 
   theaterPrjUrl: WritableSignal<String> = signal("https://github.com/StefaniaNeri/theaterPrj");
+  tripzUrl: WritableSignal<String> = signal("https://github.com/StefaniaNeri/Tripz");
 
 }
