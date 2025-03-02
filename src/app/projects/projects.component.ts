@@ -30,22 +30,22 @@ export class ProjectsComponent implements OnInit{
 
     this.tripzPreviews = [
       new ImageItem({
-        src: '../../assets/anteprime-tripz/Anteprima - Login.png', thumb: '../../assets/anteprime-tripz/Anteprima - Login.png'
+        src: 'assets/anteprime-tripz/Anteprima - Login.png', thumb: 'assets/anteprime-tripz/Anteprima - Login.png'
       }),
       new ImageItem({
-        src: '../../assets/anteprime-tripz/Anteprima - Registrazione utente.png', thumb: '../../assets/anteprime-tripz/Anteprima - Registrazione utente.png'
+        src: 'assets/anteprime-tripz/Anteprima - Registrazione utente.png', thumb: 'assets/anteprime-tripz/Anteprima - Registrazione utente.png'
       }),
       new ImageItem({
-        src: '../../assets/anteprime-tripz/Anteprima - Vista admin - Catalogo.png', thumb: './assets/anteprime-tripz/Anteprima - Vista admin - Catalogo.png'
+        src: 'assets/anteprime-tripz/Anteprima - Vista admin - Catalogo.png', thumb: 'assets/anteprime-tripz/Anteprima - Vista admin - Catalogo.png'
       }),
       new ImageItem({
-        src: '../../assets/anteprime-tripz/Anteprima - Vista admin - Lista utenti.png', thumb: './assets/anteprime-tripz/Anteprima - Vista admin - Lista utenti.png'
+        src: 'assets/anteprime-tripz/Anteprima - Vista admin - Lista utenti.png', thumb: 'assets/anteprime-tripz/Anteprima - Vista admin - Lista utenti.png'
       }),
       new ImageItem({
-        src: '../../assets/anteprime-tripz/Anteprima - Vista utente - Carrello.png', thumb: './assets/anteprime-tripz/Anteprima - Vista utente - Carrello.png'
+        src: 'assets/anteprime-tripz/Anteprima - Vista utente - Carrello.png', thumb: 'assets/anteprime-tripz/Anteprima - Vista utente - Carrello.png'
       }),
       new ImageItem({
-        src: '../../assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.png', thumb: './assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.png'
+        src: 'assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.png', thumb: 'assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.png'
       }),
     ]
 
