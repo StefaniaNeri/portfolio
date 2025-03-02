@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, importProvidersFrom, Inject, NgModule, PLATFORM_ID } from '@angular/core';
 import {
   BrowserModule,
   provideClientHydration,
@@ -17,6 +17,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillComponent } from './skills/skill/skill.component';
 import { AppearDirective } from './appear.directive';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { GALLERY_CONFIG, GalleryConfig, GalleryModule } from 'ng-gallery';
+import { isPlatformBrowser } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -32,9 +35,29 @@ import { provideAnimations } from '@angular/platform-browser/animations';
     SkillComponent,
     AppearDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [provideClientHydration(), provideAnimations()],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    GalleryModule,
+    ],
+  providers: [provideClientHydration(), provideAnimations(), importProvidersFrom(GalleryModule),  {
+    provide: GALLERY_CONFIG,
+    useValue: {
+      autoHeight: true,
+      imageSize:'cover'
+    } as GalleryConfig
+  }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule {
+
+//   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+//   if (isPlatformBrowser(this.platformId)) {
+//     import('GalleryModule').then(({ GalleryModule }) => {
+//       console.log('ng-gallery caricato solo lato browser!');
+//     });
+//   }
+// }
+
+}

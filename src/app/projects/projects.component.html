@@ -7,15 +7,16 @@
     <div class="row pb-5">
       <div class="col-12 px-md-5 d-flex justify-content-center">
         <div class="card my-5 effectGlimmerHover effectGlimmer">
-          <img class="card-img-top" src="https://wallpapers.com/images/hd/hd-wallpaper-travel-j1qko25gehb442dh.webp"
-            alt="Case campeggio su un isola turistica tropicale" loading="lazy" />
+          <!-- <img class="card-img-top" src="https://wallpapers.com/images/hd/hd-wallpaper-travel-j1qko25gehb442dh.webp"
+            alt="Case campeggio su un isola turistica tropicale" loading="lazy" /> -->
+          <gallery *ngIf="isBrowser" [items]="tripzPreviews" thumbs thumbPosition="bottom"></gallery>
           <div class="card-body p-4 bg-lightgreen-gradient">
             <h4 class="card-title fs-3  text-center pb-2">Tripz: travel booking platform</h4>
             <p class="fs-5  text-center">I've created a platform that offers a catalog of
               destinations available for booking. On the login page you can create an account as either an Admin or Base User.
               <br> Base users can select and book one or more trips, then go to the Cart to complete the booking. 
               Admin users have additional privileges, including the ability to delete destinations and view the list of users. <br> The bookings, as well as the removal of trips and user registrations, update the database accordingly.</p>
-            <p class="card-text fs-4">Source code: <a href="{{tripzUrl()}}" target="_blank">Tripz repository</a></p>
+            <p class="card-text fs-4">Source code: <a [href]="tripzUrl()" target="_blank">Tripz repository</a></p>
             <p class="fs-4 mb-0">Made with:</p>
             <ul>
               <li>Java</li>
