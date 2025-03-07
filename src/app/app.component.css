@@ -12,13 +12,13 @@
   background: url('../assets/pexels-harold-vasquez-853421-2653362.jpg') center/cover no-repeat;
   /* filter: blur(3px); */
   /* transform: scaleX(-1); */
-  z-index: -1; /* Mette l'immagine dietro */
+  z-index: -1; 
 }
 
 .bg-image {
   position: relative;
   width: 100%;
-  min-height: 100vh; /* Garantisce che il contenitore sia abbastanza grande */
+  min-height: 100vh;
 }
 
 
