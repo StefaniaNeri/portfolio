@@ -2,6 +2,26 @@
   animation: slideIn 4s forwards;
 }
 
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('../assets/pexels-harold-vasquez-853421-2653362.jpg') center/cover no-repeat;
+  /* filter: blur(3px); */
+  /* transform: scaleX(-1); */
+  z-index: -1; /* Mette l'immagine dietro */
+}
+
+.bg-image {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Garantisce che il contenitore sia abbastanza grande */
+}
+
+
 @keyframes slideIn {
   from {
     transform: translateX(120%) !important;

@@ -46,7 +46,7 @@ p:not(footer p) {
 body {
   font-family: "Rajdhani", sans-serif;
 
-  background-image: linear-gradient(180deg, var(--darkblue-palette), #154755);
+  /* background-image: linear-gradient(180deg, var(--darkblue-palette), #154755); */
 
   color: #eee;
   -webkit-font-smoothing: antialiased;
@@ -130,7 +130,7 @@ footer a:hover {
 }
 
 .bg-transparent {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 /* BORDERS */
