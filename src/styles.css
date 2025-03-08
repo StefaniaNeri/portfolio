@@ -213,6 +213,19 @@ footer a:hover {
   border-radius: 1rem;
   transition: all 0.2s ease-in-out;
   animation: opacity 0.2s;
+  z-index: 1000;
+}
+
+/* 576px */
+@media (max-width: 36em) {
+  .back-to-top {
+  background-color: rgba(160, 250, 163, 0.589);
+  bottom: 1.7rem;
+  right: 1.7rem;
+  padding: 0.6rem;
+
+  }
+  
 }
 
 @keyframes opacity {

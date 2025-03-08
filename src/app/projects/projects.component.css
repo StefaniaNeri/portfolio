@@ -20,9 +20,20 @@
   border-radius: 3px;
 }
 
+.prjTitle {
+  font-size: 2.3rem;
+}
+
+.prjDes{
+  font-size: 1.6rem;
+}
+
 /* 576px */
 @media (max-width: 36em) {
   .card {
     width: 90%;
+  }
+  .card-body{
+    padding: 1px;
   }
 }
