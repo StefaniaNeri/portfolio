@@ -3,7 +3,21 @@
 }
 
 .card {
-  width: 65%;
+  width: 60%;
+}
+
+.skills li {
+  display: inline-block;
+  box-shadow: var(--darkblue-palette) 1px 1px, rgba(82, 82, 82, 0.25) 4px 4px;
+  padding: 0.5rem 1rem;
+  margin: 0.4rem 0.6rem;
+  border: dashed 1px var(--color);
+}
+
+.skills li:hover {
+  box-shadow: var(--darkblue-palette) 1px 1px, rgba(82, 82, 82, 0.25) 2px 2px;
+  background-color: rgba(3, 16, 23, 0.066);
+  border-radius: 3px;
 }
 
 /* 576px */

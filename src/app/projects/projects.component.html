@@ -11,21 +11,19 @@
             alt="Case campeggio su un isola turistica tropicale" loading="lazy" /> -->
           <gallery *ngIf="isBrowser" [items]="tripzPreviews" thumbs thumbPosition="bottom"></gallery>
           <div class="card-body p-4 bg-lightgreen-gradient">
-            <h4 class="card-title fs-3  text-center pb-2">Tripz: travel booking platform</h4>
-            <p class="fs-5  text-center">I've created a platform that offers a catalog of
-              destinations available for booking. On the login page you can create an account as either an Admin or Base User.
-              <br> Base users can select and book one or more trips, then go to the Cart to complete the booking. 
-              Admin users have additional privileges, including the ability to delete destinations and view the list of users. <br> The bookings, as well as the removal of trips and user registrations, update the database accordingly.</p>
-            <p class="card-text fs-4">Source code: <a [href]="tripzUrl()" target="_blank">Tripz repository</a></p>
-            <p class="fs-4 mb-0">Made with:</p>
-            <ul>
-              <li>Java</li>
-              <li>SpringBoot</li>
-              <li>Hibernate</li>
-              <li>MySQL</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
+            <h4 class="card-title fs-2  text-center">Tripz</h4>
+            <h5 class="card-title fs-4  text-center pb-2">Book & Travel</h5>
+            <p class="fs-5  text-center">Platform with a catalog of
+              destinations available for booking. <br> You can register either as a Base or Admin user, for additional privileges.
+            <p class="card-text fs-4 text-center ">Source code: <a [href]="tripzUrl()" target="_blank">Tripz repository</a></p>
+            <ul class="skills fs-4 text-center">
+                <li>Java</li>
+                <li>SpringBoot</li>
+                <li>Hibernate</li>
+                <li>MySQL</li><br>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
             </ul>
           </div>
         </div>
@@ -43,17 +41,16 @@
               for booking. Users must log in to select and book a show, then are redirected to a
               page for payment and ticket purchase confirmation. User registrations and purchased tickets are stored in
               the fictional theater company’s database.</p>
-            <p class="card-text fs-4">Source code: <a href="{{theaterPrjUrl()}}" target="_blank">Theater Box Office repository</a></p>
-            <p class="fs-4 mb-0">Made with:</p>
-            <ul>
+            <p class="card-text fs-4 text-center">Source code: <a href="{{theaterPrjUrl()}}" target="_blank">Theater Box Office repository</a></p>
+            <ul class="skills fs-4 text-center">
               <li>Java</li>
               <li>SpringBoot</li>
               <li>Hibernate</li>
-              <li>MySQL</li>
+              <li>MySQL</li><br>
               <li>JavaScript</li>
               <li>HTML</li>
               <li>CSS</li>
-            </ul>
+          </ul>
           </div>
         </div>
 
