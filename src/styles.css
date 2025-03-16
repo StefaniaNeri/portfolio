@@ -129,8 +129,8 @@ footer a:hover {
   background-color: #031017cd;
 }
 
-.bg-transparent {
-  background-color: transparent !important;
+.bg-transparent-custom {
+  background-color: transparent;
 }
 
 /* BORDERS */
@@ -220,10 +220,10 @@ footer a:hover {
 @media (max-width: 36em) {
   .back-to-top {
   background-color: rgba(160, 250, 163, 0.589);
-  bottom: 2.3rem;
+  bottom: 2.35rem;
   right: 1.7rem;
   padding: 0.5rem;
-
+  border: 1.2px solid var(--darkblue-palette);
   }
   
 }
