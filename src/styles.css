@@ -14,18 +14,19 @@
   --dark-green: #021a0a;
   --semi-dark-green: #064f1e;
   --mild-green: #1d9c5c;
-  --light-green: #a0faa3;
+  /* --light-green: #a0faa3; */
+  --light-green: #84ca6c;
   --mild-blue: #1a6796;
   --light-blue: #61dafb;
   --dark-orange: #976405;
   --light-orange: #ebb401;
 
   --darkblue-palette: #072338;
-  --lightblue-palette: #154755;
-  --whiteblue-palette: #9ebee0;
+  --lightblue-palette: #183366;
+  --whiteblue-palette: #abccf0;
   --sand-palette: #ffdc7f;
 
-  --darkgreen-palette: #0c3025;
+  --darkgreen-palette: #04251b;
   --lightgreen-palette: #6a9c89;
   --whitegreen-palette: #a5ccc0;
   --whitewhitegreen-palette: #e9efec;
@@ -60,7 +61,7 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--light-green);
+  color: var(--whiteblue-palette);
 }
 
 /* FONT SIZES */
@@ -82,13 +83,13 @@ h3 {
 a,
 a:active {
   text-decoration: none;
-  color: #1e7b5e;
+  color: #15533f;
   transition: all 0.3s;
 }
 
 a:hover {
-  text-decoration: underline #6dc3a8;
-  color: #103e30;
+  text-decoration: underline #a7d8a7;
+  color: #1c6d55;
   transition: all 0.3s;
 }
 
@@ -96,12 +97,13 @@ a:hover {
 
 footer a,
 footer a:active {
-  color: var(--light-green);
+  color: var(--whiteblue-palette);
   transition: all 0.3s;
 }
 
 footer a:hover {
-  color: #fff;
+  color: #7399c1;
+  text-decoration: underline #abccf0;
   transition: all 0.3s;
 }
 
@@ -118,11 +120,24 @@ footer a:hover {
 }
 
 .bg-lightgreen-gradient {
-  background-image: linear-gradient(180deg, #a0faa3e4, #c2eac4be);
+  background-image: linear-gradient(180deg, #9ebd93, #91be82);
+}
+
+.bg-whiteblue{
+  background-color: var(--whiteblue-palette);
+}
+
+
+.bg-whiteblue-gradient{
+  background-image: linear-gradient(180deg, #87aad0, #6381a1);
+}
+
+.bg-darkblue{
+  background-color: #011c22;
 }
 
 .bg-darkblue-main {
-  background-color: #091321;
+  background-color: #011c22;
 }
 
 .bg-extra-dark {
@@ -138,6 +153,11 @@ footer a:hover {
 .border-light-green {
   border: 2.5px solid var(--light-green);
 }
+
+.border-whiteblue {
+  border: 2.5px solid var(--whiteblue-palette);
+}
+
 
 .border-tb-orange {
   border-top: 2.5px solid var(--sand-palette);
@@ -178,8 +198,17 @@ footer a:hover {
   box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 24px,
     rgb(160, 250, 163, 0.2) 0px 0px 39px, rgb(160, 250, 163, 0.2) 0px 0px 60px;
 }
+.effectGlimmerRed {
+  box-shadow: rgb(237, 113, 142,0.3) 0px 0px 24px,
+    rgb(237, 113, 142,0.3) 0px 0px 39px, rgb(237, 113, 142,0.3) 0px 0px 60px;
+}
+.effectGlimmerBlue {
+  box-shadow: rgb(171, 204, 240,0.2) 0px 0px 24px,
+    rgb(171, 204, 240,0.2) 0px 0px 39px, rgb(171, 204, 240,0.2) 0px 0px 60px;
+}
 
-.effectGlimmerHover,
+
+.effectGlimmerHover, .effectGlimmerHoverRed,.effectGlimmerBlue,.effectGlimmerHoverBlue
 .effectGlimmerHoverIcons,
 .effectUp {
   transition: all 0.4s;
@@ -189,10 +218,18 @@ footer a:hover {
   box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 70px,
     rgb(160, 250, 163, 0.2) 0px 0px 70px, rgb(160, 250, 163, 0.2) 0px 0px 70px;
 }
+.effectGlimmerHoverRed:hover {
+  box-shadow: rgb(237, 113, 142,0.3) 0px 0px 70px,
+    rgb(237, 113, 142,0.3) 0px 0px 70px, rgb(237, 113, 142,0.3) 0px 0px 70px;
+}
+.effectGlimmerHoverBlue:hover {
+  box-shadow: rgb(171, 204, 240,0.2) 0px 0px 70px,
+    rgb(171, 204, 240,0.2) 0px 0px 70px, rgb(171, 204, 240,0.2) 0px 0px 70px;
+}
 
 .effectGlimmerHoverIcons:hover {
-  box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 24px,
-    rgb(160, 250, 163, 0.2) 0px 0px 39px, rgb(160, 250, 163, 0.2) 0px 0px 60px;
+  box-shadow: rgb(171, 204, 240,0.2) 0px 0px 24px,
+    rgb(171, 204, 240,0.2) 0px 0px 39px, rgb(171, 204, 240,0.2) 0px 0px 60px;
 }
 
 .effectUp:hover {
@@ -205,7 +242,7 @@ footer a:hover {
   bottom: 4rem;
   right: 3rem;
   display: inline-flex;
-  background-color: var(--light-green);
+  background-color: var(--whiteblue-palette);
   color: var(--darkblue-palette);
   border: 1.5px solid var(--darkblue-palette);
   padding: 0.7rem;
@@ -219,7 +256,7 @@ footer a:hover {
 /* 576px */
 @media (max-width: 36em) {
   .back-to-top {
-  background-color: rgba(160, 250, 163, 0.589);
+  background-color: rgb(171, 204, 240, 0.589);
   bottom: 2.35rem;
   right: 1.7rem;
   padding: 0.5rem;
@@ -239,8 +276,8 @@ footer a:hover {
 
 .back-to-top:hover {
   text-decoration: none;
-  box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 24px,
-    rgb(160, 250, 163, 0.2) 0px 0px 39px, rgb(160, 250, 163, 0.2) 0px 0px 60px;
+  box-shadow: rgb(171, 204, 240, 0.2) 0px 0px 24px,
+    rgb(171, 204, 240, 0.2) 0px 0px 39px, rgb(171, 204, 240, 0.2) 0px 0px 60px;
 }
 
 .back-to-top:hover span {

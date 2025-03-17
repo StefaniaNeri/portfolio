@@ -1,5 +1,6 @@
 .bg-skill {
-  background-color: #051d2c;
+  /* background-color: #022229; */
+  background-image: linear-gradient(180deg,#022229, #04313b);
 }
 
 .container .slide-in {

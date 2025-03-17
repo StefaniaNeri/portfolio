@@ -1,34 +1,113 @@
-.bg-prj {
-  background-color: #031017;
-}
-
 .card {
   width: 60%;
+  border: none;
+  border-radius: 30px;
 }
 
-
-
-.langs{
-  border: dashed 1.5px var(--semi-dark-green);
-  box-shadow:  rgba(82, 82, 82, 0.25) 4px 4px;
-  background-color: rgba(106, 176, 108, 0.589);
-  padding: 0.2rem;
-  margin: 0.4rem 0.6rem;
-  border-radius: 3px;
-  text-shadow: var(--light-green) 1px 0 10px;
+@media (min-width: 62em){
+  .card{
+    width: 80%;
+  }
 }
 
-.langs:hover {
-  box-shadow: rgba(82, 82, 82, 0.25) 2px 2px;
+/* BACKGROUND COLORS */
+.prjText{
+  background-color: #03101772;
+  color: #eee;
 }
+
+.bg-tripz {
+  background-color: #bd4866;
+}
+
+.bg-langs-tripz{
+  background-color: #9d2744f6;
+}
+
+.bg-sounds {
+  background-color: #91be82;
+}
+
+.bg-langs-sounds{
+  background-color: #416b3f94;
+  
+}
+
+/* TITLES */
 
 .prjTitle {
   font-size: 2.3rem;
+  background-color: #416b3f;
+  border-top: solid 1px #000;
+  margin: 0;
+  color: #eee;
 }
+
+.bg-titleTripz {
+  background-color: #781931;
+}
+
+.bg-titleSounds {
+  background-color: #416b3f;
+}
+
+/* LINKS */
+
+.tripzLinks,
+.tripzLinks:active{
+  text-decoration: none;
+  color: #f7bbca;
+  transition: all 0.3s;
+  text-decoration: underline #ed718e;
+  text-underline-offset: 4px;
+}
+
+.tripzLinks:hover {
+  color: #4b0918;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.soundsLinks,
+.soundsLinks:active {
+  text-decoration: none;
+  color: #2c502a;
+  transition: all 0.3s;
+  text-decoration: underline #c1f2be94;
+  text-underline-offset: 4px;
+  
+}
+
+.soundsLinks:hover {
+  color: #122312;
+  text-decoration: none;
+  
+  transition: all 0.3s;
+}
+
+/* //////////// */
 
 .prjDes{
   font-size: 1.6rem;
 }
+
+.langs{
+  border: dashed 0.5px #eee;
+  box-shadow:  rgba(82, 82, 82, 0.25) 5px 5px;
+  /* background-color: #416b3f; */
+  padding: 0.2rem;
+  margin: 0.4rem 0.6rem;
+  border-radius: 3px;
+  color: #eee;
+  /* text-shadow: var(--light-green) 1px 0 10px; */
+}
+
+.langs:hover {
+  box-shadow: rgba(82, 82, 82, 0.25) 2px 2px;
+  /* box-shadow:  rgba(82, 82, 82, 0.25) 5px 5px; */
+
+}
+
 
 /* <576px */
 @media (max-width: 36em) {
@@ -36,7 +115,7 @@
   .lang-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem; /* Aggiunge uno spazio tra le colonne */
+    gap: 0.5rem; 
     justify-content: center !important;
   }
 
@@ -47,7 +126,7 @@
 
 
   .col-6, .col-4 {
-    flex: 0 0 auto; /* Impedisce alla colonna di allargarsi o di andare a capo */
+    flex: 0 0 auto; 
   }
 
   .card {

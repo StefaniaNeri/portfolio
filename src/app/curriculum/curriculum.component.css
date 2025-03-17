@@ -1,9 +1,13 @@
+.title-cv{
+  color: #4b0b1a;
+}
+
 .btn-cv {
   /* box-shadow: rgb(3, 15, 24, 0.2) 0px 0px 24px, rgb(3, 15, 24, 0.2) 0px 0px 39px,
     rgb(3, 15, 24, 0.2) 0px 0px 60px; */
   border: 1px solid var(--sand-palette);
-  background-color: var(--darkblue-palette);
-  color: var(--light-green);
+  background-color: #580f20eb;
+  color: #eee;
   transition: all 0.7s;
 }
 

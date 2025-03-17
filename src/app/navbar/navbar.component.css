@@ -32,7 +32,7 @@ nav .nav-link {
 
 .nav-item:hover,
 .nav-item:active {
-  background-color: transparent;
+  background-color: #09092db2;
   cursor: pointer;
 
   box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 24px,
@@ -40,7 +40,7 @@ nav .nav-link {
 }
 
 .nav-item:hover .nav-link {
-  color: var(--light-green);
+  color: var(--whiteblue-palette);
   text-decoration: none;
 }
 

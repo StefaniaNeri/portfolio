@@ -1,22 +1,23 @@
-<section id="projects" class="py-5 bg-prj">
+<section id="projects" class="py-5 bg-darkblue">
 
   <div class="container">
     <div class="text-center pb-md-4 pt-md-5 mb-2">
       <h1>Projects</h1>
     </div>
     <div class="row pb-5">
-      <div class="col-12 px-md-5 d-flex justify-content-center">
+      <!-- <div class="col-12 px-md-5 d-flex justify-content-center">
         <div class="card my-5 effectGlimmerHover effectGlimmer">
-          <!-- <img class="card-img-top" src="https://wallpapers.com/images/hd/hd-wallpaper-travel-j1qko25gehb442dh.webp"
-            alt="Case campeggio su un isola turistica tropicale" loading="lazy" /> -->
-          <gallery *ngIf="isBrowser" [items]="tripzPreviews" thumbs thumbPosition="bottom"></gallery>
+          <gallery *ngIf="isBrowser" [items]="tripzPreviews" thumbs thumbPosition="right"></gallery>
+          <h4 class="card-title prjTitle prjText ps-3 p-2 ">Tripz platform</h4>
           <div class="card-body p-4 bg-lightgreen-gradient">
-            <h4 class="card-title prjTitle">Tripz</h4>
-            <h5 class="card-title prjDes pb-2">Book & Travel</h5>
-            <p class="fs-5 ">Platform with a catalog of
-              destinations available for booking. <br> You can register either as a Base or Admin user, for additional privileges.
+
+            <div class="">
+              <h5 class="card-title prjDes m-0 rounded-top d-inline-block">Book & Travel</h5>
+              <p class="fs-5 rounded-bottom rounded-top-right ">Platform with a catalog of
+                destinations available for booking. <br> You can register either as a Base or Admin user, for additional privileges.</p>
+            </div>
             <p class="card-text fs-4 text-end">Source code: <a [href]="tripzUrl()" target="_blank">Tripz repository</a></p>
-        
+
             <div class="container lang-container text-center fs-5">
               <div class="row lang-row mb-md-0 mb-2 justify-content-end">
                   <div class="langs col-md-3 col-5">Java</div>
@@ -35,33 +36,62 @@
           </div>
         </div>
 
+      </div> -->
+
+      <div class="col-12 px-md-5 d-flex justify-content-center">
+        <div class="card my-5 effectGlimmerRed effectGlimmerHoverRed">
+          <!-- <img class="card-img-top" src="https://wallpapers.com/images/hd/hd-wallpaper-travel-j1qko25gehb442dh.webp"
+            alt="Case campeggio su un isola turistica tropicale" loading="lazy" /> -->
+          <gallery *ngIf="isBrowser" [items]="tripzPreviews" class="rounded-top" thumbs thumbPosition="right"></gallery>
+          <h4 class="card-title prjTitle bg-titleTripz prjText ps-3 p-2 ">Tripz platform</h4>
+          <div class="card-body rounded-bottom p-4 bg-tripz">
+
+            <div>
+              <h5 class="card-title prjDes text-light m-0 rounded-top d-inline-block">Book & Travel</h5>
+              <p class="fs-5 rounded-bottom rounded-top-right ">Platform with a catalog of
+                destinations available for booking. <br> You can register either as a Base or Admin user, for additional privileges.</p>
+            </div>
+            <p class="card-text fs-4 text-end text-light">Source code: <a [href]="tripzUrl()" target="_blank" class="tripzLinks">Tripz repository</a></p>
+        
+            <div class="container lang-container text-center fs-5">
+              <div class="row lang-row mb-md-0 mb-2 justify-content-end">
+                  <div class="langs bg-langs-tripz col-md-3 col-5">Java</div>
+                  <div class="langs bg-langs-tripz col-md-3 col-5">SpringBoot</div>
+              </div>
+              <div class="row lang-row mb-md-0 mb-2 justify-content-end">
+                  <div class="langs bg-langs-tripz col-md-3 col-5">Hibernate</div>
+                  <div class="langs bg-langs-tripz col-md-3 col-5">MySQL</div>
+              </div>
+              <div class="row lang-row justify-content-end">
+                  <div class="langs bg-langs-tripz col-md-3 col-4">JavaScript</div>
+                  <div class="langs bg-langs-tripz col-md-3 col-3">HTML</div>
+                  <div class="langs bg-langs-tripz col-md-3 col-3">CSS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="col-12 px-md-5 d-flex justify-content-center">
         <div class="card my-5 effectGlimmerHover effectGlimmer">
-          <img class="card-img-top" src="assets/pexels-donaldtong94-109669min.jpg"
+          <img class="card-img-top rounded-top" src="assets/pexels-michael-sprehe-20684-93684.jpg"
             alt="Vista di un teatro dal punto di vista del palco" loading="lazy" />
-          <div class="card-body p-4 bg-lightgreen-gradient">
-            <h4 class="card-title prjTitle pb-2">Theater Box Office</h4>
-            <p class="fs-5">As part of a simulated project I created a platform that offers a catalog of
-              shows available
-              for booking. Users must log in to select and book a show, then are redirected to a
-              page for payment and ticket purchase confirmation. User registrations and purchased tickets are stored in
-              the fictional theater company’s database.</p>
-            <p class="card-text fs-4 text-end">Source code: <a href="{{theaterPrjUrl()}}" target="_blank">Theater Box Office repository</a></p>
+            <h4 class="card-title prjTitle ps-3 p-2">Ambient Sound Generator</h4>
+          <div class="card-body rounded-bottom p-4 bg-lightgreen-gradient">
+            <p class="fs-5"></p>
+            <p class="card-text fs-4 text-end">Source code: <a href="{{theaterPrjUrl()}}" target="_blank" class="soundsLinks">Sounds Generator repository</a></p>
             <div class="container lang-container text-center fs-5">
               <div class="row lang-row mb-md-0  mb-2 justify-content-end">
-                  <div class="langs col-md-3 col-5">Java</div>
-                  <div class="langs col-md-3 col-5">SpringBoot</div>
+                  <div class="langs bg-langs-sounds col-md-3 col-5">Angular</div>
+                  <div class="langs bg-langs-sounds col-md-3 col-5">Typescript</div>
               </div>
               <div class="row lang-row mb-md-0 mb-2 justify-content-end">
-                  <div class="langs col-md-3 col-5">Hibernate</div>
-                  <div class="langs col-md-3 col-5">MySQL</div>
+                  <div class="langs bg-langs-sounds col-md-3 col-5">HTML</div>
+                  <div class="langs bg-langs-sounds col-md-3 col-5">CSS</div>
               </div>
               <div class="row lang-row justify-content-end">
-                  <div class="langs col-md-3 col-4">JavaScript</div>
-                  <div class="langs col-md-3 col-3">HTML</div>
-                  <div class="langs col-md-3 col-3">CSS</div>
+                  <div class="langs bg-langs-sounds col-md-3 col-4">API</div>
               </div>
             </div>
           </div>
