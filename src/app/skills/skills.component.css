@@ -7,6 +7,10 @@
   animation: slideIn 4s forwards;
 }
 
+.row{
+  padding: 0 12rem;
+}
+
 @keyframes slideIn {
   from {
     transform: translateX(120%) !important;
@@ -18,7 +22,7 @@
   }
 }
 
-/* 576px */
+/* >576px */
 @media (max-width: 36em) {
   /* .skillsTitle > h1 {
     font-size: 3rem;
@@ -31,5 +35,6 @@
 
   .row {
     margin: 0px;
+    padding: 0 1rem;
   }
 }

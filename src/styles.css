@@ -9,7 +9,7 @@
 
 :root {
   --extra-dark: #161616;
-  --extra-blue: #040425;
+  --extra-blue: #02021a;
   --dark: #282d35;
   --dark-green: #021a0a;
   --semi-dark-green: #064f1e;
@@ -48,11 +48,12 @@ body {
   font-family: "Rajdhani", sans-serif;
 
   /* background-image: linear-gradient(180deg, var(--darkblue-palette), #154755); */
-
+  background-color: var(--extra-blue);
   color: #eee;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 /* html {
   font-size: calc(0.3rem + 0.5vw);
@@ -76,6 +77,14 @@ h2 {
 
 h3 {
   font-size: 1.7rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
 }
 
 /* LINK GLOBAL */
@@ -155,7 +164,7 @@ footer a:hover {
 }
 
 .border-whiteblue {
-  border: 2.5px solid var(--whiteblue-palette);
+  border: 1px solid var(--whiteblue-palette);
 }
 
 

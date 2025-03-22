@@ -1,9 +1,9 @@
-<div class="card effectUp effectGlimmerBlue pe-2 pe-md-0 rounded border-whiteblue bg-darkblue-main text-white">
-  <div class="card-body px-2 pt-1 pb-2 px-md-3 pt-md-4 pb-md-3 text-center">
-    <img src="{{skill.src}}" alt="{{skill.linguaggio}} logo" height="70" width="70">
+<div class="card effectUp effectGlimmerBlue pe-2 pe-md-0 rounded border-whiteblue bg-darkblue-main">
+  <div class="card-body px-2 pt-1 pb-2 px-md-0 pt-md-1 pb-md-0 text-center">
+    <img src="{{skill.src}}" class="pe-1 pe-md-0" alt="{{skill.linguaggio}} logo" height="60" width="60">
     <div class="w-100">
 
-      <h5 class="card-title pt-md-2 pb-md-3">{{skill.linguaggio}}</h5>
+      <h5 class="card-title pt-md-1 pb-md-1">{{skill.linguaggio}}</h5>
       <div class="progress prgparent" aria-labelledby="linguaggio">
         <div class="progress-bar pgbar " role="progressbar" [style.width.%]="skill.progress"
           [attr.aria-valuenow]="skill.progress" aria-valuemin="0" aria-valuemax="100"></div>

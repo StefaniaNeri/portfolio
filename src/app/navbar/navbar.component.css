@@ -50,10 +50,12 @@ nav {
   transform: all 0.3s;
   position: relative;
   overflow: hidden;
+
 }
 nav .nav-link {
   color: var(--darkblue-palette);
   /* position: relative; */
+
   z-index: 1;  
 }
 
@@ -73,9 +75,9 @@ nav .nav-link {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(9, 9, 45, 0.1);
-  backdrop-filter: blur(4px); 
-  -webkit-backdrop-filter: blur(4px); /* Per Safari */
+  /* background: rgba(9, 9, 45, 0); */
+  backdrop-filter: blur(3px); 
+  -webkit-backdrop-filter: blur(3px); /* Per Safari */
   z-index: -1;
 }
 
@@ -152,15 +154,14 @@ nav .nav-link {
   }
 }
 
-/* for smaller devices  <576*/
+/* for smaller devices  <576px*/
 @media (max-width: 36em) {
 
-  nav{
-    border-top: 7px solid var(--light-green);
-  }
 
   .logo img {
     width: 30px;
     margin-right: auto;
   }
+
+  
 }
