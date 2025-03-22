@@ -15,7 +15,7 @@
   --semi-dark-green: #064f1e;
   --mild-green: #1d9c5c;
   /* --light-green: #a0faa3; */
-  --light-green: #84ca6c;
+  --light-green: #D6FAD7;
   --mild-blue: #1a6796;
   --light-blue: #61dafb;
   --dark-orange: #976405;
@@ -157,6 +157,10 @@ footer a:hover {
   background-color: transparent;
 }
 
+.bg-icons {
+  background-color: #c09b70;
+}
+
 /* BORDERS */
 
 .border-light-green {
@@ -243,6 +247,11 @@ footer a:hover {
 
 .effectUp:hover {
   transform: translateY(-0.8rem);
+}
+
+.scaleEffectHover:hover{
+  scale: 1.1;
+  transition: all 0.3s;
 }
 
 /* BACK TO TOP */
@@ -343,4 +352,25 @@ footer a:hover {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--whiteblue-palette) #270404;
+}
+
+.btn-cv{
+  border: 1px solid var(--whiteblue-palette);
+  color: #efefefe8;
+  background-color: #18314b88;
+  border-color: var(--whiteblue-palette);
+  box-shadow: rgba(81, 127, 212, 0.4) 8px 8px 6px;
+  /* background-color: #644417b9; */
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  transition: all 0.7s;
+}
+
+.btn-cv:hover,
+.btn-cv:active {
+  box-shadow: rgba(39, 86, 173, 0.4) 8px 8px 6px;
+  background-color: transparent;
+  scale: 1.1;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }

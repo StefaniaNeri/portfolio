@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: space-around;
   /* border: 1px solid var(--whiteblue-palette); */
-  padding: 11rem 10rem 11rem 12rem;
+  padding: 8rem 10rem 8rem 12rem;
   border-radius: 6px;
   background-image: linear-gradient(180deg, rgba(9, 16, 27, 0) 10%, rgba(9, 16, 27, 0.4) 30%, rgba(9, 16, 27, 0.4) 70%, rgba(9, 16, 27, 0) 100%);
   overflow: hidden;
@@ -37,12 +37,16 @@
 
 .name {
   font-size: 4.6rem;
+  font-weight: 500;
   color: var(--whiteblue-palette);
 }
 
 .sub {
-  font-size: 2rem;
-  color: var(--whiteblue-palette);
+  font-size: 2.2rem;
+  font-weight: 500;
+  /* color: var(--whiteblue-palette); */
+  color: #b9d2ecde;
+  /* color: #d6b588; */
 }
 
 .imgHero {
@@ -50,13 +54,32 @@
   width: auto;
 }
 
+.btn-cv-hero{
+  border: 1px solid var(--whiteblue-palette);
+  color: #efefefe8;
+  background-color: #18314b88;
+  border-color: var(--whiteblue-palette);
+  box-shadow: rgba(81, 127, 212, 0.4) 8px 8px 6px;
+  /* background-color: #644417b9; */
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  transition: all 0.7s;
+}
 
+.btn-cv-hero:hover,
+.btn-cv-hero:active {
+  box-shadow: rgba(39, 86, 173, 0.4) 8px 8px 6px;
+  background-color: transparent;
+  scale: 1.1;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
 /* >1600px */
 @media (min-width: 100em) {
 
   .heroContent {
-    padding: 16rem 14rem 16rem 16rem;
+    padding: 14rem 14rem 14rem 16rem;
   }
 
   .name {
@@ -69,6 +92,10 @@
 
   .imgHero {
     height: 19rem;
+  }
+
+  .social{
+    padding-right: 4rem;
   }
 }
 
@@ -105,8 +132,7 @@
 
   .heroContent {
     justify-content: center;
-    padding-top: 1rem;
-    padding: 2.5rem 1rem 5rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     
   }
 
@@ -118,9 +144,20 @@
   .sub {
     font-size: 1.7rem;
   }
+
+  .social{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    padding-bottom: 2.3rem;
+  }
+
+  .btn-cv{
+    margin-top: 1.6rem;
+  }
   
   .imgHero {
-    padding-bottom: 3rem;
     height: auto;
     width: 75%;
   }

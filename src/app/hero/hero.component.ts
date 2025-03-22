@@ -16,7 +16,7 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './hero.component.css',
 })
 export class HeroComponent {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private portfolioServ: PortfolioServService) {}
 
   // @ViewChild('heroSec') heroSec: ElementRef;
 
@@ -27,4 +27,12 @@ export class HeroComponent {
   //     document.documentElement.style.setProperty('--vh', `${vh}px`);
   //   }
   // }
+
+  urlCV: string = 'assets/CV Stefania Neri.pdf';
+
+  openCV() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.portfolioServ.open(this.urlCV);
+    }
+  }
 }

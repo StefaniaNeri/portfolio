@@ -23,7 +23,7 @@ export class PortfolioServService {
     console.log('service' + this.isVisible);
   }
 
-  // DOWNLOAD URL
+
   open(url: string) {
     if (isPlatformBrowser(this.platformId)) {
       window.open(url, '_blank');
@@ -31,6 +31,8 @@ export class PortfolioServService {
       console.warn('Attempted to open a URL on the server side.');
     }
   }
+
+ 
 
   isSticky: boolean = false;
 

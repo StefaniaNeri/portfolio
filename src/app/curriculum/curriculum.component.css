@@ -1,31 +1,23 @@
 .title-cv{
-  color: #4b0b1a;
+  color: #efefef;
+  font-weight: 400;
 }
 
-.btn-cv {
-  /* box-shadow: rgb(3, 15, 24, 0.2) 0px 0px 24px, rgb(3, 15, 24, 0.2) 0px 0px 39px,
-    rgb(3, 15, 24, 0.2) 0px 0px 60px; */
-  border: 1px solid var(--sand-palette);
-  background-color: #580f20eb;
-  color: #eee;
-  transition: all 0.7s;
+
+
+.bg-cv{
+  /* background-image: url("/assets/pexels-brett-sayles-11931931.jpg"); */
+  background-image: url("/assets/pexels-vie-studio-8148585.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding: 1.3rem 1.3rem;
 }
 
-.bg-lightgreen-gradient-cv{
-  background-image: linear-gradient(180deg, #a0faa3e4, #e1f4e1d2);
-}
-
-.btn-cv:hover,
-.btn-cv:active {
-  /* background-color: transparent; */
-  background-image: linear-gradient(180deg, #8df390, #d4f6d5da);
-  color: var(--darkblue-palette);
-  font-weight: 600;
-  border-color: var(--darkgreen);
-  box-shadow: rgba(160, 250, 163, 0.584) 0px 0px 60px,
-    rgba(160, 250, 163, 0.584) 0px 0px 60px,
-    rgba(160, 250, 163, 0.584) 0px 0px 60px;
-  transition: all 0.3s;
+.bg-dark-transparent{
+  background-color: #000000a6;
+  border-radius: 6px;
 }
 
 /* 576px */
