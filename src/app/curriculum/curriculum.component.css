@@ -7,7 +7,7 @@
 
 .bg-cv{
   /* background-image: url("/assets/pexels-brett-sayles-11931931.jpg"); */
-  background-image: url("/assets/pexels-vie-studio-8148585.jpg");
+  background-image: url("../../assets/pexels-vie-studio-8148585.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
