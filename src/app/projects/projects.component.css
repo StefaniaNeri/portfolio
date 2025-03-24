@@ -9,25 +9,32 @@
   display: none;
 }
 
-.primoPrj{
+/* .primoPrj{
   margin-bottom: 5rem;
- 
-  background: linear-gradient(45deg, #141a2d 20%, #1f2f4d 40%, #2a4275a8 100%);
-   
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  /* border-radius: 12px; */
   padding: 4.5rem 0rem 4.5rem 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
 }
 
 .secondoPrj{
   margin-bottom: 5rem;
   background: linear-gradient(45deg, #2a4275a8 20%, #1f2f4d 40%, #141a2d 100%);
-   
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   padding: 4.5rem 0rem 4.5rem 0rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.prj{
+  margin-bottom: 4rem;
+  padding: 4.5rem 0rem 4.5rem 0rem;
+}
+
+.prjBgTripz{
+  background: linear-gradient(45deg, #141a2d 20%, #1f2f4d 40%, #2a4275a8 100%);
+}
+
+.prjBgSounds{
+  background: linear-gradient(45deg, #2a4275a8 20%, #1f2f4d 40%, #141a2d 100%);
 }
 
 .imgSounds{
@@ -163,27 +170,34 @@ color: #74af71;
 
 /* <576px */
 @media (max-width: 36em) {
+
+  .prj{
+    padding: 2.7rem 0rem 2.7rem 0rem;
+  }
   
+  .prjBgTripz{
+    background: linear-gradient(120deg, #141a2d 20%, #1f2f4d 60%, #2a4275a8 100%);
+  }
+
+  .prjBgSounds{
+  background: linear-gradient(120deg, #2a4275a8 20%, #1f2f4d 40%, #141a2d 100%);
+
+  }
+
+  .prjTitle{
+    text-align: center;
+  }
+
   .lang-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem; 
     justify-content: center !important;
   }
 
-  .langs{
-    margin: 0px;
-    background-color: rgba(106, 176, 108, 0.435);
+  .card-text{
+    text-align: center;
   }
 
-
-  .col-6, .col-4 {
-    flex: 0 0 auto; 
-  }
-
-  .card {
-    width: 95%;
-  }
 
   .displayMobile{
     display: inline-block;
@@ -193,5 +207,12 @@ color: #74af71;
     display: none;
   }
 
+  .orderMobile-1 {
+    order: 1;
+  }
+
+  .orderMobile-2 {
+    order: 2;
+  }
 
 }
