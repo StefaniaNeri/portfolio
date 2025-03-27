@@ -44,9 +44,7 @@
 .sub {
   font-size: 2.2rem;
   font-weight: 500;
-  /* color: var(--whiteblue-palette); */
   color: #b9d2ecde;
-  /* color: #d6b588; */
 }
 
 .imgHero {
@@ -60,7 +58,6 @@
   background-color: #18314b88;
   border-color: var(--whiteblue-palette);
   box-shadow: rgba(81, 127, 212, 0.4) 8px 8px 6px;
-  /* background-color: #644417b9; */
   border-radius: 8px;
   padding: 0.7rem 1rem;
   transition: all 0.7s;
@@ -99,8 +96,13 @@
   }
 }
 
-/* 992px */
+/* <992px */
 @media (max-width: 62em) {
+
+  .heroContent{
+     padding: 8rem 5rem 8rem 5rem;
+  }
+
   .name {
     font-size: 3.5rem;
   }
@@ -110,37 +112,33 @@
   }
 }
 
-/* 768px */
+/* <768px */
 @media (max-width: 48em) {
   .name {
-    text-align: center;
     margin-top: 2rem;
   }
-  .sub {
-    text-align: center;
-  }
+ 
   .imgHero {
     padding-bottom: 2rem;
   }
-}
 
-/* <576px */
-@media (max-width: 36em) {
+
   .heightHero {
     height:fit-content;
   }
-
+  
   .heroContent {
+    text-align: center;
     justify-content: center;
     padding: 1rem 1rem 1rem 1rem;
     
   }
-
+  
   .heroContent::before {
     backdrop-filter: blur(3px); 
-    -webkit-backdrop-filter: blur(3px); /* Per Safari */
+    -webkit-backdrop-filter: blur(3px);
   }
-
+  
   .sub {
     font-size: 1.7rem;
   }
@@ -156,9 +154,12 @@
   .btn-cv{
     margin-top: 1.6rem;
   }
-  
+
   .imgHero {
     height: auto;
     width: 75%;
   }
+  
 }
+
+
