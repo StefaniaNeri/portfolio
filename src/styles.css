@@ -10,13 +10,13 @@
 :root {
   --extra-dark: #161616;
   --extra-blue: #02021a;
+  --mild-blue: #192a3f;
   --dark: #282d35;
   --dark-green: #021a0a;
   --semi-dark-green: #064f1e;
   --mild-green: #1d9c5c;
   /* --light-green: #a0faa3; */
   --light-green: #D6FAD7;
-  --mild-blue: #1a6796;
   --light-blue: #61dafb;
   --dark-orange: #976405;
   --light-orange: #ebb401;
@@ -47,7 +47,6 @@ p:not(footer p) {
 body {
   font-family: "Rajdhani", sans-serif;
 
-  /* background-image: linear-gradient(180deg, var(--darkblue-palette), #154755); */
   background-color: var(--extra-blue);
   color: #eee;
   -webkit-font-smoothing: antialiased;
@@ -92,13 +91,15 @@ h5 {
 a,
 a:active {
   text-decoration: none;
-  color: #15533f;
+  color: #bbd3ee;
   transition: all 0.3s;
 }
 
 a:hover {
-  text-decoration: underline #a7d8a7;
-  color: #1c6d55;
+  text-decoration: underline #bbd3ee;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 3.5px;
+  color: #8ab8e9;
   transition: all 0.3s;
 }
 
@@ -113,6 +114,8 @@ footer a:active {
 footer a:hover {
   color: #7399c1;
   text-decoration: underline #abccf0;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 3.5px;
   transition: all 0.3s;
 }
 
@@ -153,6 +156,12 @@ footer a:hover {
   background-color: #031017cd;
 }
 
+.bg-mild-blue {
+  background-color: var(--mild-blue);
+
+}
+
+
 .bg-transparent-custom {
   background-color: transparent;
 }
@@ -175,6 +184,10 @@ footer a:hover {
 .border-tb-orange {
   border-top: 2.5px solid var(--sand-palette);
   border-bottom: 2.5px solid var(--sand-palette);
+}
+
+.border-t-orange {
+  border-top: 2.5px solid var(--sand-palette);
 }
 
 .border-end-blue {
@@ -335,7 +348,7 @@ footer a:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--porpora);
+  background: var(--extra-blue);
   border-radius: 4px;
 }
 
@@ -351,7 +364,7 @@ footer a:hover {
 /* Per Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--whiteblue-palette) #270404;
+  scrollbar-color: var(--whiteblue-palette) var(--extra-dark);
 }
 
 .btn-cv{
@@ -360,7 +373,6 @@ footer a:hover {
   background-color: #18314b88;
   border-color: var(--whiteblue-palette);
   box-shadow: rgba(81, 127, 212, 0.4) 8px 8px 6px;
-  /* background-color: #644417b9; */
   border-radius: 8px;
   padding: 0.7rem 1rem;
   transition: all 0.7s;

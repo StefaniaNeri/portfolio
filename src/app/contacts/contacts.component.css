@@ -1,0 +1,45 @@
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #efefef;
+}
+
+input, textarea{
+    background-color: #1018229c;
+    border: 1px solid #495068a2;
+    color: #efefef;
+}
+
+input:focus, textarea:focus {
+    color: #efefef;
+    outline: none;
+    caret-color: var(--whiteblue-palette);
+    box-shadow: rgb(171, 204, 240,0.2) 0px 0px 3px,
+    rgb(171, 204, 240,0.2) 0px 0px 8px, rgb(171, 204, 240,0.2) 0px 0px 14px;
+    transition: all 0s;
+  }
+  
+
+input:active, input:focus, textarea:active, textarea:focus{
+    background-color: #0a2241;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #efefefc4;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: transparent;
+  }
+  
+.btn-form{
+    color: #efefef;
+    background-color: #304e75;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-form:hover {
+    background-color: #223d61;
+    transition: all 0.2s;
+}

@@ -1,1 +1,47 @@
-<!-- <p>contatti works!</p> -->
+<section id="contact" class="pb-5 bg-mild-blue">
+
+    <div class="container ">
+      <div class="pb-4 pt-5 mb-2 text-center">
+        <h1>Contact</h1>
+      </div>
+      <h2 class="fw-lighter text-center">Send me a message!</h2>
+      <!-- <p class="subtitle">Got a question or proposal, or just want to say hello? Go ahead.</p> -->
+      <p class="fs-5 fw-lighter pt-3 px-2 text-center">Get in touch or send me an email directly on <a href="mailto:stefania.neri.92@gmail.com">stefania.neri.92&#64;gmail.com</a></p>
+
+
+      <div class="d-flex justify-content-center">
+
+        <form #myForm="ngForm" action="https://formspree.io/f/mpwpjdog" method="POST" class="d-flex justify-content-center row pt-3 pt-md-5 g-3">
+            <input type="hidden" name="_next" value="https://your-website.com/thank-you-page">
+            <div class="col-10 col-md-5">
+                <label for="full-name" class="form-label">Your Name</label>
+                <input type="text" name="full-name" class="form-control" placeholder="Enter your name" id="full-name" aria-describedby="full-name" required>
+                <div class="invalid-feedback">
+                    Please enter your name.
+                  </div>
+            </div>
+            <div class="col-10 col-md-5">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter your email address" id="email" aria-describedby="email" required>
+                <div class="invalid-feedback">
+                    Please enter your email.
+                  </div>
+            </div>
+            <div class="col-10">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea name="message" name="message" class="form-control" placeholder="Enter your message" id="message" rows="5" required></textarea>
+                <div class="invalid-feedback">
+                    Please type a message.
+                  </div>
+            </div>
+        
+            <div class="col-12 text-center pt-3">
+                <button type="submit" class="btn btn-form px-4 py-2 fs-5 ">Send 
+                    <img width="25" height="25" src="https://img.icons8.com/?size=100&id=11686&format=png&color=efefef" alt="arrow--v1"/>
+                </button>
+            </div>
+        </form>
+    
+    </div>    
+    </div>
+</section>

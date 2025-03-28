@@ -83,7 +83,8 @@ color: #74af71;
   color: #f3edae;
   transition: all 0.3s;
   text-decoration: underline #eeb861;
-  text-underline-offset: 4px;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 3.5px;
 }
 
 .tripzLinks:hover {
@@ -98,7 +99,8 @@ color: #74af71;
   color: #2c502a;
   transition: all 0.3s;
   text-decoration: underline #c1f2be94;
-  text-underline-offset: 4px;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 3.5px;
   
 }
 

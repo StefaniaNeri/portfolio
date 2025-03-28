@@ -19,6 +19,7 @@ import { AppearDirective } from './appear.directive';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { GALLERY_CONFIG, GalleryConfig, GalleryModule } from 'ng-gallery';
 import { isPlatformBrowser } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { isPlatformBrowser } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     GalleryModule,
+    FormsModule
     ],
   providers: [provideClientHydration(), provideAnimations(), importProvidersFrom(GalleryModule),  {
     provide: GALLERY_CONFIG,
