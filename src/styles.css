@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 ::after,
 ::before {
@@ -270,7 +275,7 @@ footer a:hover {
 /* BACK TO TOP */
 .back-to-top {
   position: fixed;
-  bottom: 4rem;
+  bottom: 3rem;
   right: 3rem;
   display: inline-flex;
   background-color: var(--whiteblue-palette);

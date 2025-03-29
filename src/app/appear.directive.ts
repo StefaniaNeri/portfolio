@@ -84,7 +84,7 @@ export class AppearDirective {
       this.subscriptionScroll = this.portfolioServ
         .onScroll()
         .subscribe((scrollPos) => {
-          console.log('Scroll position:', scrollPos);
+          // console.log('Scroll position:', scrollPos);
           this.checkVisibility(); // Controlla la visibilità dell'elemento
         });
     }

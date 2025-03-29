@@ -1,4 +1,4 @@
-<section id="contact" class="pb-5 bg-mild-blue">
+<section id="contact" class="py-4 bg-mild-blue">
 
     <div class="container ">
       <div class="pb-4 pt-5 mb-2 text-center">
@@ -11,32 +11,35 @@
 
       <div class="d-flex justify-content-center">
 
-        <form #myForm="ngForm" action="https://formspree.io/f/mpwpjdog" method="POST" class="d-flex justify-content-center row pt-3 pt-md-5 g-3">
-            <input type="hidden" name="_next" value="https://your-website.com/thank-you-page">
+        <form #myFormRef="ngForm" (ngSubmit)="sendForm()" action="https://formspree.io/f/mpwpjdog" method="POST" class="d-flex justify-content-center row pt-3 pb-4 pt-md-5 g-3">
+            <!-- <input type="hidden" name="_subject" value="https://stefanianeri.github.io/portfolio/#contact"> -->
+            <!-- <input type="hidden" name="_next" value="https://stefanianeri.github.io/portfolio/#contact"> -->
+            <!-- <input type="hidden" name="redirect" value="https://stefanianeri.github.io/portfolio/#contact"> -->
+
             <div class="col-10 col-md-5">
-                <label for="full-name" class="form-label">Your Name</label>
-                <input type="text" name="full-name" class="form-control" placeholder="Enter your name" id="full-name" aria-describedby="full-name" required>
+                <label for="fullName" class="form-label">Your Name</label>
+                <input #fullName type="text" name="fullName" class="form-control" ngModel placeholder="Enter your name" id="fullName" aria-describedby="fullName">
                 <div class="invalid-feedback">
                     Please enter your name.
                   </div>
             </div>
             <div class="col-10 col-md-5">
                 <label for="email" class="form-label">Email Address</label>
-                <input type="email" name="email" class="form-control" placeholder="Enter your email address" id="email" aria-describedby="email" required>
+                <input #email type="email" name="email" class="form-control" ngModel placeholder="Enter your email address" id="email" aria-describedby="email">
                 <div class="invalid-feedback">
                     Please enter your email.
                   </div>
             </div>
             <div class="col-10">
                 <label for="message" class="form-label">Your Message</label>
-                <textarea name="message" name="message" class="form-control" placeholder="Enter your message" id="message" rows="5" required></textarea>
+                <textarea #message name="message" name="message" ngModel class="form-control" placeholder="Enter your message" id="message" rows="5"></textarea>
                 <div class="invalid-feedback">
                     Please type a message.
                   </div>
             </div>
         
             <div class="col-12 text-center pt-3">
-                <button type="submit" class="btn btn-form px-4 py-2 fs-5 ">Send 
+                <button type="submit" class="btn btn-form px-4 py-2 fs-5 ">Send message
                     <img width="25" height="25" src="https://img.icons8.com/?size=100&id=11686&format=png&color=efefef" alt="arrow--v1"/>
                 </button>
             </div>

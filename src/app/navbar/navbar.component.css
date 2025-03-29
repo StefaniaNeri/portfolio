@@ -39,13 +39,11 @@ nav {
   transform: all 0.3s;
   position: relative;
   overflow: hidden;
-
 }
 nav .nav-link {
   color: var(--darkblue-palette);
-  /* position: relative; */
-
-  z-index: 1;  
+  display: block;
+  min-width: 6.8rem;
 }
 
 .nav-item:hover,

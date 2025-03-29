@@ -52,7 +52,7 @@ export class PortfolioServService {
   // Check if the scroll position indicates the sticky state
   updateSticky(scrollPos: number) {
     this.isSticky = scrollPos >= 600;
-    console.log('Sticky status:', this.isSticky);
+    // console.log('Sticky status:', this.isSticky);
   }
 
   // GESTIRE GLI EVENTI, WINDOW SERVICE
