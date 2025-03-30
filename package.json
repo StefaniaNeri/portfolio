@@ -25,6 +25,7 @@
     "bootstrap": "^5.3.3",
     "express": "^4.18.2",
     "ionicons": "^7.4.0",
+    "ng-angular-popup": "^0.6.6",
     "ng-gallery": "^12.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

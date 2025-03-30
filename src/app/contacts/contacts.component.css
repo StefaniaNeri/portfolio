@@ -4,7 +4,10 @@
     color: #efefef;
 }
 
-input, textarea{
+input, textarea, input:-webkit-autofill,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus {
     background-color: #1018229c;
     border: 1px solid #495068a2;
     color: #efefef;

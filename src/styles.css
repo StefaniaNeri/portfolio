@@ -391,3 +391,42 @@ footer a:hover {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+
+/* TOAST MESSAGE CONTACT FORM */
+
+
+.toast-message.toast-success {
+  align-items: center !important;
+  border: 1.5px solid #2b405a !important;
+  /* border-bottom: 1.5px solid var(--whiteblue-palette) !important; */
+  /* background-color: #101822 !important; */
+  background-color: var(--whiteblue-palette) !important;
+  
+  font-family: "Rajdhani", sans-serif !important;
+  font-size: 1.6rem !important;
+  /* font-weight: 700 !important; */
+  box-shadow: rgb(171, 204, 240,0.2) 0px 0px 2px,
+    rgb(171, 204, 240,0.2) 0px 0px 7px, rgb(171, 204, 240,0.2) 0px 0px 13px !important;
+}
+.cross-icon.toast-success{
+  color: #101822 !important;
+  /* color: var(--whiteblue-palette) !important; */
+}
+
+.toaster .toast-message .msg-summary {
+  font-size: 1.3rem !important;
+  /* color: #efefef !important; */
+  /* color: var(--whiteblue-palette) !important; */
+  color: #101822 !important;
+  font-weight: 500 !important;
+  line-height: 1.25;
+}
+
+.toast-icon.toast-success{
+  display: none !important;
+}
+
+
+.toast-message.toast-error {
+  border-left: 3px solid #ef4444;
+}

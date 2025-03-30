@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-contacts',
@@ -7,6 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrl: './contacts.component.css',
 })
 export class ContactsComponent implements AfterViewInit {
+  constructor(private toast: NgToastService) {}
 
   @ViewChild('myFormRef') myFormRef!: NgForm;
   @ViewChild('fullName') fullName!: ElementRef;
@@ -14,11 +16,7 @@ export class ContactsComponent implements AfterViewInit {
   @ViewChild('message') message!: ElementRef;
 
   ngAfterViewInit() {
-    // `ViewChild` sarà disponibile solo dopo questo punto
-  }
-
-  clearForm(form: HTMLFormElement) {
-    form.reset();
+   
   }
 
   async sendForm() {
@@ -39,12 +37,31 @@ export class ContactsComponent implements AfterViewInit {
 
       const data = await response.json();
       console.log("Risposta dal server:", data);
-      window.location.href = "https://stefanianeri.github.io/portfolio/#contact";
+      // window.location.href = "https://stefanianeri.github.io/portfolio/#contact";
       this.myFormRef.reset();
-
+      this.showSuccess();
       
     } catch (error) {
       console.error("Errore nell'invio del form:", error);
+      this.showError();
     }
+  }
+
+
+  showSuccess() {
+    this.toast.success('Message sent successfully!', '', 6000);
+    
+  }
+
+  showError() {
+    this.toast.danger('Something went wrong. Please try again.', 'Error', 6000);
+  }
+
+  showInfo() {
+    this.toast.info('Info Message', 'Information', 6000);
+  }
+
+  showWarning() {
+    this.toast.warning('Warning Message', 'Warning', 6000);
   }
 }

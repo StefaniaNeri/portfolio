@@ -3,6 +3,7 @@ import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { PortfolioServService } from './portfolioServ.service';
 import { Subscription } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
+import { ToasterPosition } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-root',
@@ -36,6 +37,7 @@ export class AppComponent {
 
   titleParent = 'sn';
   isVisible = false;
+  ToasterPosition = ToasterPosition;
 
   onAppear() {
     this.isVisible = true;
