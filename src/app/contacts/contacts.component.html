@@ -18,22 +18,22 @@
 
             <div class="col-10 col-md-5">
                 <label for="fullName" class="form-label">Your Name</label>
-                <input #fullName type="text" name="fullName" class="form-control" ngModel placeholder="Enter your name" id="fullName" aria-describedby="fullName">
-                <div class="invalid-feedback">
+                <input [(ngModel)]="fullName" type="text" name="fullName" [ngClass]="{'is-invalid': showErrors && !fullName}" class="form-control" placeholder="Enter your name" id="fullName" aria-describedby="fullName" required>
+                <div *ngIf="showErrors && !fullName" class="invalid-feedback">
                     Please enter your name.
                   </div>
             </div>
             <div class="col-10 col-md-5">
                 <label for="email" class="form-label">Email Address</label>
-                <input #email type="email" name="email" class="form-control" ngModel placeholder="Enter your email address" id="email" aria-describedby="email">
-                <div class="invalid-feedback">
+                <input [(ngModel)]="email" type="email" name="email" [ngClass]="{'is-invalid': showErrors && !isValidEmail()}" class="form-control" placeholder="Enter your email address" id="email" aria-describedby="email" required>
+                <div *ngIf="showErrors && !isValidEmail()" class="invalid-feedback">
                     Please enter your email.
                   </div>
             </div>
             <div class="col-10">
                 <label for="message" class="form-label">Your Message</label>
-                <textarea #message name="message" name="message" ngModel class="form-control" placeholder="Enter your message" id="message" rows="5"></textarea>
-                <div class="invalid-feedback">
+                <textarea [(ngModel)]="message" name="message" name="message" [ngClass]="{'is-invalid': showErrors && !message}" class="form-control" placeholder="Enter your message" id="message" rows="5" required></textarea>
+                <div *ngIf="showErrors && !message" class="invalid-feedback">
                     Please type a message.
                   </div>
             </div>
