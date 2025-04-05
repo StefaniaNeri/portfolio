@@ -2,7 +2,6 @@
 
 nav {
   padding: 1.5rem 0 0 0;
-  /* position: relative; */
 }
 
 
@@ -23,10 +22,6 @@ nav {
 .sticky.navbar {
   padding: 0.5rem 0 0.5rem 0;
 }
-
-
-
-
 
 .sticky .logo, .sticky .navbar-nav{
   transform: scale(0.8);

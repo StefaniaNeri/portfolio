@@ -37,8 +37,10 @@
 
 .name {
   font-size: 4.6rem;
-  font-weight: 500;
-  color: var(--whiteblue-palette);
+  background: linear-gradient(to right, #6782b6, #abccf0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .sub {
@@ -50,26 +52,6 @@
 .imgHero {
   height: 17rem;
   width: auto;
-}
-
-.btn-cv-hero{
-  border: 1px solid var(--whiteblue-palette);
-  color: #efefefe8;
-  background-color: #18314b88;
-  border-color: var(--whiteblue-palette);
-  box-shadow: rgba(81, 127, 212, 0.4) 8px 8px 6px;
-  border-radius: 8px;
-  padding: 0.7rem 1rem;
-  transition: all 0.7s;
-}
-
-.btn-cv-hero:hover,
-.btn-cv-hero:active {
-  box-shadow: rgba(39, 86, 173, 0.4) 8px 8px 6px;
-  background-color: transparent;
-  scale: 1.1;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
 /* >1600px */

@@ -44,5 +44,5 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .btn-form:hover {
     background-color: #223d61;
-    transition: all 0.2s;
+    transition: all 0.1s;
 }
