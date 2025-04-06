@@ -124,18 +124,9 @@ footer a:hover {
 
 /* BACKGROUND COLORS */
 
-.bg-light-green {
-  background-color: var(--light-green);
-}
-
-.bg-lightgreen-gradient {
-  background-image: linear-gradient(180deg, #9ebd93, #91be82);
-}
-
 .bg-whiteblue{
   background-color: var(--whiteblue-palette);
 }
-
 
 .bg-whiteblue-gradient{
   background-image: linear-gradient(180deg, #87aad0, #6381a1);
@@ -169,67 +160,46 @@ footer a:hover {
 
 /* BORDERS */
 
-.border-light-green {
-  border: 2.5px solid var(--light-green);
+.border-t-light-green {
+  border-top: 1.6px solid var(--light-green);
+}
+
+.border-tb-light-green {
+  border-top: 1.6px solid var(--light-green);
+  border-bottom: 1.6px solid var(--light-green);
 }
 
 .border-whiteblue {
   border: 1px solid var(--whiteblue-palette);
 }
 
-
 .border-tb-orange {
-  border-top: 2.5px solid var(--sand-palette);
-  border-bottom: 2.5px solid var(--sand-palette);
+  border-top: 1.5px solid var(--sand-palette);
+  border-bottom: 1.5px solid var(--sand-palette);
 }
 
 .border-t-orange {
-  border-top: 2.5px solid var(--sand-palette);
+  border-top: 1.5px solid var(--sand-palette);
 }
 
 .border-end-blue {
   border-right: 1.5px solid var(--darkblue-palette);
 }
 
-.border-se-green {
-  border-right: 15px solid #a0faa336;
-  border-left: 15px solid #a0faa336;
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
-}
-
-.border-setop-green {
-  border-right: 15px solid #a0faa336;
-  border-left: 15px solid #a0faa336;
-  border-top-left-radius: 20%;
-  border-top-right-radius: 20%;
-}
 
 /* MARGINS */
 
-.margin-20 {
-  margin-left: 20rem;
-  margin-right: 20rem;
-}
 .margin-left-custom {
   margin-left: 70px;
 }
 
 /* EFFECTS */
 
-.effectGlimmer {
-  box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 24px,
-    rgb(160, 250, 163, 0.2) 0px 0px 39px, rgb(160, 250, 163, 0.2) 0px 0px 60px;
-}
-.effectGlimmerRed {
-  box-shadow: rgb(237, 113, 142,0.3) 0px 0px 24px,
-    rgb(237, 113, 142,0.3) 0px 0px 39px, rgb(237, 113, 142,0.3) 0px 0px 60px;
-}
+
 .effectGlimmerBlue {
   box-shadow: rgb(171, 204, 240,0.2) 0px 0px 24px,
     rgb(171, 204, 240,0.2) 0px 0px 39px, rgb(171, 204, 240,0.2) 0px 0px 60px;
 }
-
 
 .effectGlimmerHover, .effectGlimmerHoverRed,.effectGlimmerBlue,.effectGlimmerHoverBlue
 .effectGlimmerHoverIcons,
@@ -237,14 +207,6 @@ footer a:hover {
   transition: all 0.4s;
 }
 
-.effectGlimmerHover:hover {
-  box-shadow: rgb(160, 250, 163, 0.2) 0px 0px 70px,
-    rgb(160, 250, 163, 0.2) 0px 0px 70px, rgb(160, 250, 163, 0.2) 0px 0px 70px;
-}
-.effectGlimmerHoverRed:hover {
-  box-shadow: rgb(237, 113, 142,0.3) 0px 0px 70px,
-    rgb(237, 113, 142,0.3) 0px 0px 70px, rgb(237, 113, 142,0.3) 0px 0px 70px;
-}
 .effectGlimmerHoverBlue:hover {
   box-shadow: rgb(171, 204, 240,0.2) 0px 0px 70px,
     rgb(171, 204, 240,0.2) 0px 0px 70px, rgb(171, 204, 240,0.2) 0px 0px 70px;
@@ -293,15 +255,6 @@ footer a:hover {
   
 }
 
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .back-to-top:hover {
   text-decoration: none;
   box-shadow: rgb(171, 204, 240, 0.2) 0px 0px 24px,
@@ -318,19 +271,6 @@ footer a:hover {
     font-size: 3rem !important;
   }
 
-  .border-setop-green {
-    border-right: 2px solid #a0faa336;
-    border-left: 2px solid #a0faa336;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-  }
-
-  .border-se-green {
-    border-right: 2px solid #a0faa336;
-    border-left: 2px solid #a0faa336;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-  }
 
   .margin-left-custom {
     margin-left: 20px;

@@ -19,43 +19,6 @@ export class SkillsComponent implements Skill {
   src: String;
   progress: String;
 
-  // listaSkill: Skill[] = [
-  //   // new CardSkill('HTML5', 'src', 'Frontend'),
-  //   // new CardSkill('CSS3', 'src', 'Frontend'),
-  //   // new CardSkill('JavaScript', 'src', 'Frontend'),
-  //   // new CardSkill('Java', 'src', 'Backend'),
-  //   // new CardSkill('MySQL', 'src', 'Backend'),
-
-  //   {
-  //     linguaggio: 'HTML5',
-  //     src: 'https://img.icons8.com/plasticine/100/html-5.png',
-  //   },
-  //   { linguaggio: 'CSS3', src: 'https://img.icons8.com/stickers/50/css3.png' },
-  //   {
-  //     linguaggio: 'JavaScript',
-  //     src: 'https://img.icons8.com/fluency/48/javascript.png',
-  //   },
-  //   {
-  //     linguaggio: 'Bootstrap',
-  //     src: 'https://img.icons8.com/color-glass/48/bootstrap.png',
-  //   },
-  //   {
-  //     linguaggio: 'Angular',
-  //     src: 'https://img.icons8.com/fluency/48/angularjs.png',
-  //   },
-  //   {
-  //     linguaggio: 'Java',
-  //     src: 'https://img.icons8.com/nolan/64/java-coffee-cup-logo.png', // https://img.icons8.com/plasticine/100/java-coffee-cup-logo.png
-  //   },
-  //   {
-  //     linguaggio: 'Spring Boot',
-  //     src: 'https://img.icons8.com/color/48/spring-logo.png',
-  //   },
-  //   {
-  //     linguaggio: 'MySQL',
-  //     src: 'https://img.icons8.com/external-those-icons-flat-those-icons/24/external-MySQL-programming-and-development-those-icons-flat-those-icons.png',
-  //   },
-  // ];
 
   listaSkillFE: Skill[] = [
     {
@@ -81,13 +44,13 @@ export class SkillsComponent implements Skill {
     {
       linguaggio: 'Angular',
       src: 'https://img.icons8.com/fluency/96/angularjs.png',
-      progress: '40',
+      progress: '45',
     },
   ];
   listaSkillBE: Skill[] = [
     {
       linguaggio: 'Java',
-      src: 'https://img.icons8.com/nolan/100/java-coffee-cup-logo.png', // https://img.icons8.com/plasticine/100/java-coffee-cup-logo.png
+      src: 'https://img.icons8.com/nolan/100/java-coffee-cup-logo.png',
       progress: '38',
     },
     {
