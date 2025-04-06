@@ -12,7 +12,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* border: 1px solid var(--whiteblue-palette); */
   padding: 8rem 10rem 8rem 12rem;
   border-radius: 6px;
   background-image: linear-gradient(180deg, rgba(9, 16, 27, 0) 10%, rgba(9, 16, 27, 0.4) 30%, rgba(9, 16, 27, 0.4) 70%, rgba(9, 16, 27, 0) 100%);
@@ -37,10 +36,11 @@
 
 .name {
   font-size: 4.6rem;
-  background: linear-gradient(to right, #6782b6, #abccf0);
-  background-clip: text;
+  color: var(--whiteblue-palette);
+  /* background: linear-gradient(to right, #abccf0, #abccf0); */
+  /* background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  color: transparent; */
 }
 
 .sub {

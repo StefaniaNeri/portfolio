@@ -138,6 +138,8 @@ footer a:hover {
 
 .bg-darkblue-main {
   background-color: #011c22;
+  background-image: linear-gradient(180deg, #000000 55%, #0a1e35);
+
 }
 
 .bg-extra-dark {
@@ -148,7 +150,6 @@ footer a:hover {
   background-color: var(--mild-blue);
 
 }
-
 
 .bg-transparent-custom {
   background-color: transparent;
@@ -161,12 +162,12 @@ footer a:hover {
 /* BORDERS */
 
 .border-t-light-green {
-  border-top: 1.6px solid var(--light-green);
+  border-top: 1.4px solid #6ad06aaf;
 }
 
 .border-tb-light-green {
-  border-top: 1.6px solid var(--light-green);
-  border-bottom: 1.6px solid var(--light-green);
+  border-top: 1.4px solid #6ad06aaf;
+  border-bottom: 1.4px solid #6ad06aaf;
 }
 
 .border-whiteblue {
@@ -259,6 +260,11 @@ footer a:hover {
   text-decoration: none;
   box-shadow: rgb(171, 204, 240, 0.2) 0px 0px 24px,
     rgb(171, 204, 240, 0.2) 0px 0px 39px, rgb(171, 204, 240, 0.2) 0px 0px 60px;
+}
+
+.back-to-top span {
+  position: relative;
+  z-index: 1;
 }
 
 .back-to-top:hover span {
