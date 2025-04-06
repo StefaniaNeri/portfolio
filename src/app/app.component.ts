@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, HostListener, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { PortfolioServService } from './portfolioServ.service';
 import { Subscription } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
@@ -32,7 +32,7 @@ export class AppComponent {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private portfolioServ: PortfolioServService
+    private portfolioServ: PortfolioServService, private cdr: ChangeDetectorRef
   ) {}
 
   titleParent = 'sn';
@@ -45,12 +45,6 @@ export class AppComponent {
   }
 
   isSticky: boolean = false;
-
-  // @HostListener('window:scroll', [])
-  // checkScroll() {
-  //   this.portfolioServ.checkScroll();
-  //   this.isSticky = this.portfolioServ.isSticky;
-  // }
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -70,10 +64,42 @@ export class AppComponent {
     }
   }
 
-  ngOnDestroy() {
-    // Disiscriversi dall'osservabile quando il componente viene distrutto
-    if (this.scrollSubscription) {
-      this.scrollSubscription.unsubscribe();
-    }
-  }
+  // ROUTES
+
+  // showSkills = false;
+  // showProjects = false;
+
+  // @ViewChild('skillsTrigger') skillsTrigger!: ElementRef;
+  // @ViewChild('projectsTrigger') projectsTrigger!: ElementRef;
+
+
+  // ngAfterViewInit(): void {
+  //   this.lazyLoad(this.skillsTrigger.nativeElement, () => {
+  //     this.showSkills = true;
+  //     this.cdr.detectChanges(); 
+  //   });
+
+  //   this.lazyLoad(this.projectsTrigger.nativeElement, () => {
+  //     this.showProjects = true;
+  //     this.cdr.detectChanges();
+  //   });
+  // }
+
+  // lazyLoad(element: HTMLElement, callback: () => void): void {
+  //   if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+  //     const observer = new IntersectionObserver(([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         callback();
+  //         observer.disconnect();
+  //       }
+  //     }, { threshold: 0.2 });
+
+  //     observer.observe(element);
+  //   } else {
+   
+  //     callback();
+  //   }
+  // }
+
 }
+

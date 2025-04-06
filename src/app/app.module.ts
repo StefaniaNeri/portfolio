@@ -55,12 +55,5 @@ import { NgToastModule } from 'ng-angular-popup';
 })
 export class AppModule {
 
-//   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-//   if (isPlatformBrowser(this.platformId)) {
-//     import('GalleryModule').then(({ GalleryModule }) => {
-//       console.log('ng-gallery caricato solo lato browser!');
-//     });
-//   }
-// }
 
 }

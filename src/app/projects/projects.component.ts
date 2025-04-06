@@ -33,19 +33,19 @@ export class ProjectsComponent implements OnInit{
         src: 'assets/anteprime-tripz/Anteprima - Login.png', thumb: 'assets/anteprime-tripz/Anteprima - Login.png'
       }),
       new ImageItem({
-        src: 'assets/anteprime-tripz/Anteprima - Registrazione utente.png', thumb: 'assets/anteprime-tripz/Anteprima - Registrazione utente.png'
+        src: 'assets/anteprime-tripz/Anteprima - Registrazione utente.webp', thumb: 'assets/anteprime-tripz/Anteprima - Registrazione utente.webp'
       }),
       new ImageItem({
-        src: 'assets/anteprime-tripz/Anteprima - Vista admin - Catalogo.png', thumb: 'assets/anteprime-tripz/Anteprima - Vista admin - Catalogo.png'
+        src: 'assets/anteprime-tripz/Anteprima - Vista admin - Catalogo.webp', thumb: 'assets/anteprime-tripz/Anteprima - Vista admin - Catalogo.webp'
       }),
       new ImageItem({
-        src: 'assets/anteprime-tripz/Anteprima - Vista admin - Lista utenti.png', thumb: 'assets/anteprime-tripz/Anteprima - Vista admin - Lista utenti.png'
+        src: 'assets/anteprime-tripz/Anteprima - Vista admin - Lista utenti.webp', thumb: 'assets/anteprime-tripz/Anteprima - Vista admin - Lista utenti.webp'
       }),
       new ImageItem({
-        src: 'assets/anteprime-tripz/Anteprima - Vista utente - Carrello.png', thumb: 'assets/anteprime-tripz/Anteprima - Vista utente - Carrello.png'
+        src: 'assets/anteprime-tripz/Anteprima - Vista utente - Carrello.webp', thumb: 'assets/anteprime-tripz/Anteprima - Vista utente - Carrello.webp'
       }),
       new ImageItem({
-        src: 'assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.png', thumb: 'assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.png'
+        src: 'assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.webp', thumb: 'assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.webp'
       }),
     ]
 

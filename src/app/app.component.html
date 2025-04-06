@@ -3,9 +3,22 @@
   [titleSN]="titleParent"></app-navbar>
   <!-- <app-hero (appear)="onAppear()" [ngClass]="{'slide-in': isVisible}"></app-hero> -->
   <app-hero></app-hero>
-  <!-- <app-about-me></app-about-me> -->
   <app-skills></app-skills>
   <app-projects></app-projects>
+
+  <!-- <div #skillsTrigger>
+    <ng-container *ngIf="showSkills">
+      <app-skills></app-skills>
+    </ng-container>
+  </div>
+
+  <div #projectsTrigger>
+    <ng-container *ngIf="showProjects">
+      <app-projects></app-projects> 
+    </ng-container>
+  </div> -->
+
+  <!-- <router-outlet></router-outlet> -->
   <app-curriculum></app-curriculum>
   <ng-toast [width]="400" [position]="ToasterPosition.BOTTOM_RIGHT"></ng-toast>
   <app-contacts></app-contacts>

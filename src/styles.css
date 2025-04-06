@@ -372,7 +372,7 @@ footer a:hover {
   box-shadow: rgba(81, 127, 212, 0.4) 8px 8px 6px;
   border-radius: 8px;
   padding: 0.7rem 1rem;
-  transition: all 0.7s;
+  transition: all 0.3s;
 }
 
 .btn-cv:hover,
@@ -381,7 +381,7 @@ footer a:hover {
   background-color: transparent;
   scale: 1.1;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 /* TOAST MESSAGE CONTACT FORM */
