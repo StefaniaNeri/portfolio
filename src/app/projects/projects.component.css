@@ -38,32 +38,16 @@ color: #74af71;
   color: #c2ddb8;
   }
 
+  ::ng-deep .g-image-item {
+    height: 34rem !important;
+    width: 100%;
+    object-fit: cover;
+  }
+
 /* BACKGROUND COLORS */
 .prjText{
   background-color: #03101772;
   color: #eee;
-}
-
-.bg-tripz {
-  background-color: #bd4866;
-  border-radius: 0.375rem 0 0 0.375rem;
-}
-
-.bg-langs-tripz{
-  background-color: #50320200;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-.bg-sounds {
-  background-color: #91be82;
-}
-
-.bg-langs-sounds{
-  background-color: #50320200;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  
 }
 
 
@@ -137,6 +121,16 @@ color: #74af71;
   box-shadow: rgba(255, 252, 217, 0.25) 2px 2px;
 }
 
+/* <1600px */
+@media (max-width: 100em) {
+
+  ::ng-deep .g-image-item {
+    height: 27rem !important;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+}
 
 @media (min-width: 62em){
   .card{

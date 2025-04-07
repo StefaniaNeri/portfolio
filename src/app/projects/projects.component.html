@@ -36,7 +36,11 @@
       </div>
 
       <div class="col-12 col-md-7">
-        <gallery *ngIf="isBrowser" [items]="tripzPreviews" class="ms-1 rounded" bullets bulletPosition="top"></gallery>
+        <gallery *ngIf="isBrowser" [items]="tripzPreviews" class="ms-1 rounded" bullets bulletPosition="top">
+          <ng-template let-item>
+            <img class="gallery-image" [src]="item.data.src" />
+          </ng-template>
+        </gallery>
       </div>
 
     </div>

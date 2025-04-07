@@ -42,7 +42,7 @@ export class ProjectsComponent implements OnInit{
         src: 'assets/anteprime-tripz/Anteprima - Vista admin - Lista utenti.webp', thumb: 'assets/anteprime-tripz/Anteprima - Vista admin - Lista utenti.webp'
       }),
       new ImageItem({
-        src: 'assets/anteprime-tripz/Anteprima - Vista utente - Carrello.webp', thumb: 'assets/anteprime-tripz/Anteprima - Vista utente - Carrello.webp'
+        src: 'assets/anteprime-tripz/Anteprima - Vista utente - Carrello.png', thumb: 'assets/anteprime-tripz/Anteprima - Vista utente - Carrello.png'
       }),
       new ImageItem({
         src: 'assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.webp', thumb: 'assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.webp'
