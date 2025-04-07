@@ -137,8 +137,7 @@ footer a:hover {
 }
 
 .bg-darkblue-main {
-  background-color: #011c22;
-  background-image: linear-gradient(180deg, #000000 55%, #0a1e35);
+  background-image: linear-gradient(180deg, #081727 55%, #081b2f);
 
 }
 
@@ -336,25 +335,20 @@ footer a:hover {
 .toast-message.toast-success {
   align-items: center !important;
   border: 1.5px solid #2b405a !important;
-  /* border-bottom: 1.5px solid var(--whiteblue-palette) !important; */
-  /* background-color: #101822 !important; */
   background-color: var(--whiteblue-palette) !important;
   
   font-family: "Rajdhani", sans-serif !important;
   font-size: 1.6rem !important;
-  /* font-weight: 700 !important; */
   box-shadow: rgb(171, 204, 240,0.2) 0px 0px 2px,
     rgb(171, 204, 240,0.2) 0px 0px 7px, rgb(171, 204, 240,0.2) 0px 0px 13px !important;
 }
+
 .cross-icon.toast-success{
   color: #101822 !important;
-  /* color: var(--whiteblue-palette) !important; */
 }
 
 .toaster .toast-message .msg-summary {
   font-size: 1.3rem !important;
-  /* color: #efefef !important; */
-  /* color: var(--whiteblue-palette) !important; */
   color: #101822 !important;
   font-weight: 500 !important;
   line-height: 1.25;
@@ -364,7 +358,24 @@ footer a:hover {
   display: none !important;
 }
 
-
 .toast-message.toast-error {
   border-left: 3px solid #ef4444;
+}
+
+
+/* <768px */
+@media (max-width: 48em) {
+  .toaster {
+    width: 50% !important;
+    min-width: 345px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    margin: 0 auto !important;
+    padding: 0.5rem !important;
+  }
+
+  .toaster .toast-message .msg-summary {
+    font-size: 1rem !important;
+  }
 }

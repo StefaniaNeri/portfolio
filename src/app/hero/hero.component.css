@@ -54,6 +54,10 @@
   width: auto;
 }
 
+.btn-cv{
+  margin-right: 6.4rem !important;
+}
+
 /* >1600px */
 @media (min-width: 100em) {
 
@@ -76,13 +80,26 @@
   .social{
     padding-right: 4rem;
   }
+
+
+}
+
+/* <1200px */
+@media (max-width: 75em) {
+  .heroContent{
+    padding: 8rem 2rem 8rem 2rem;
+ }
+ .btn-cv{
+  margin-left: 2rem;
+  margin-right: 2.8rem !important;
+}
 }
 
 /* <992px */
 @media (max-width: 62em) {
 
   .heroContent{
-     padding: 8rem 5rem 8rem 5rem;
+     padding: 8rem 1rem 8rem 1rem;
   }
 
   .name {
@@ -92,7 +109,12 @@
   .sub {
     font-size: 1.7rem;
   }
+  .btn-cv{
+    margin-left: 1.9rem;
+    margin-right: 1.5rem !important;
+  }
 }
+
 
 /* <768px */
 @media (max-width: 48em) {
@@ -134,7 +156,7 @@
   }
 
   .btn-cv{
-    margin-top: 1.6rem;
+    margin: 1.6rem 0 0 0 !important;
   }
 
   .imgHero {

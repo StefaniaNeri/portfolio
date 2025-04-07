@@ -185,4 +185,10 @@ color: #74af71;
     order: 2;
   }
 
+  ::ng-deep .g-image-item {
+    height: 13rem !important;
+    width: 100%;
+    object-fit: contain;
+  }
+
 }
