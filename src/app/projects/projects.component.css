@@ -132,10 +132,68 @@ color: #74af71;
   
 }
 
-@media (min-width: 62em){
+/* <1200px */
+@media (max-width: 75em){
   .card{
-    width: 80%;
+    width: 100%;
   }
+
+  .prj{
+    padding: 2.7rem 0rem 2.7rem 0rem;
+  }
+}
+
+/* <992px */
+@media (max-width: 75em){
+ 
+
+  .prj{
+    padding: 2.7rem 1.7rem 2.7rem 1.7rem;
+  }
+
+  .prjBgTripz{
+    background: linear-gradient(120deg, #141a2d 20%, #1f2f4d 60%, #2a4275a8 100%);
+  }
+
+  .prjBgSounds{
+  background: linear-gradient(120deg, #2a4275a8 10%, #1f2f4d 20%, #141a2d 70%);
+
+  }
+
+
+  .lang-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+
+  .card-text{
+    text-align: center;
+  }
+
+
+  .displayMobile{
+    display: inline-block;
+  }
+
+  .mobileHidden{
+    display: none;
+  }
+
+  .orderMobile-1 {
+    order: 1;
+  }
+
+  .orderMobile-2 {
+    order: 2;
+  }
+
+  ::ng-deep .g-image-item {
+    height: 18rem !important;
+    width: 100%;
+    object-fit: contain;
+  }
+
 }
 
 /* <576px */

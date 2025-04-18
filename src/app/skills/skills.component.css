@@ -44,18 +44,6 @@
 
 }
 
-/* <992px */
-@media (max-width: 62em) {
- 
-}
-
-/* <768px */
-@media (max-width: 48em) {
-  /* .row{
-    padding: 0 0rem;
-  } */
-}
-
 /* >576px */
 @media (max-width: 36em) {
 
