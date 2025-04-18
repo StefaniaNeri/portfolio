@@ -54,8 +54,10 @@
   width: auto;
 }
 
+
 .btn-cv{
-  margin-right: 10.4rem !important;
+  margin-left: 4rem;
+  margin-right: 0rem !important;
 }
 
 /* >1600px */
@@ -77,17 +79,16 @@
     height: 19rem;
   }
 
-  .social{
-    padding-right: 4rem;
+  .btn-cv{
+    margin-left: 5rem;
   }
-
 
 }
 
-/* <1200px */
-@media (max-width: 75em) {
+/* <1328px */
+@media (max-width: 83em) {
   .heroContent{
-    padding: 8rem 2rem 8rem 2rem;
+    padding: 8rem 4rem 8rem 4rem;
  }
  .btn-cv{
   margin-left: 2rem;
@@ -95,11 +96,21 @@
 }
 }
 
-/* <992px */
-@media (max-width: 62em) {
+/* <1040px */
+@media (max-width: 65em) {
+  .heroContent{
+    padding: 8rem 2.9rem 8rem 2.9rem;
+ }
+ .btn-cv{
+  margin-left: 2.3rem;
+}
+}
+
+/* <929px */
+@media (max-width: 58.07em) {
 
   .heroContent{
-     padding: 8rem 1rem 8rem 1rem;
+     padding: 8rem 2.5rem 8rem 2.5rem;
   }
 
   .name {
@@ -110,8 +121,9 @@
     font-size: 1.7rem;
   }
   .btn-cv{
-    margin-left: 1.9rem;
-    margin-right: 1.5rem !important;
+    padding: 0.4rem 0.5rem;
+    margin-left: 1.8rem;
+    margin-right: 0.7rem !important;
   }
 }
 
@@ -134,7 +146,7 @@
   .heroContent {
     text-align: center;
     justify-content: center;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1.2rem 1rem 1.2rem 1rem;
     
   }
   
@@ -151,7 +163,7 @@
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    justify-content: center;
+    justify-content: center !important;
     padding-bottom: 2.3rem;
   }
 
