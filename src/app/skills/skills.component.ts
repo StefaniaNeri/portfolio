@@ -54,7 +54,7 @@ export class SkillsComponent implements Skill {
       progress: '45',
     },
     {
-      linguaggio: 'Spring Boot',
+      linguaggio: 'Spring',
       src: 'https://img.icons8.com/color/96/spring-logo.png',
       progress: '40',
     },
