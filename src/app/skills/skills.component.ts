@@ -44,19 +44,19 @@ export class SkillsComponent implements Skill {
     {
       linguaggio: 'Angular',
       src: 'https://img.icons8.com/fluency/96/angularjs.png',
-      progress: '45',
+      progress: '50',
     },
   ];
   listaSkillBE: Skill[] = [
     {
       linguaggio: 'Java',
       src: 'https://img.icons8.com/nolan/100/java-coffee-cup-logo.png',
-      progress: '38',
+      progress: '45',
     },
     {
       linguaggio: 'Spring Boot',
       src: 'https://img.icons8.com/color/96/spring-logo.png',
-      progress: '37',
+      progress: '40',
     },
     {
       linguaggio: 'MySQL',
