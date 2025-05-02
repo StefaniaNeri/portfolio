@@ -139,7 +139,11 @@ color: #74af71;
   }
 
   .prj{
-    padding: 2.7rem 0rem 2.7rem 0rem;
+    padding: 2.7rem 5rem 2.7rem 5rem;
+  }
+
+  .prjBgTripz .row > div:first-child {
+    padding: 0rem 2rem 0rem 2rem !important;   
   }
 }
 
@@ -160,11 +164,14 @@ color: #74af71;
 
   }
 
+  .container{
+    margin-left: 0rem !important;
+  }
 
   .lang-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center !important;
+    justify-content: start !important;
   }
 
   .card-text{
@@ -219,7 +226,7 @@ color: #74af71;
   .lang-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center !important;
+    justify-content: start !important;
   }
 
   .card-text{
