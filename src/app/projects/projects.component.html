@@ -6,8 +6,50 @@
     </div>
   </div>
 
-  <div class="prj prjBgTripz">
+  <div class="prj prjBgRight ">
+    
+    <div class="row m-0 justify-content-center align-items-stretch">
 
+      <div class="col-12 col-md-12 col-xl-7 p-0 orderMobile-2">
+        <gallery *ngIf="isBrowser" id="twittoGallery" [items]="twittoPreviews" class="ms-1 rounded" bullets bulletPosition="top">
+          <ng-template let-item>
+            <img class="gallery-image" [src]="item.data.src" />
+          </ng-template>
+        </gallery>
+      </div>
+      
+      <div class="col-12 col-md-12 col-xl-4 px-4 px-sm-5 px-md-5 ps-lg-4 pe-lg-0 d-flex flex-column justify-content-center orderMobile-1">
+        <h4 class="prjTitle text-darkpurple bg-titleTripz rounded-bottom">Twitto</h4>
+        <h5 class="pt-4 prjDes text-purple rounded-top d-inline-block">Connect with people</h5>
+        <p class="fs-6 ">Create an account or log in to share updates about your day. <br> Follow other users to see their posts and join the conversation by leaving comments. </p>
+          <p class="card-text text-darkpurple fs-5 text-end px-md-4 px-lg-3">Source code: <a [href]="twittoUrl()" target="_blank"
+            class="twittoLinks">Twitto repository</a></p>
+            <div class="container lang-container text-center pb-4 px-0 px-md-0 px-lg-3 pb-sm-5 pb-xl-0 fs-6">
+              <div class="row lang-row mb-md-0 mb-2 justify-content-end">
+                <div class="langsTwitto bg-langs-tripz col-sm-2 col-lg-3 col-3">Java</div>
+                <div class="langsTwitto bg-langs-tripz col-sm-2 col-lg-3 col-3">Spring</div>
+                <div class="langsTwitto bg-langs-tripz col-sm-2 col-lg-3 col-3">Angular</div>
+              </div>
+              <div class="row lang-row mb-md-0 mb-2 justify-content-end">
+                <div class="langsTwitto bg-langs-tripz col-sm-2 col-lg-3 col-3">MySQL</div>
+                <div class="langsTwitto bg-langs-tripz col-sm-2 col-lg-3 col-3">Hibernate</div>
+            <div class="langsTwitto bg-langs-tripz col-sm-2 col-lg-3 col-3">JWT Tokens</div>
+          </div>
+          <div class="row lang-row justify-content-end">
+            <div class="langsTwitto bg-langs-tripz col-sm-2 col-md-2 col-lg-3 col-3">Typescript</div>
+            <div class="langsTwitto bg-langs-tripz col-sm-2 col-md-2 col-lg-3 col-3">HTML</div>
+            <div class="langsTwitto bg-langs-tripz col-sm-2 col-md-2 col-lg-3 col-3">CSS</div>
+          </div>
+        </div>
+      </div>
+
+       
+
+    </div>
+    </div>
+      
+      
+      <div class="prj prjBgLeft">
     <div class="row m-0 justify-content-center align-items-stretch">
 
       <div class="col-12 col-md-12 col-xl-4 px-4 px-sm-5 px-md-5 px-lg-0 d-flex flex-column justify-content-center">
@@ -36,7 +78,7 @@
       </div>
 
       <div class="col-12 col-md-12 col-xl-7">
-        <gallery *ngIf="isBrowser" [items]="tripzPreviews" class="ms-1 rounded" bullets bulletPosition="top">
+        <gallery *ngIf="isBrowser" id="tripzGallery" [items]="tripzPreviews" class="ms-1 rounded" bullets bulletPosition="top">
           <ng-template let-item>
             <img class="gallery-image" [src]="item.data.src" />
           </ng-template>
@@ -44,10 +86,12 @@
       </div>
 
     </div>
+    </div>
+   
 
-  </div>
 
-  <div class="prj prjBgSounds">
+
+  <div class="prj prjBgRight">
 
     <div class="row m-0 justify-content-center align-items-stretch">
 

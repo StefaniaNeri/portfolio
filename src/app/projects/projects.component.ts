@@ -14,11 +14,13 @@ export class ProjectsComponent implements OnInit{
     this.isBrowser = isPlatformBrowser(this.platformId)
   }
  
-  theaterPrjUrl: WritableSignal<String> = signal("https://github.com/StefaniaNeri/theaterPrj");
+  // theaterPrjUrl: WritableSignal<String> = signal("https://github.com/StefaniaNeri/theaterPrj");
   tripzUrl: WritableSignal<String> = signal("https://github.com/StefaniaNeri/Tripz");
+  twittoUrl: WritableSignal<String> = signal("https://github.com/StefaniaNeri/twitto");
 
   
   tripzPreviews: GalleryItem[];
+  twittoPreviews: GalleryItem[];
 
   ngOnInit(): void {
     if (this.isBrowser) {
@@ -47,6 +49,21 @@ export class ProjectsComponent implements OnInit{
       new ImageItem({
         src: 'assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.webp', thumb: 'assets/anteprime-tripz/Anteprima - Vista utente - Catalogo.webp'
       }),
+    ];
+
+     this.twittoPreviews = [
+      new ImageItem({
+        src: 'assets/anteprime-twitto/Home.jpg', thumb: 'assets/anteprime-twitto/Home.jpg'
+      }),
+      new ImageItem({
+        src: 'assets/anteprime-twitto/Home2.jpg', thumb: 'assets/anteprime-twitto/Home2.jpg'
+      }),
+      new ImageItem({
+        src: 'assets/anteprime-twitto/Login.jpg', thumb: 'assets/anteprime-twitto/Login.jpg'
+      }),
+      new ImageItem({
+        src: 'assets/anteprime-twitto/Register.jpg', thumb: 'assets/anteprime-twitto/Register.jpg'
+      })
     ]
 
   }
