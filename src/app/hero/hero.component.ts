@@ -28,7 +28,7 @@ export class HeroComponent {
   //   }
   // }
 
-  urlCV: string = 'assets/Stefania Neri.pdf';
+  urlCV: string = 'assets/Stefania Neri Eng.pdf';
 
   openCV() {
     if (isPlatformBrowser(this.platformId)) {
